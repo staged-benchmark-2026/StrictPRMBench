@@ -1,0 +1,29 @@
+Mechanical-only null vs observed within-trace NI
+
+Definition
+- Null APR removes the deleted step from the clean product score while freezing all remaining step scores at their clean values.
+- Observed APR uses the fully rescored deleted trace from the PRM.
+- Both analyses are computed on the same strict within-trace subset from experiment 938.
+
+Per-cell comparison
+- InternLM2-1.8B / GSM8K: ΔNI_null=+0.000 [+0.000, +0.000], ΔNI_observed=-0.311 [-0.392, -0.230], obs-null=-0.311
+- InternLM2-7B / GSM8K: ΔNI_null=+0.000 [+0.000, +0.000], ΔNI_observed=-0.493 [-0.588, -0.405], obs-null=-0.493
+- Math-Shepherd / GSM8K: ΔNI_null=+0.000 [+0.000, +0.000], ΔNI_observed=-0.480 [-0.574, -0.385], obs-null=-0.480
+- Qwen / GSM8K: ΔNI_null=-0.182 [-0.264, -0.088], ΔNI_observed=-0.311 [-0.399, -0.223], obs-null=-0.128
+- RLHFlow / GSM8K: ΔNI_null=-0.027 [-0.054, +0.000], ΔNI_observed=-0.196 [-0.270, -0.115], obs-null=-0.169
+- Skywork-7B / GSM8K: ΔNI_null=+0.000 [+0.000, +0.000], ΔNI_observed=-0.392 [-0.486, -0.277], obs-null=-0.392
+- Skywork-1.5B / GSM8K: ΔNI_null=+0.000 [+0.000, +0.000], ΔNI_observed=-0.372 [-0.473, -0.270], obs-null=-0.372
+- InternLM2-1.8B / MATH-500: ΔNI_null=+0.000 [+0.000, +0.000], ΔNI_observed=-0.139 [-0.230, -0.057], obs-null=-0.139
+- InternLM2-7B / MATH-500: ΔNI_null=+0.000 [+0.000, +0.000], ΔNI_observed=-0.320 [-0.426, -0.205], obs-null=-0.320
+- Math-Shepherd / MATH-500: ΔNI_null=+0.000 [+0.000, +0.000], ΔNI_observed=-0.402 [-0.500, -0.303], obs-null=-0.402
+- Qwen / MATH-500: ΔNI_null=-0.164 [-0.270, -0.066], ΔNI_observed=-0.246 [-0.352, -0.156], obs-null=-0.082
+- RLHFlow / MATH-500: ΔNI_null=+0.000 [+0.000, +0.000], ΔNI_observed=-0.123 [-0.230, -0.016], obs-null=-0.123
+- Skywork-7B / MATH-500: ΔNI_null=+0.000 [+0.000, +0.000], ΔNI_observed=-0.328 [-0.443, -0.205], obs-null=-0.328
+- Skywork-1.5B / MATH-500: ΔNI_null=+0.000 [+0.000, +0.000], ΔNI_observed=-0.418 [-0.508, -0.328], obs-null=-0.418
+
+- Null ΔNI non-positive: 14/14
+- Null ΔNI near zero (|Δ| <= 0.02): 11/14
+- Observed ΔNI more negative than null: 14/14
+- Mean ΔNI_null across 14 cells: -0.027
+- Mean ΔNI_observed across 14 cells: -0.324
+- Mean (observed - null): -0.297

@@ -1,0 +1,19 @@
+Cluster-robust reanalysis of pooled forced-choice GM preference
+
+Simple binomial:         85.5% [81.4%, 88.9%]
+Hierarchical bootstrap:  85.5% [79.5%, 90.4%]
+GEE (exchangeable):      85.4% [80.4%, 89.3%]
+Per-cell all > 80%:      YES (range 80.3% - 89.8%)
+Per-cell all p < 0.001:  YES
+
+Per-cell breakdown:
+- InternLM2-7B / gsm8k: 89.8% [82.0%, 95.0%], p=<0.001 (n=98)
+- InternLM2-7B / math500: 89.6% [81.7%, 94.9%], p=<0.001 (n=96)
+- Skywork-7B / gsm8k: 81.0% [71.9%, 88.2%], p=<0.001 (n=100)
+- Skywork-7B / math500: 80.3% [69.1%, 88.8%], p=<0.001 (n=71)
+
+Conclusion: Clustered uncertainty is only modestly wider than the simple binomial CI. The pooled 85.5% GM-preference result remains robust to within-cell clustering, and all four contributing cells are individually >80% with p<0.001.
+
+Card CSV: ./results/cluster_robust/card_level_majority.csv
+Bootstrap detail: ./results/cluster_robust/hierarchical_bootstrap.txt
+GEE detail: ./results/cluster_robust/gee_results.txt

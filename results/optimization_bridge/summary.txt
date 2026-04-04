@@ -1,0 +1,16 @@
+Optimization bridge (minimum configuration)
+
+Start trace: clean product top-1, restricted to correct traces.
+Injected rules: product, GM, cluster_sum_gm, official.
+Optimizers: product and GM greedy answer-preserving deletion.
+
+Qwen / GSM8K / optimize=gm: n_start=156, n_nontrivial=18, mean_del=1.11, mean_gain=+0.0002, hijack product=1.000, gm=0.944, cluster=0.778, official=1.000, Δ(product-gm)=+0.056 [+0.000, +0.167]
+Qwen / GSM8K / optimize=product: n_start=156, n_nontrivial=28, mean_del=1.25, mean_gain=+0.0012, hijack product=1.000, gm=0.786, cluster=0.643, official=1.000, Δ(product-gm)=+0.214 [+0.071, +0.393]
+Skywork-7B / GSM8K / optimize=gm: n_start=119, n_nontrivial=48, mean_del=1.15, mean_gain=+0.0402, hijack product=1.000, gm=0.833, cluster=0.750, official=0.833, Δ(product-gm)=+0.167 [+0.062, +0.271]
+Skywork-7B / GSM8K / optimize=product: n_start=119, n_nontrivial=82, mean_del=1.56, mean_gain=+0.1441, hijack product=1.000, gm=0.537, cluster=0.500, official=0.537, Δ(product-gm)=+0.463 [+0.354, +0.573]
+Qwen / MATH-500 / optimize=gm: n_start=128, n_nontrivial=28, mean_del=1.64, mean_gain=+0.0033, hijack product=1.000, gm=0.857, cluster=0.821, official=1.000, Δ(product-gm)=+0.143 [+0.036, +0.286]
+Qwen / MATH-500 / optimize=product: n_start=128, n_nontrivial=42, mean_del=2.05, mean_gain=+0.0257, hijack product=1.000, gm=0.690, cluster=0.667, official=1.000, Δ(product-gm)=+0.310 [+0.167, +0.452]
+Skywork-7B / MATH-500 / optimize=gm: n_start=83, n_nontrivial=63, mean_del=1.44, mean_gain=+0.0438, hijack product=1.000, gm=0.778, cluster=0.778, official=0.794, Δ(product-gm)=+0.222 [+0.127, +0.333]
+Skywork-7B / MATH-500 / optimize=product: n_start=83, n_nontrivial=79, mean_del=2.63, mean_gain=+0.1910, hijack product=1.000, gm=0.570, cluster=0.570, official=0.582, Δ(product-gm)=+0.430 [+0.329, +0.544]
+
+Cells meeting provisional GO threshold (product hijack > 20% and > GM): 8/8

@@ -1,0 +1,30 @@
+=== Answer-Clustered Aggregation Audit ===
+
+Primary clustered method: cluster_sum_gm.
+Note: cluster_majority_weighted_gm is exactly identical to cluster_sum_gm because |cluster| × mean(GM) = sum(GM).
+Sensitivity method: cluster_majority_vote.
+
+Product worst Flip@32 (primary four-rule comparison): 14/14 cells
+GM stability-best (ties allowed): 6/14 cells
+Cluster_sum_gm stability-best (ties allowed): 4/14 cells
+
+Per-cell primary results:
+- Math-Shepherd / GSM8K: n_base=332, Flip product=0.103, GM=0.040, cluster=0.040, official=0.045; Wrong cluster=0.000; Gain cluster=0.018; winners: stab=gm util=cluster_sum_gm
+- Skywork-7B / GSM8K: n_base=345, Flip product=0.246, GM=0.096, cluster=0.093, official=0.096; Wrong cluster=0.000; Gain cluster=0.022; winners: stab=cluster_sum_gm util=gm|official
+- Skywork-1.5B / GSM8K: n_base=328, Flip product=0.237, GM=0.126, cluster=0.131, official=0.123; Wrong cluster=0.000; Gain cluster=0.018; winners: stab=official util=official
+- Qwen / GSM8K: n_base=405, Flip product=0.040, GM=0.035, cluster=0.036, official=0.040; Wrong cluster=0.000; Gain cluster=0.022; winners: stab=gm util=product|gm|official
+- RLHFlow / GSM8K: n_base=390, Flip product=0.047, GM=0.028, cluster=0.032, official=0.028; Wrong cluster=0.000; Gain cluster=0.018; winners: stab=gm|official util=cluster_sum_gm|official
+- InternLM2-7B / GSM8K: n_base=397, Flip product=0.163, GM=0.065, cluster=0.061, official=0.018; Wrong cluster=0.000; Gain cluster=0.018; winners: stab=official util=official
+- InternLM2-1.8B / GSM8K: n_base=359, Flip product=0.343, GM=0.062, cluster=0.060, official=0.028; Wrong cluster=0.000; Gain cluster=0.020; winners: stab=official util=cluster_sum_gm
+- Math-Shepherd / MATH500: n_base=289, Flip product=0.200, GM=0.114, cluster=0.111, official=0.093; Wrong cluster=0.000; Gain cluster=0.070; winners: stab=official util=cluster_sum_gm
+- Skywork-7B / MATH500: n_base=284, Flip product=0.183, GM=0.094, cluster=0.091, official=0.093; Wrong cluster=0.000; Gain cluster=0.086; winners: stab=cluster_sum_gm util=official
+- Skywork-1.5B / MATH500: n_base=257, Flip product=0.213, GM=0.095, cluster=0.095, official=0.095; Wrong cluster=0.000; Gain cluster=0.076; winners: stab=gm|cluster_sum_gm|official util=cluster_sum_gm
+- Qwen / MATH500: n_base=319, Flip product=0.085, GM=0.070, cluster=0.070, official=0.085; Wrong cluster=0.000; Gain cluster=0.078; winners: stab=cluster_sum_gm util=product|official
+- RLHFlow / MATH500: n_base=325, Flip product=0.134, GM=0.055, cluster=0.059, official=0.058; Wrong cluster=0.000; Gain cluster=0.066; winners: stab=gm util=cluster_sum_gm
+- InternLM2-7B / MATH500: n_base=307, Flip product=0.206, GM=0.104, cluster=0.104, official=0.094; Wrong cluster=0.000; Gain cluster=0.074; winners: stab=official util=cluster_sum_gm
+- InternLM2-1.8B / MATH500: n_base=285, Flip product=0.345, GM=0.127, cluster=0.129, official=0.193; Wrong cluster=0.000; Gain cluster=0.072; winners: stab=gm util=cluster_sum_gm
+
+Interpretation:
+- This audit uses the same native-top1 deleted-trace injection as the matched-trace product-vs-GM experiment, so all methods are evaluated on the same perturbation.
+- GM already reaches or matches the stability frontier on most cells; clustered answer aggregation does not consistently outperform GM.
+- Wrong@32 remains low under clustered aggregation on this protocol.

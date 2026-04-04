@@ -1,0 +1,25 @@
+{
+  "problem_id": "gsm8k_361",
+  "question": "A train travels between 3 different cities.  It goes 75 miles from the first city to the second city, 100 miles from the second city to the third city, and 50 miles less than that combined distance to go from the third city to the first city.  It does this trip 3 times a day.  The train needs service every 18,000 miles so how many days does it go between services?",
+  "ground_truth": "20",
+  "raw_text": "Distance from the first city to the second city: \\(75\\) miles.\nDistance from the second city to the third city: \\(100\\) miles.\nDistance from the third city back to the first city: This is given as \\(50\\) miles less than the combined distance of the other two legs of the trip. So, we first find the combined distance:\n   \\[\n   75 + 100 = 175 \\text{ miles}\n   \\]\n   Then, the distance from the third city to the first city is:\n   \\[\n   175 - 50 = 125 \\text{ miles}\n   \\]\n\nNow, the total distance for one complete round trip (which includes all three segments) is:\n\\[\n75 + 100 + 125 = 300 \\text{ miles}\n\\]\n\nSince the train makes this trip 3 times a day, the daily distance traveled is:\n\\[\n300 \\times 3 = 900 \\text{ miles/day}\n\\]\n\nNext, we need to determine how many days the train can travel before reaching the 18,000 miles threshold. We do this by dividing the total service interval by the daily distance:\n\\[\n\\frac{18000}{900} = 20\n\\]\n\nTherefore, the train can operate for 20 days between services.",
+  "steps": [
+    {
+      "index": 0,
+      "text": "Distance from the first city to the second city: \\(75\\) miles."
+    },
+    {
+      "index": 1,
+      "text": "Distance from the second city to the third city: \\(100\\) miles."
+    },
+    {
+      "index": 2,
+      "text": "Distance from the third city back to the first city: This is given as \\(50\\) miles less than the combined distance of the other two legs of the trip. So, we first find the combined distance:\n   \\[\n   75 + 100 = 175 \\text{ miles}\n   \\]\n   Then, the distance from the third city to the first city is:\n   \\[\n   175 - 50 = 125 \\text{ miles}\n   \\]\n\nNow, the total distance for one complete round trip (which includes all three segments) is:\n\\[\n75 + 100 + 125 = 300 \\text{ miles}\n\\]\n\nSince the train makes this trip 3 times a day, the daily distance traveled is:\n\\[\n300 \\times 3 = 900 \\text{ miles/day}\n\\]\n\nNext, we need to determine how many days the train can travel before reaching the 18,000 miles threshold. We do this by dividing the total service interval by the daily distance:\n\\[\n\\frac{18000}{900} = 20\n\\]\n\nTherefore, the train can operate for 20 days between services."
+    }
+  ],
+  "extracted_answer": "20",
+  "is_correct": true,
+  "num_tokens": 322,
+  "num_steps": 3,
+  "model_name": "QwQ-32B"
+}

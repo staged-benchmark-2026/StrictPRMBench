@@ -1,0 +1,1609 @@
+{
+  "problem_id": "math500_297",
+  "n": 32,
+  "temperature": 0.8,
+  "candidates": [
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we need to determine the smallest possible number of leaves \\( n \\) in a book such that the number of pages is 3 more than a multiple of 7, and the number of leaves is greater than 100. Let's break this down step-by-step.\n\n1. **Relationship between pages and leaves:**\n   - Each piece of paper has 2 pages.\n   - Therefore, if the book has \\( n \\) leaves, it has \\( 2n \\) pages.\n\n2. **Condition on the number of pages:**\n   - The number of pages is 3 more than a multiple of 7.\n   - Mathematically, this can be expressed as:\n     \\[\n     2n \\equiv 3 \\pmod{7}\n     \\]\n\n3. **Solving the congruence:**\n   - We need to find the smallest \\( n \\) such that \\( 2n \\equiv 3 \\pmod{7} \\).\n   - To isolate \\( n \\), we first find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n     \\[\n     2x \\equiv 1 \\pmod{7}\n     \\]\n   - By testing values, we find:\n     \\[\n     2 \\times 4 = 8 \\equiv 1 \\pmod{7}\n     \\]\n   - Therefore, the multiplicative inverse of 2 modulo 7 is 4.\n   - Multiplying both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4, we get:\n     \\[\n     n \\equiv 3 \\times 4 \\pmod{7}\n     \\]\n     \\[\n     n \\equiv 12 \\pmod{7}\n     \\]\n     \\[\n     n \\equiv 5 \\pmod{7}\n     \\]\n\n4. **Finding the smallest \\( n \\) greater than 100:**\n   - We need \\( n \\) to satisfy \\( n \\equiv 5 \\pmod{7} \\) and \\( n > 100 \\).\n   - The general form of \\( n \\) that satisfies \\( n \\equiv 5 \\pmod{7} \\) is:\n     \\[\n     n = 7k + 5\n     \\]\n     for some integer \\( k \\).\n   - We need \\( 7k + 5 > 100 \\):\n     \\[\n     7k > 95\n     \\]\n     \\[\n     k > \\frac{95}{7}\n     \\]\n     \\[\n     k > 13.5714\n     \\]\n   - Since \\( k \\) must be an integer, the smallest integer greater than 13.5714 is 14.\n   - Substituting \\( k = 14 \\) into the equation \\( n = 7k + 5 \\):\n     \\[\n     n = 7 \\times 14 + 5\n     \\]\n     \\[\n     n = 98 + 5\n     \\]\n     \\[\n     n = 103\n     \\]\n\nTherefore, the smallest possible number of leaves is \\(\\boxed{103}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Relationship between pages and leaves:**\n   - Each piece of paper has 2 pages.\n   - Therefore, if the book has \\( n \\) leaves, it has \\( 2n \\) pages.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Condition on the number of pages:**\n   - The number of pages is 3 more than a multiple of 7.\n   - Mathematically, this can be expressed as:\n     \\[\n     2n \\equiv 3 \\pmod{7}\n     \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Solving the congruence:**\n   - We need to find the smallest \\( n \\) such that \\( 2n \\equiv 3 \\pmod{7} \\).\n   - To isolate \\( n \\), we first find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n     \\[\n     2x \\equiv 1 \\pmod{7}\n     \\]\n   - By testing values, we find:\n     \\[\n     2 \\times 4 = 8 \\equiv 1 \\pmod{7}\n     \\]\n   - Therefore, the multiplicative inverse of 2 modulo 7 is 4.\n   - Multiplying both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4, we get:\n     \\[\n     n \\equiv 3 \\times 4 \\pmod{7}\n     \\]\n     \\[\n     n \\equiv 12 \\pmod{7}\n     \\]\n     \\[\n     n \\equiv 5 \\pmod{7}\n     \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Finding the smallest \\( n \\) greater than 100:**\n   - We need \\( n \\) to satisfy \\( n \\equiv 5 \\pmod{7} \\) and \\( n > 100 \\).\n   - The general form of \\( n \\) that satisfies \\( n \\equiv 5 \\pmod{7} \\) is:\n     \\[\n     n = 7k + 5\n     \\]\n     for some integer \\( k \\).\n   - We need \\( 7k + 5 > 100 \\):\n     \\[\n     7k > 95\n     \\]\n     \\[\n     k > \\frac{95}{7}\n     \\]\n     \\[\n     k > 13.5714\n     \\]\n   - Since \\( k \\) must be an integer, the smallest integer greater than 13.5714 is 14.\n   - Substituting \\( k = 14 \\) into the equation \\( n = 7k + 5 \\):\n     \\[\n     n = 7 \\times 14 + 5\n     \\]\n     \\[\n     n = 98 + 5\n     \\]\n     \\[\n     n = 103\n     \\]\n\nTherefore, the smallest possible number of leaves is \\(\\boxed{103}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 476,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to understand the relationship between the number of leaves and the number of pages in the book. Each leaf consists of two pages, so if the number of leaves is \\( n \\), then the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nFirst, let's solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even when \\( k \\) is odd. Let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Then:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\). Therefore, we solve:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nThe smallest integer \\( m \\) that satisfies this inequality is \\( m = 14 \\). Substituting \\( m = 14 \\) into the expression for \\( n \\):\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to understand the relationship between the number of leaves and the number of pages in the book. Each leaf consists of two pages, so if the number of leaves is \\( n \\), then the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "First, let's solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even when \\( k \\) is odd. Let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Then:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\). Therefore, we solve:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nThe smallest integer \\( m \\) that satisfies this inequality is \\( m = 14 \\). Substituting \\( m = 14 \\) into the expression for \\( n \\):\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 405,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we need to establish the relationship between the number of leaves and the number of pages in the book. Let's denote the number of leaves by \\( n \\). Since each leaf consists of two pages, the number of pages in the book is \\( 2n \\).\n\nAccording to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest possible value of \\( n \\) such that \\( n > 100 \\).\n\nFirst, we rearrange the equation to solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. So, let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so we solve the inequality:\n\\[ 7m + 5 > 100 \\]\nSubtract 5 from both sides:\n\\[ 7m > 95 \\]\nDivide both sides by 7:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we need to establish the relationship between the number of leaves and the number of pages in the book. Let's denote the number of leaves by \\( n \\). Since each leaf consists of two pages, the number of pages in the book is \\( 2n \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest possible value of \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "First, we rearrange the equation to solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. So, let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so we solve the inequality:\n\\[ 7m + 5 > 100 \\]\nSubtract 5 from both sides:\n\\[ 7m > 95 \\]\nDivide both sides by 7:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 421,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we need to express the number of leaves and the number of pages in terms of a variable and then use the given conditions to find the smallest possible number of leaves.\n\nLet \\( n \\) be the number of leaves. Since each piece of paper has 2 pages, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be written as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\).\n\nWe need to find the smallest \\( n \\) such that \\( n > 100 \\). First, we solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. So, let \\( k = 2m + 1 \\) for some integer \\( m \\). Then:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\).\n\nNext, we need to find the smallest \\( n \\) such that \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) is an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the expression for \\( n \\):\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\n\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we need to express the number of leaves and the number of pages in terms of a variable and then use the given conditions to find the smallest possible number of leaves.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "Let \\( n \\) be the number of leaves. Since each piece of paper has 2 pages, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be written as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "We need to find the smallest \\( n \\) such that \\( n > 100 \\). First, we solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. So, let \\( k = 2m + 1 \\) for some integer \\( m \\). Then:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Next, we need to find the smallest \\( n \\) such that \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) is an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the expression for \\( n \\):\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "Therefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 416,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the relationship between the number of leaves and the number of pages. Let \\( n \\) be the number of leaves. Since each leaf consists of two pages, the total number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nFirst, we solve for \\( n \\):\n\\[ 2n = 7k + 3 \\implies n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so:\n\\[ 7m + 5 > 100 \\implies 7m > 95 \\implies m > \\frac{95}{7} \\approx 13.57 \\]\nThe smallest integer \\( m \\) that satisfies this inequality is \\( m = 14 \\). Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the relationship between the number of leaves and the number of pages. Let \\( n \\) be the number of leaves. Since each leaf consists of two pages, the total number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "First, we solve for \\( n \\):\n\\[ 2n = 7k + 3 \\implies n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so:\n\\[ 7m + 5 > 100 \\implies 7m > 95 \\implies m > \\frac{95}{7} \\approx 13.57 \\]\nThe smallest integer \\( m \\) that satisfies this inequality is \\( m = 14 \\). Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 399,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we need to translate the given conditions into mathematical expressions and solve them step-by-step.\n\nFirst, let's define the variables:\n- Let \\( n \\) be the number of leaves.\n- Since each piece of paper has 2 pages, the number of pages is \\( 2n \\).\n\nWe know two things about the number of pages:\n1. The number of pages is 3 more than a multiple of 7. This can be expressed as:\n   \\[\n   2n = 7k + 3\n   \\]\n   for some integer \\( k \\).\n\n2. The number of leaves is greater than 100:\n   \\[\n   n > 100\n   \\]\n\nWe need to find the smallest \\( n \\) that satisfies both conditions. First, we solve for \\( n \\) in terms of \\( k \\):\n\\[\n2n = 7k + 3 \\implies n = \\frac{7k + 3}{2}\n\\]\n\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) will be even if \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k \\) into the equation for \\( n \\):\n\\[\nn = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5\n\\]\n\nNow, we need \\( n \\) to be greater than 100:\n\\[\n7m + 5 > 100 \\implies 7m > 95 \\implies m > \\frac{95}{7} \\approx 13.57\n\\]\n\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) back into the equation for \\( n \\):\n\\[\nn = 7(14) + 5 = 98 + 5 = 103\n\\]\n\nThus, the smallest possible number of leaves is:\n\\[\n\\boxed{103}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "The number of pages is 3 more than a multiple of 7. This can be expressed as:\n   \\[\n   2n = 7k + 3\n   \\]\n   for some integer \\( k \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "The number of leaves is greater than 100:\n   \\[\n   n > 100\n   \\]\n\nWe need to find the smallest \\( n \\) that satisfies both conditions. First, we solve for \\( n \\) in terms of \\( k \\):\n\\[\n2n = 7k + 3 \\implies n = \\frac{7k + 3}{2}\n\\]\n\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) will be even if \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k \\) into the equation for \\( n \\):\n\\[\nn = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5\n\\]\n\nNow, we need \\( n \\) to be greater than 100:\n\\[\n7m + 5 > 100 \\implies 7m > 95 \\implies m > \\frac{95}{7} \\approx 13.57\n\\]\n\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) back into the equation for \\( n \\):\n\\[\nn = 7(14) + 5 = 98 + 5 = 103\n\\]\n\nThus, the smallest possible number of leaves is:\n\\[\n\\boxed{103}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 429,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the relationship between the number of leaves and the number of pages. Let \\( n \\) be the number of leaves. Since each piece of paper has two pages, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nFirst, solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Then:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\):\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the relationship between the number of leaves and the number of pages. Let \\( n \\) be the number of leaves. Since each piece of paper has two pages, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "First, solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Then:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\):\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 377,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves. Since each leaf consists of two pages, the total number of pages in the book is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nFirst, we solve for \\( n \\):\n\\[ 2n = 7k + 3 \\implies n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\implies 7m > 95 \\implies m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves. Since each leaf consists of two pages, the total number of pages in the book is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "First, we solve for \\( n \\):\n\\[ 2n = 7k + 3 \\implies n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\implies 7m > 95 \\implies m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 401,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we need to follow these steps:\n\n1. **Understand the relationship between pages and leaves:**\n   - Each leaf consists of 2 pages (one on each side of the paper).\n   - Therefore, if the number of leaves is \\( n \\), the number of pages is \\( 2n \\).\n\n2. **Formulate the given conditions:**\n   - The number of pages is 3 more than a multiple of 7.\n   - The number of leaves is greater than 100.\n\n3. **Express the number of pages mathematically:**\n   - Let \\( p \\) be the number of pages.\n   - According to the problem, \\( p = 7k + 3 \\) for some integer \\( k \\).\n\n4. **Relate the number of pages to the number of leaves:**\n   - Since \\( p = 2n \\), we can substitute \\( p \\) in the equation:\n     \\[\n     2n = 7k + 3\n     \\]\n   - Solving for \\( n \\):\n     \\[\n     n = \\frac{7k + 3}{2}\n     \\]\n\n5. **Ensure \\( n \\) is an integer:**\n   - For \\( n \\) to be an integer, \\( 7k + 3 \\) must be even.\n   - Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even.\n   - Adding 3 (which is odd) to an odd number results in an even number.\n   - Therefore, \\( k \\) must be odd.\n\n6. **Find the smallest \\( k \\) such that \\( n > 100 \\):**\n   - Start with the smallest odd \\( k \\) and check if \\( n > 100 \\):\n     \\[\n     k = 1: \\quad n = \\frac{7(1) + 3}{2} = \\frac{10}{2} = 5 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 3: \\quad n = \\frac{7(3) + 3}{2} = \\frac{24}{2} = 12 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 5: \\quad n = \\frac{7(5) + 3}{2} = \\frac{38}{2} = 19 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 7: \\quad n = \\frac{7(7) + 3}{2} = \\frac{52}{2} = 26 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 9: \\quad n = \\frac{7(9) + 3}{2} = \\frac{66}{2} = 33 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 11: \\quad n = \\frac{7(11) + 3}{2} = \\frac{80}{2} = 40 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 13: \\quad n = \\frac{7(13) + 3}{2} = \\frac{94}{2} = 47 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 15: \\quad n = \\frac{7(15) + 3}{2} = \\frac{108}{2} = 54 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 17: \\quad n = \\frac{7(17) + 3}{2} = \\frac{122}{2} = 61 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 19: \\quad n = \\frac{7(19) + 3}{2} = \\frac{136}{2} = 68 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 21: \\quad n = \\frac{7(21) + 3}{2} = \\frac{150}{2} = 75 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 23: \\quad n = \\frac{7(23) + 3}{2} = \\frac{164}{2} = 82 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 25: \\quad n = \\frac{7(25) + 3}{2} = \\frac{178}{2} = 89 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 27: \\quad n = \\frac{7(27) + 3}{2} = \\frac{192}{2} = 96 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 29: \\quad n = \\frac{7(29) + 3}{2} = \\frac{208}{2} = 104 \\quad (\\text{greater than 100})\n     \\]\n\nTherefore, the smallest possible number of leaves is \\(\\boxed{104}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Understand the relationship between pages and leaves:**\n   - Each leaf consists of 2 pages (one on each side of the paper).\n   - Therefore, if the number of leaves is \\( n \\), the number of pages is \\( 2n \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Formulate the given conditions:**\n   - The number of pages is 3 more than a multiple of 7.\n   - The number of leaves is greater than 100.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Express the number of pages mathematically:**\n   - Let \\( p \\) be the number of pages.\n   - According to the problem, \\( p = 7k + 3 \\) for some integer \\( k \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Relate the number of pages to the number of leaves:**\n   - Since \\( p = 2n \\), we can substitute \\( p \\) in the equation:\n     \\[\n     2n = 7k + 3\n     \\]\n   - Solving for \\( n \\):\n     \\[\n     n = \\frac{7k + 3}{2}\n     \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "**Ensure \\( n \\) is an integer:**\n   - For \\( n \\) to be an integer, \\( 7k + 3 \\) must be even.\n   - Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even.\n   - Adding 3 (which is odd) to an odd number results in an even number.\n   - Therefore, \\( k \\) must be odd.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "**Find the smallest \\( k \\) such that \\( n > 100 \\):**\n   - Start with the smallest odd \\( k \\) and check if \\( n > 100 \\):\n     \\[\n     k = 1: \\quad n = \\frac{7(1) + 3}{2} = \\frac{10}{2} = 5 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 3: \\quad n = \\frac{7(3) + 3}{2} = \\frac{24}{2} = 12 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 5: \\quad n = \\frac{7(5) + 3}{2} = \\frac{38}{2} = 19 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 7: \\quad n = \\frac{7(7) + 3}{2} = \\frac{52}{2} = 26 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 9: \\quad n = \\frac{7(9) + 3}{2} = \\frac{66}{2} = 33 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 11: \\quad n = \\frac{7(11) + 3}{2} = \\frac{80}{2} = 40 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 13: \\quad n = \\frac{7(13) + 3}{2} = \\frac{94}{2} = 47 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 15: \\quad n = \\frac{7(15) + 3}{2} = \\frac{108}{2} = 54 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 17: \\quad n = \\frac{7(17) + 3}{2} = \\frac{122}{2} = 61 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 19: \\quad n = \\frac{7(19) + 3}{2} = \\frac{136}{2} = 68 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 21: \\quad n = \\frac{7(21) + 3}{2} = \\frac{150}{2} = 75 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 23: \\quad n = \\frac{7(23) + 3}{2} = \\frac{164}{2} = 82 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 25: \\quad n = \\frac{7(25) + 3}{2} = \\frac{178}{2} = 89 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 27: \\quad n = \\frac{7(27) + 3}{2} = \\frac{192}{2} = 96 \\quad (\\text{not greater than 100})\n     \\]\n     \\[\n     k = 29: \\quad n = \\frac{7(29) + 3}{2} = \\frac{208}{2} = 104 \\quad (\\text{greater than 100})\n     \\]\n\nTherefore, the smallest possible number of leaves is \\(\\boxed{104}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "104",
+      "is_correct": false,
+      "num_tokens": 671,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we need to follow these steps:\n\n1. **Understand the relationship between pages and leaves:**\n   - Each leaf consists of 2 pages (one on each side of the paper).\n   - Therefore, if the number of leaves is \\( n \\), the number of pages is \\( 2n \\).\n\n2. **Set up the given condition:**\n   - The number of pages is 3 more than a multiple of 7.\n   - Mathematically, this can be expressed as:\n     \\[\n     2n = 7k + 3\n     \\]\n     where \\( k \\) is an integer.\n\n3. **Solve for \\( n \\):**\n   - Rearrange the equation to solve for \\( n \\):\n     \\[\n     2n = 7k + 3 \\implies n = \\frac{7k + 3}{2}\n     \\]\n   - For \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Adding 3 (an odd number) to an even number results in an odd number, which cannot be divided by 2 to yield an integer. Therefore, \\( k \\) must be odd.\n\n4. **Find the smallest odd \\( k \\) such that \\( n > 100 \\):**\n   - Let \\( k = 2m + 1 \\) where \\( m \\) is an integer. Substitute \\( k \\) into the equation:\n     \\[\n     n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5\n     \\]\n   - We need \\( n > 100 \\):\n     \\[\n     7m + 5 > 100 \\implies 7m > 95 \\implies m > \\frac{95}{7} \\approx 13.57\n     \\]\n   - The smallest integer \\( m \\) greater than 13.57 is 14.\n\n5. **Calculate \\( n \\) for \\( m = 14 \\):**\n   - Substitute \\( m = 14 \\) back into the equation for \\( n \\):\n     \\[\n     n = 7 \\cdot 14 + 5 = 98 + 5 = 103\n     \\]\n\n6. **Verify the solution:**\n   - Check if \\( n = 103 \\) satisfies the original condition:\n     \\[\n     2n = 2 \\cdot 103 = 206\n     \\]\n     \\[\n     206 = 7 \\cdot 29 + 3\n     \\]\n     This confirms that 206 is indeed 3 more than a multiple of 7.\n\nTherefore, the smallest possible number of leaves is \\(\\boxed{103}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Understand the relationship between pages and leaves:**\n   - Each leaf consists of 2 pages (one on each side of the paper).\n   - Therefore, if the number of leaves is \\( n \\), the number of pages is \\( 2n \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Set up the given condition:**\n   - The number of pages is 3 more than a multiple of 7.\n   - Mathematically, this can be expressed as:\n     \\[\n     2n = 7k + 3\n     \\]\n     where \\( k \\) is an integer.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Solve for \\( n \\):**\n   - Rearrange the equation to solve for \\( n \\):\n     \\[\n     2n = 7k + 3 \\implies n = \\frac{7k + 3}{2}\n     \\]\n   - For \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Adding 3 (an odd number) to an even number results in an odd number, which cannot be divided by 2 to yield an integer. Therefore, \\( k \\) must be odd.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Find the smallest odd \\( k \\) such that \\( n > 100 \\):**\n   - Let \\( k = 2m + 1 \\) where \\( m \\) is an integer. Substitute \\( k \\) into the equation:\n     \\[\n     n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5\n     \\]\n   - We need \\( n > 100 \\):\n     \\[\n     7m + 5 > 100 \\implies 7m > 95 \\implies m > \\frac{95}{7} \\approx 13.57\n     \\]\n   - The smallest integer \\( m \\) greater than 13.57 is 14.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "**Calculate \\( n \\) for \\( m = 14 \\):**\n   - Substitute \\( m = 14 \\) back into the equation for \\( n \\):\n     \\[\n     n = 7 \\cdot 14 + 5 = 98 + 5 = 103\n     \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "**Verify the solution:**\n   - Check if \\( n = 103 \\) satisfies the original condition:\n     \\[\n     2n = 2 \\cdot 103 = 206\n     \\]\n     \\[\n     206 = 7 \\cdot 29 + 3\n     \\]\n     This confirms that 206 is indeed 3 more than a multiple of 7.\n\nTherefore, the smallest possible number of leaves is \\(\\boxed{103}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 486,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we need to express the number of pages and leaves in terms of the given conditions and find the smallest possible number of leaves that satisfies both conditions.\n\nFirst, let's define the variables:\n- Let \\( n \\) be the number of leaves.\n- Since each leaf has 2 pages, the number of pages is \\( 2n \\).\n\nWe are given two conditions:\n1. The number of pages is 3 more than a multiple of 7.\n2. The number of leaves is greater than 100.\n\nFrom the first condition, we can write:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). This equation tells us that \\( 2n - 3 \\) must be divisible by 7. Therefore, we can express \\( n \\) in the form:\n\\[ n = \\frac{7k + 3}{2} \\]\nThis means \\( 7k + 3 \\) must be even, which implies that \\( 7k \\) must be odd (since 3 is odd, and the sum of an odd number and an odd number is even). Therefore, \\( k \\) must be odd. We can write \\( k \\) as \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation for \\( n \\), we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\n\nSo, \\( n \\) can be written as:\n\\[ n = 7m + 5 \\]\nWe are also given that \\( n > 100 \\). Therefore, we need to find the smallest integer \\( m \\) such that:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\n\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "The number of pages is 3 more than a multiple of 7.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "The number of leaves is greater than 100.\n\nFrom the first condition, we can write:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). This equation tells us that \\( 2n - 3 \\) must be divisible by 7. Therefore, we can express \\( n \\) in the form:\n\\[ n = \\frac{7k + 3}{2} \\]\nThis means \\( 7k + 3 \\) must be even, which implies that \\( 7k \\) must be odd (since 3 is odd, and the sum of an odd number and an odd number is even). Therefore, \\( k \\) must be odd. We can write \\( k \\) as \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation for \\( n \\), we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\n\nSo, \\( n \\) can be written as:\n\\[ n = 7m + 5 \\]\nWe are also given that \\( n > 100 \\). Therefore, we need to find the smallest integer \\( m \\) such that:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\n\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 465,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the relationship between the number of pages and the number of leaves. Given that each leaf corresponds to 2 pages (one on each side of the paper), if the book has \\( n \\) leaves, then it has \\( 2n \\) pages. According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). Rearranging this equation, we get:\n\\[ 2n - 3 = 7k \\]\nor equivalently,\n\\[ 2n \\equiv 3 \\pmod{7} \\]\n\nNext, we need to find the smallest positive integer \\( n \\) such that \\( 2n \\equiv 3 \\pmod{7} \\). To do this, we need the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[ 2x \\equiv 1 \\pmod{7} \\]\nBy testing values, we find that:\n\\[ 2 \\times 4 = 8 \\equiv 1 \\pmod{7} \\]\nSo, the inverse of 2 modulo 7 is 4. Multiplying both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4, we get:\n\\[ n \\equiv 3 \\times 4 \\pmod{7} \\]\n\\[ n \\equiv 12 \\pmod{7} \\]\n\\[ n \\equiv 5 \\pmod{7} \\]\nThis means that \\( n \\) can be written in the form:\n\\[ n = 7m + 5 \\]\nfor some integer \\( m \\). We are also given that the number of leaves is greater than 100, so:\n\\[ n > 100 \\]\nSubstituting \\( n = 7m + 5 \\) into the inequality, we get:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\]\n\\[ m > 13.5714 \\]\nThe smallest integer \\( m \\) that satisfies this inequality is 14. Therefore, substituting \\( m = 14 \\) into the expression for \\( n \\), we get:\n\\[ n = 7 \\times 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the relationship between the number of pages and the number of leaves. Given that each leaf corresponds to 2 pages (one on each side of the paper), if the book has \\( n \\) leaves, then it has \\( 2n \\) pages. According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). Rearranging this equation, we get:\n\\[ 2n - 3 = 7k \\]\nor equivalently,\n\\[ 2n \\equiv 3 \\pmod{7} \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "Next, we need to find the smallest positive integer \\( n \\) such that \\( 2n \\equiv 3 \\pmod{7} \\). To do this, we need the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[ 2x \\equiv 1 \\pmod{7} \\]\nBy testing values, we find that:\n\\[ 2 \\times 4 = 8 \\equiv 1 \\pmod{7} \\]\nSo, the inverse of 2 modulo 7 is 4. Multiplying both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4, we get:\n\\[ n \\equiv 3 \\times 4 \\pmod{7} \\]\n\\[ n \\equiv 12 \\pmod{7} \\]\n\\[ n \\equiv 5 \\pmod{7} \\]\nThis means that \\( n \\) can be written in the form:\n\\[ n = 7m + 5 \\]\nfor some integer \\( m \\). We are also given that the number of leaves is greater than 100, so:\n\\[ n > 100 \\]\nSubstituting \\( n = 7m + 5 \\) into the inequality, we get:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\]\n\\[ m > 13.5714 \\]\nThe smallest integer \\( m \\) that satisfies this inequality is 14. Therefore, substituting \\( m = 14 \\) into the expression for \\( n \\), we get:\n\\[ n = 7 \\times 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 452,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we start by defining the variables and relationships given:\n\n- Let \\( n \\) be the number of leaves.\n- Each piece of paper has 2 pages, so the number of pages is \\( 2n \\).\n- We are given that the number of pages is 3 more than a multiple of 7, which can be expressed as:\n  \\[\n  2n \\equiv 3 \\pmod{7}\n  \\]\n- We also know that the number of leaves \\( n \\) is greater than 100.\n\nFirst, we need to solve the congruence \\( 2n \\equiv 3 \\pmod{7} \\). To do this, we find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[\n2x \\equiv 1 \\pmod{7}\n\\]\n\nWe test values to find \\( x \\):\n\\[\n2 \\times 1 = 2 \\not\\equiv 1 \\pmod{7}\n\\]\n\\[\n2 \\times 2 = 4 \\not\\equiv 1 \\pmod{7}\n\\]\n\\[\n2 \\times 3 = 6 \\not\\equiv 1 \\pmod{7}\n\\]\n\\[\n2 \\times 4 = 8 \\equiv 1 \\pmod{7}\n\\]\n\nThus, the multiplicative inverse of 2 modulo 7 is 4. We multiply both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4:\n\\[\n4 \\cdot 2n \\equiv 4 \\cdot 3 \\pmod{7}\n\\]\n\\[\n8n \\equiv 12 \\pmod{7}\n\\]\nSince \\( 8 \\equiv 1 \\pmod{7} \\), we simplify:\n\\[\nn \\equiv 12 \\pmod{7}\n\\]\n\\[\n12 \\equiv 5 \\pmod{7}\n\\]\n\nTherefore, the solution to the congruence is:\n\\[\nn \\equiv 5 \\pmod{7}\n\\]\n\nThis means \\( n \\) can be written in the form:\n\\[\nn = 7k + 5\n\\]\nfor some integer \\( k \\).\n\nWe are given that \\( n > 100 \\). We substitute \\( n = 7k + 5 \\) into this inequality:\n\\[\n7k + 5 > 100\n\\]\nSubtract 5 from both sides:\n\\[\n7k > 95\n\\]\nDivide by 7:\n\\[\nk > \\frac{95}{7}\n\\]\n\\[\nk > 13.5714\n\\]\n\nSince \\( k \\) must be an integer, the smallest integer greater than 13.5714 is 14. Therefore, we set \\( k = 14 \\):\n\\[\nn = 7 \\cdot 14 + 5 = 98 + 5 = 103\n\\]\n\nThus, the smallest possible number of leaves is:\n\\[\n\\boxed{103}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we start by defining the variables and relationships given:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "- Let \\( n \\) be the number of leaves.\n- Each piece of paper has 2 pages, so the number of pages is \\( 2n \\).\n- We are given that the number of pages is 3 more than a multiple of 7, which can be expressed as:\n  \\[\n  2n \\equiv 3 \\pmod{7}\n  \\]\n- We also know that the number of leaves \\( n \\) is greater than 100.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "First, we need to solve the congruence \\( 2n \\equiv 3 \\pmod{7} \\). To do this, we find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[\n2x \\equiv 1 \\pmod{7}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "We test values to find \\( x \\):\n\\[\n2 \\times 1 = 2 \\not\\equiv 1 \\pmod{7}\n\\]\n\\[\n2 \\times 2 = 4 \\not\\equiv 1 \\pmod{7}\n\\]\n\\[\n2 \\times 3 = 6 \\not\\equiv 1 \\pmod{7}\n\\]\n\\[\n2 \\times 4 = 8 \\equiv 1 \\pmod{7}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "Thus, the multiplicative inverse of 2 modulo 7 is 4. We multiply both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4:\n\\[\n4 \\cdot 2n \\equiv 4 \\cdot 3 \\pmod{7}\n\\]\n\\[\n8n \\equiv 12 \\pmod{7}\n\\]\nSince \\( 8 \\equiv 1 \\pmod{7} \\), we simplify:\n\\[\nn \\equiv 12 \\pmod{7}\n\\]\n\\[\n12 \\equiv 5 \\pmod{7}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "Therefore, the solution to the congruence is:\n\\[\nn \\equiv 5 \\pmod{7}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "This means \\( n \\) can be written in the form:\n\\[\nn = 7k + 5\n\\]\nfor some integer \\( k \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "We are given that \\( n > 100 \\). We substitute \\( n = 7k + 5 \\) into this inequality:\n\\[\n7k + 5 > 100\n\\]\nSubtract 5 from both sides:\n\\[\n7k > 95\n\\]\nDivide by 7:\n\\[\nk > \\frac{95}{7}\n\\]\n\\[\nk > 13.5714\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "Since \\( k \\) must be an integer, the smallest integer greater than 13.5714 is 14. Therefore, we set \\( k = 14 \\):\n\\[\nn = 7 \\cdot 14 + 5 = 98 + 5 = 103\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "Thus, the smallest possible number of leaves is:\n\\[\n\\boxed{103}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 471,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves. Since each piece of paper has 2 pages, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nFirst, we solve for \\( n \\):\n\\[ 2n = 7k + 3 \\]\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even when \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n = 7m + 5 \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves. Since each piece of paper has 2 pages, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "First, we solve for \\( n \\):\n\\[ 2n = 7k + 3 \\]\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even when \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n = 7m + 5 \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 418,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages. Given that each leaf corresponds to 2 pages, let's denote the number of leaves by \\( n \\). Therefore, the number of pages is \\( 2n \\).\n\nAccording to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nFirst, solve for \\( n \\):\n\\[ 2n = 7k + 3 \\]\n\\[ n = \\frac{7k + 3}{2} \\]\n\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) will be odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) will be even if \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} \\]\n\\[ n = \\frac{14m + 7 + 3}{2} \\]\n\\[ n = \\frac{14m + 10}{2} \\]\n\\[ n = 7m + 5 \\]\n\nWe need \\( n \\) to be greater than 100:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\]\n\\[ m > 13.5714 \\]\n\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substitute \\( m = 14 \\) back into the equation for \\( n \\):\n\\[ n = 7(14) + 5 \\]\n\\[ n = 98 + 5 \\]\n\\[ n = 103 \\]\n\nThus, the smallest possible number of leaves is:\n\\[\n\\boxed{103}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages. Given that each leaf corresponds to 2 pages, let's denote the number of leaves by \\( n \\). Therefore, the number of pages is \\( 2n \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "First, solve for \\( n \\):\n\\[ 2n = 7k + 3 \\]\n\\[ n = \\frac{7k + 3}{2} \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "For \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) will be odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) will be even if \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} \\]\n\\[ n = \\frac{14m + 7 + 3}{2} \\]\n\\[ n = \\frac{14m + 10}{2} \\]\n\\[ n = 7m + 5 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "We need \\( n \\) to be greater than 100:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\]\n\\[ m > 13.5714 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "Since \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substitute \\( m = 14 \\) back into the equation for \\( n \\):\n\\[ n = 7(14) + 5 \\]\n\\[ n = 98 + 5 \\]\n\\[ n = 103 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "Thus, the smallest possible number of leaves is:\n\\[\n\\boxed{103}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 415,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages, and then use the given conditions to find the smallest possible number of leaves.\n\nFirst, let's denote the number of leaves by \\( n \\). Since each leaf consists of 2 pages, the total number of pages in the book is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). Rearranging this equation, we get:\n\\[ 2n - 3 = 7k \\]\nor equivalently,\n\\[ 2n \\equiv 3 \\pmod{7} \\]\n\nTo solve for \\( n \\), we need to find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[ 2x \\equiv 1 \\pmod{7} \\]\nBy testing values, we find that \\( x = 4 \\) works because:\n\\[ 2 \\cdot 4 = 8 \\equiv 1 \\pmod{7} \\]\nThus, the inverse of 2 modulo 7 is 4. Multiplying both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4, we get:\n\\[ n \\equiv 3 \\cdot 4 \\pmod{7} \\]\n\\[ n \\equiv 12 \\pmod{7} \\]\n\\[ n \\equiv 5 \\pmod{7} \\]\nThis means that \\( n \\) can be written in the form:\n\\[ n = 7m + 5 \\]\nfor some integer \\( m \\). We are also given that the number of leaves is greater than 100, so:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.571 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation \\( n = 7m + 5 \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages, and then use the given conditions to find the smallest possible number of leaves.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "First, let's denote the number of leaves by \\( n \\). Since each leaf consists of 2 pages, the total number of pages in the book is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). Rearranging this equation, we get:\n\\[ 2n - 3 = 7k \\]\nor equivalently,\n\\[ 2n \\equiv 3 \\pmod{7} \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "To solve for \\( n \\), we need to find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[ 2x \\equiv 1 \\pmod{7} \\]\nBy testing values, we find that \\( x = 4 \\) works because:\n\\[ 2 \\cdot 4 = 8 \\equiv 1 \\pmod{7} \\]\nThus, the inverse of 2 modulo 7 is 4. Multiplying both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4, we get:\n\\[ n \\equiv 3 \\cdot 4 \\pmod{7} \\]\n\\[ n \\equiv 12 \\pmod{7} \\]\n\\[ n \\equiv 5 \\pmod{7} \\]\nThis means that \\( n \\) can be written in the form:\n\\[ n = 7m + 5 \\]\nfor some integer \\( m \\). We are also given that the number of leaves is greater than 100, so:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.571 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation \\( n = 7m + 5 \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 452,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves, which means the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\).\n\nWe need to find the smallest \\( n \\) such that \\( n > 100 \\). First, we solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even when \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\). We need the smallest \\( n \\) such that \\( n > 100 \\). Therefore, we solve the inequality:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the expression for \\( n \\), we get:\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves, which means the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We need to find the smallest \\( n \\) such that \\( n > 100 \\). First, we solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even when \\( k \\) is odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\). We need the smallest \\( n \\) such that \\( n > 100 \\). Therefore, we solve the inequality:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the expression for \\( n \\), we get:\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 412,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the relationship between the number of leaves and the number of pages. Let \\( n \\) be the number of leaves. Since each leaf consists of two pages, the total number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. Therefore, we can express this relationship mathematically as:\n\n\\[ 2n = 7k + 3 \\]\n\nfor some integer \\( k \\). This equation can be rearranged to solve for \\( n \\):\n\n\\[ n = \\frac{7k + 3}{2} \\]\n\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) will be odd if \\( k \\) is odd and even if \\( k \\) is even. Adding 3 (an odd number) to an even number results in an odd number, and adding 3 to an odd number results in an even number. Therefore, \\( k \\) must be odd. We can write \\( k \\) as \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\n\nThus, \\( n \\) must be of the form \\( 7m + 5 \\). We are also given that the number of leaves is greater than 100. Therefore, we need to find the smallest integer \\( m \\) such that:\n\n\\[ 7m + 5 > 100 \\]\n\nSubtracting 5 from both sides, we get:\n\n\\[ 7m > 95 \\]\n\nDividing both sides by 7, we get:\n\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\n\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\n\nTherefore, the smallest possible number of leaves is:\n\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the relationship between the number of leaves and the number of pages. Let \\( n \\) be the number of leaves. Since each leaf consists of two pages, the total number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. Therefore, we can express this relationship mathematically as:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "\\[ 2n = 7k + 3 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "for some integer \\( k \\). This equation can be rearranged to solve for \\( n \\):",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "\\[ n = \\frac{7k + 3}{2} \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "For \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) will be odd if \\( k \\) is odd and even if \\( k \\) is even. Adding 3 (an odd number) to an even number results in an odd number, and adding 3 to an odd number results in an even number. Therefore, \\( k \\) must be odd. We can write \\( k \\) as \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "Thus, \\( n \\) must be of the form \\( 7m + 5 \\). We are also given that the number of leaves is greater than 100. Therefore, we need to find the smallest integer \\( m \\) such that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "\\[ 7m + 5 > 100 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "Subtracting 5 from both sides, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "\\[ 7m > 95 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "Dividing both sides by 7, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "\\[ m > \\frac{95}{7} \\approx 13.57 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "Since \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "Therefore, the smallest possible number of leaves is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 459,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves. Since each leaf consists of 2 pages, the total number of pages in the book is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nFirst, we rearrange the equation to solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. So, let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so we set up the inequality:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves. Since each leaf consists of 2 pages, the total number of pages in the book is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "First, we rearrange the equation to solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. So, let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so we set up the inequality:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 414,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages in the book. Let's denote the number of leaves by \\( n \\). Since each leaf consists of 2 pages (one on each side), the total number of pages is \\( 2n \\).\n\nAccording to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nFirst, let's solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. Let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Then:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\). We need the smallest \\( n \\) such that \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the expression for \\( n \\):\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages in the book. Let's denote the number of leaves by \\( n \\). Since each leaf consists of 2 pages (one on each side), the total number of pages is \\( 2n \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "First, let's solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. Let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Then:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\). We need the smallest \\( n \\) such that \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the expression for \\( n \\):\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 401,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages in the book. Let's denote the number of leaves by \\( n \\). According to the problem, the number of pages is twice the number of leaves, so the number of pages is \\( 2n \\).\n\nWe are given two conditions:\n1. The number of pages is 3 more than a multiple of 7.\n2. The number of leaves is greater than 100.\n\nFrom the first condition, we can express the number of pages as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). This equation tells us that when \\( 2n \\) is divided by 7, the remainder is 3. We can rearrange this equation to solve for \\( n \\):\n\\[ 2n \\equiv 3 \\pmod{7} \\]\n\nTo isolate \\( n \\), we need to find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[ 2x \\equiv 1 \\pmod{7} \\]\n\nBy testing values, we find that \\( x = 4 \\) works because:\n\\[ 2 \\cdot 4 = 8 \\equiv 1 \\pmod{7} \\]\n\nSo, we multiply both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4:\n\\[ n \\equiv 3 \\cdot 4 \\pmod{7} \\]\n\\[ n \\equiv 12 \\pmod{7} \\]\n\\[ n \\equiv 5 \\pmod{7} \\]\n\nThis means that \\( n \\) can be written in the form:\n\\[ n = 7m + 5 \\]\nfor some integer \\( m \\). We also know that \\( n > 100 \\). Therefore, we need to find the smallest integer \\( m \\) such that:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\n\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\n\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "The number of pages is 3 more than a multiple of 7.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "The number of leaves is greater than 100.\n\nFrom the first condition, we can express the number of pages as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). This equation tells us that when \\( 2n \\) is divided by 7, the remainder is 3. We can rearrange this equation to solve for \\( n \\):\n\\[ 2n \\equiv 3 \\pmod{7} \\]\n\nTo isolate \\( n \\), we need to find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[ 2x \\equiv 1 \\pmod{7} \\]\n\nBy testing values, we find that \\( x = 4 \\) works because:\n\\[ 2 \\cdot 4 = 8 \\equiv 1 \\pmod{7} \\]\n\nSo, we multiply both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4:\n\\[ n \\equiv 3 \\cdot 4 \\pmod{7} \\]\n\\[ n \\equiv 12 \\pmod{7} \\]\n\\[ n \\equiv 5 \\pmod{7} \\]\n\nThis means that \\( n \\) can be written in the form:\n\\[ n = 7m + 5 \\]\nfor some integer \\( m \\). We also know that \\( n > 100 \\). Therefore, we need to find the smallest integer \\( m \\) such that:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\n\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\n\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 456,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of pages and the number of leaves in the book. Given that the number of pages is twice the number of leaves, let's denote the number of leaves by \\( n \\). Therefore, the number of pages is \\( 2n \\).\n\nWe know that the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We also know that the number of leaves \\( n \\) is greater than 100. Our goal is to find the smallest possible value of \\( n \\) that satisfies both conditions.\n\nFirst, we rearrange the equation to solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Adding 3 (which is odd) to an even number results in an odd number, and adding 3 to an odd number results in an even number. Therefore, \\( k \\) must be odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\). We need the smallest \\( n \\) such that \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of pages and the number of leaves in the book. Given that the number of pages is twice the number of leaves, let's denote the number of leaves by \\( n \\). Therefore, the number of pages is \\( 2n \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We know that the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We also know that the number of leaves \\( n \\) is greater than 100. Our goal is to find the smallest possible value of \\( n \\) that satisfies both conditions.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "First, we rearrange the equation to solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Adding 3 (which is odd) to an even number results in an odd number, and adding 3 to an odd number results in an even number. Therefore, \\( k \\) must be odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\). We need the smallest \\( n \\) such that \\( n > 100 \\):\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 459,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages, and then use the given conditions to find the smallest possible number of leaves.\n\nFirst, let's denote the number of leaves by \\( n \\). Since each piece of paper has 2 pages, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nRearranging the equation, we get:\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. So, let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages, and then use the given conditions to find the smallest possible number of leaves.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "First, let's denote the number of leaves by \\( n \\). Since each piece of paper has 2 pages, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "Rearranging the equation, we get:\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. So, let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 422,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves in the book. Since each piece of paper has two sides, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nFirst, we solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. So, let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so we set up the inequality:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves in the book. Since each piece of paper has two sides, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "First, we solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) is even if \\( k \\) is odd. So, let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so we set up the inequality:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 409,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve the problem, we need to determine the smallest number of leaves \\( n \\) such that the number of pages \\( 2n \\) satisfies two conditions:\n1. \\( 2n = 7k + 3 \\) for some integer \\( k \\).\n2. \\( n > 100 \\).\n\nFirst, let's express the condition \\( 2n = 7k + 3 \\) in terms of \\( n \\). We can rewrite this equation as:\n\\[ 2n \\equiv 3 \\pmod{7}. \\]\nTo isolate \\( n \\), we need the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[ 2x \\equiv 1 \\pmod{7}. \\]\nBy testing values, we find that \\( x = 4 \\) works because:\n\\[ 2 \\cdot 4 = 8 \\equiv 1 \\pmod{7}. \\]\nThus, we multiply both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4:\n\\[ n \\equiv 3 \\cdot 4 \\pmod{7}, \\]\n\\[ n \\equiv 12 \\pmod{7}, \\]\n\\[ n \\equiv 5 \\pmod{7}. \\]\nThis means that \\( n \\) can be written in the form:\n\\[ n = 7m + 5 \\]\nfor some integer \\( m \\). We also know that \\( n > 100 \\). Therefore, we need to find the smallest integer \\( m \\) such that:\n\\[ 7m + 5 > 100. \\]\nSolving for \\( m \\):\n\\[ 7m > 95, \\]\n\\[ m > \\frac{95}{7}, \\]\n\\[ m > 13.5714. \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the expression for \\( n \\):\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103. \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103}. \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "\\( 2n = 7k + 3 \\) for some integer \\( k \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "\\( n > 100 \\).\n\nFirst, let's express the condition \\( 2n = 7k + 3 \\) in terms of \\( n \\). We can rewrite this equation as:\n\\[ 2n \\equiv 3 \\pmod{7}. \\]\nTo isolate \\( n \\), we need the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[ 2x \\equiv 1 \\pmod{7}. \\]\nBy testing values, we find that \\( x = 4 \\) works because:\n\\[ 2 \\cdot 4 = 8 \\equiv 1 \\pmod{7}. \\]\nThus, we multiply both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4:\n\\[ n \\equiv 3 \\cdot 4 \\pmod{7}, \\]\n\\[ n \\equiv 12 \\pmod{7}, \\]\n\\[ n \\equiv 5 \\pmod{7}. \\]\nThis means that \\( n \\) can be written in the form:\n\\[ n = 7m + 5 \\]\nfor some integer \\( m \\). We also know that \\( n > 100 \\). Therefore, we need to find the smallest integer \\( m \\) such that:\n\\[ 7m + 5 > 100. \\]\nSolving for \\( m \\):\n\\[ 7m > 95, \\]\n\\[ m > \\frac{95}{7}, \\]\n\\[ m > 13.5714. \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the expression for \\( n \\):\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103. \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103}. \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 396,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves, and let \\( p \\) be the number of pages. According to the problem, each piece of paper has 2 pages, so the number of pages \\( p \\) is twice the number of leaves \\( n \\). Therefore, we have:\n\n\\[ p = 2n \\]\n\nWe are also given that the number of pages is 3 more than a multiple of 7. This can be expressed as:\n\n\\[ p \\equiv 3 \\pmod{7} \\]\n\nSubstituting \\( p = 2n \\) into the congruence, we get:\n\n\\[ 2n \\equiv 3 \\pmod{7} \\]\n\nTo solve for \\( n \\), we need to find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\n\\[ 2x \\equiv 1 \\pmod{7} \\]\n\nBy testing values, we find that \\( x = 4 \\) works because:\n\n\\[ 2 \\cdot 4 = 8 \\equiv 1 \\pmod{7} \\]\n\nThus, the inverse of 2 modulo 7 is 4. Multiplying both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4, we get:\n\n\\[ n \\equiv 3 \\cdot 4 \\pmod{7} \\]\n\\[ n \\equiv 12 \\pmod{7} \\]\n\\[ n \\equiv 5 \\pmod{7} \\]\n\nThis means that \\( n \\) can be written in the form:\n\n\\[ n = 7k + 5 \\]\n\nfor some integer \\( k \\). We are also given that the number of leaves is greater than 100. Therefore, we need to find the smallest integer \\( k \\) such that:\n\n\\[ 7k + 5 > 100 \\]\n\\[ 7k > 95 \\]\n\\[ k > \\frac{95}{7} \\]\n\\[ k > 13.5714 \\]\n\nSince \\( k \\) must be an integer, the smallest possible value for \\( k \\) is 14. Substituting \\( k = 14 \\) into the equation \\( n = 7k + 5 \\), we get:\n\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\n\nTherefore, the smallest possible number of leaves is:\n\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the variables and relationships given in the problem. Let \\( n \\) be the number of leaves, and let \\( p \\) be the number of pages. According to the problem, each piece of paper has 2 pages, so the number of pages \\( p \\) is twice the number of leaves \\( n \\). Therefore, we have:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "\\[ p = 2n \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "We are also given that the number of pages is 3 more than a multiple of 7. This can be expressed as:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "\\[ p \\equiv 3 \\pmod{7} \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "Substituting \\( p = 2n \\) into the congruence, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "\\[ 2n \\equiv 3 \\pmod{7} \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "To solve for \\( n \\), we need to find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "\\[ 2x \\equiv 1 \\pmod{7} \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "By testing values, we find that \\( x = 4 \\) works because:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "\\[ 2 \\cdot 4 = 8 \\equiv 1 \\pmod{7} \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "Thus, the inverse of 2 modulo 7 is 4. Multiplying both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "\\[ n \\equiv 3 \\cdot 4 \\pmod{7} \\]\n\\[ n \\equiv 12 \\pmod{7} \\]\n\\[ n \\equiv 5 \\pmod{7} \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "This means that \\( n \\) can be written in the form:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "\\[ n = 7k + 5 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "for some integer \\( k \\). We are also given that the number of leaves is greater than 100. Therefore, we need to find the smallest integer \\( k \\) such that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "\\[ 7k + 5 > 100 \\]\n\\[ 7k > 95 \\]\n\\[ k > \\frac{95}{7} \\]\n\\[ k > 13.5714 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 17,
+          "text": "Since \\( k \\) must be an integer, the smallest possible value for \\( k \\) is 14. Substituting \\( k = 14 \\) into the equation \\( n = 7k + 5 \\), we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 18,
+          "text": "\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 19,
+          "text": "Therefore, the smallest possible number of leaves is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 20,
+          "text": "\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 457,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages in the book. Let's denote the number of leaves by \\( n \\). Since each leaf consists of two pages (one on each side of the paper), the number of pages is \\( 2n \\).\n\nWe are given that the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We can rearrange this equation to solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) will be even if \\( k \\) is odd. So, let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\). We are also given that the number of leaves is greater than 100, so we need to find the smallest \\( m \\) such that:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages in the book. Let's denote the number of leaves by \\( n \\). Since each leaf consists of two pages (one on each side of the paper), the number of pages is \\( 2n \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We are given that the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We can rearrange this equation to solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) will be even if \\( k \\) is odd. So, let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nSo, \\( n \\) must be of the form \\( 7m + 5 \\). We are also given that the number of leaves is greater than 100, so we need to find the smallest \\( m \\) such that:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nTherefore, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 438,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages, and then use the given conditions to find the smallest possible number of leaves.\n\nFirst, let's denote the number of leaves by \\( n \\). Since each piece of paper has 2 pages, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nRewriting the equation for \\( n \\), we get:\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) will be even if \\( k \\) is odd. Let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Then:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nThe smallest integer \\( m \\) that satisfies this inequality is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves and the number of pages, and then use the given conditions to find the smallest possible number of leaves.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "First, let's denote the number of leaves by \\( n \\). Since each piece of paper has 2 pages, the number of pages is \\( 2n \\). According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "Rewriting the equation for \\( n \\), we get:\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) will be even if \\( k \\) is odd. Let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Then:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so:\n\\[ 7m + 5 > 100 \\]\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\nThe smallest integer \\( m \\) that satisfies this inequality is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7 \\cdot 14 + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 388,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves \\( n \\) and the number of pages \\( p \\). According to the problem, each piece of paper has two pages, so the number of pages \\( p \\) is given by:\n\\[ p = 2n \\]\n\nWe are also given that the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ p \\equiv 3 \\pmod{7} \\]\nSubstituting \\( p = 2n \\) into the congruence, we get:\n\\[ 2n \\equiv 3 \\pmod{7} \\]\n\nTo solve for \\( n \\), we need to find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[ 2x \\equiv 1 \\pmod{7} \\]\nBy testing values, we find that:\n\\[ 2 \\times 4 = 8 \\equiv 1 \\pmod{7} \\]\nSo, the inverse of 2 modulo 7 is 4. Multiplying both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4, we get:\n\\[ n \\equiv 12 \\pmod{7} \\]\nSince \\( 12 \\equiv 5 \\pmod{7} \\), we have:\n\\[ n \\equiv 5 \\pmod{7} \\]\nThis means that \\( n \\) can be written in the form:\n\\[ n = 7k + 5 \\]\nfor some integer \\( k \\). We are given that the number of leaves \\( n \\) is greater than 100, so we need to find the smallest \\( k \\) such that:\n\\[ 7k + 5 > 100 \\]\nSolving for \\( k \\):\n\\[ 7k > 95 \\]\n\\[ k > \\frac{95}{7} \\approx 13.57 \\]\nThe smallest integer \\( k \\) that satisfies this inequality is 14. Therefore, the smallest possible value of \\( n \\) is:\n\\[ n = 7 \\times 14 + 5 = 98 + 5 = 103 \\]\n\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to establish the relationship between the number of leaves \\( n \\) and the number of pages \\( p \\). According to the problem, each piece of paper has two pages, so the number of pages \\( p \\) is given by:\n\\[ p = 2n \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We are also given that the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ p \\equiv 3 \\pmod{7} \\]\nSubstituting \\( p = 2n \\) into the congruence, we get:\n\\[ 2n \\equiv 3 \\pmod{7} \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "To solve for \\( n \\), we need to find the multiplicative inverse of 2 modulo 7. The multiplicative inverse of 2 modulo 7 is a number \\( x \\) such that:\n\\[ 2x \\equiv 1 \\pmod{7} \\]\nBy testing values, we find that:\n\\[ 2 \\times 4 = 8 \\equiv 1 \\pmod{7} \\]\nSo, the inverse of 2 modulo 7 is 4. Multiplying both sides of the congruence \\( 2n \\equiv 3 \\pmod{7} \\) by 4, we get:\n\\[ n \\equiv 12 \\pmod{7} \\]\nSince \\( 12 \\equiv 5 \\pmod{7} \\), we have:\n\\[ n \\equiv 5 \\pmod{7} \\]\nThis means that \\( n \\) can be written in the form:\n\\[ n = 7k + 5 \\]\nfor some integer \\( k \\). We are given that the number of leaves \\( n \\) is greater than 100, so we need to find the smallest \\( k \\) such that:\n\\[ 7k + 5 > 100 \\]\nSolving for \\( k \\):\n\\[ 7k > 95 \\]\n\\[ k > \\frac{95}{7} \\approx 13.57 \\]\nThe smallest integer \\( k \\) that satisfies this inequality is 14. Therefore, the smallest possible value of \\( n \\) is:\n\\[ n = 7 \\times 14 + 5 = 98 + 5 = 103 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Thus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 416,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the relationship between the number of leaves and the number of pages. If a book has \\( n \\) leaves, then it has \\( 2n \\) pages. According to the problem, the number of pages is 3 more than a multiple of 7. Therefore, we can express the number of pages as:\n\n\\[ 2n = 7k + 3 \\]\n\nfor some integer \\( k \\). This equation can be rearranged to solve for \\( n \\):\n\n\\[ n = \\frac{7k + 3}{2} \\]\n\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) will be odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) will be even if \\( k \\) is odd. Let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\n\nSo, \\( n \\) must be of the form \\( 7m + 5 \\). We are given that the number of leaves \\( n \\) is greater than 100. Therefore, we need to find the smallest integer \\( m \\) such that:\n\n\\[ 7m + 5 > 100 \\]\n\nSolving for \\( m \\):\n\n\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]\n\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the expression for \\( n \\):\n\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\n\nThus, the smallest possible number of leaves is:\n\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we start by defining the relationship between the number of leaves and the number of pages. If a book has \\( n \\) leaves, then it has \\( 2n \\) pages. According to the problem, the number of pages is 3 more than a multiple of 7. Therefore, we can express the number of pages as:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "\\[ 2n = 7k + 3 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "for some integer \\( k \\). This equation can be rearranged to solve for \\( n \\):",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "\\[ n = \\frac{7k + 3}{2} \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "For \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) will be odd if \\( k \\) is odd, and even if \\( k \\) is even. Therefore, \\( 7k + 3 \\) will be even if \\( k \\) is odd. Let's set \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "So, \\( n \\) must be of the form \\( 7m + 5 \\). We are given that the number of leaves \\( n \\) is greater than 100. Therefore, we need to find the smallest integer \\( m \\) such that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "\\[ 7m + 5 > 100 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "Solving for \\( m \\):",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "\\[ 7m > 95 \\]\n\\[ m > \\frac{95}{7} \\approx 13.57 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "Since \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the expression for \\( n \\):",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "Thus, the smallest possible number of leaves is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 418,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo determine the smallest possible number of leaves in the book, we need to follow these steps:\n\n1. **Understand the relationship between pages and leaves:**\n   - Each leaf consists of 2 pages.\n   - Therefore, if the book has \\( n \\) leaves, it has \\( 2n \\) pages.\n\n2. **Formulate the given conditions mathematically:**\n   - The number of pages is 3 more than a multiple of 7. This can be written as:\n     \\[\n     2n = 7k + 3\n     \\]\n     where \\( k \\) is an integer.\n   - The number of leaves \\( n \\) is greater than 100:\n     \\[\n     n > 100\n     \\]\n\n3. **Solve for \\( n \\):**\n   - From the equation \\( 2n = 7k + 3 \\), solve for \\( n \\):\n     \\[\n     n = \\frac{7k + 3}{2}\n     \\]\n   - For \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Adding 3 (an odd number) to an even number results in an odd number, which cannot be divided by 2 to yield an integer. Therefore, \\( k \\) must be odd.\n\n4. **Find the smallest odd \\( k \\) such that \\( n > 100 \\):**\n   - Let \\( k = 2m + 1 \\) where \\( m \\) is a non-negative integer. Substitute \\( k \\) into the equation:\n     \\[\n     n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5\n     \\]\n   - We need \\( n > 100 \\):\n     \\[\n     7m + 5 > 100\n     \\]\n     \\[\n     7m > 95\n     \\]\n     \\[\n     m > \\frac{95}{7} \\approx 13.57\n     \\]\n   - The smallest integer \\( m \\) greater than 13.57 is 14.\n\n5. **Calculate \\( n \\) for \\( m = 14 \\):**\n   - Substitute \\( m = 14 \\) into the equation for \\( n \\):\n     \\[\n     n = 7 \\cdot 14 + 5 = 98 + 5 = 103\n     \\]\n\n6. **Verify the solution:**\n   - Check if \\( n = 103 \\) satisfies the original condition:\n     \\[\n     2n = 2 \\cdot 103 = 206\n     \\]\n     \\[\n     206 = 7 \\cdot 29 + 3\n     \\]\n     This confirms that 206 is indeed 3 more than a multiple of 7.\n\nTherefore, the smallest possible number of leaves is \\(\\boxed{103}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Understand the relationship between pages and leaves:**\n   - Each leaf consists of 2 pages.\n   - Therefore, if the book has \\( n \\) leaves, it has \\( 2n \\) pages.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Formulate the given conditions mathematically:**\n   - The number of pages is 3 more than a multiple of 7. This can be written as:\n     \\[\n     2n = 7k + 3\n     \\]\n     where \\( k \\) is an integer.\n   - The number of leaves \\( n \\) is greater than 100:\n     \\[\n     n > 100\n     \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Solve for \\( n \\):**\n   - From the equation \\( 2n = 7k + 3 \\), solve for \\( n \\):\n     \\[\n     n = \\frac{7k + 3}{2}\n     \\]\n   - For \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Adding 3 (an odd number) to an even number results in an odd number, which cannot be divided by 2 to yield an integer. Therefore, \\( k \\) must be odd.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Find the smallest odd \\( k \\) such that \\( n > 100 \\):**\n   - Let \\( k = 2m + 1 \\) where \\( m \\) is a non-negative integer. Substitute \\( k \\) into the equation:\n     \\[\n     n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5\n     \\]\n   - We need \\( n > 100 \\):\n     \\[\n     7m + 5 > 100\n     \\]\n     \\[\n     7m > 95\n     \\]\n     \\[\n     m > \\frac{95}{7} \\approx 13.57\n     \\]\n   - The smallest integer \\( m \\) greater than 13.57 is 14.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "**Calculate \\( n \\) for \\( m = 14 \\):**\n   - Substitute \\( m = 14 \\) into the equation for \\( n \\):\n     \\[\n     n = 7 \\cdot 14 + 5 = 98 + 5 = 103\n     \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "**Verify the solution:**\n   - Check if \\( n = 103 \\) satisfies the original condition:\n     \\[\n     2n = 2 \\cdot 103 = 206\n     \\]\n     \\[\n     206 = 7 \\cdot 29 + 3\n     \\]\n     This confirms that 206 is indeed 3 more than a multiple of 7.\n\nTherefore, the smallest possible number of leaves is \\(\\boxed{103}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 493,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_297",
+      "problem": {
+        "id": "math500_297",
+        "dataset": "math500",
+        "question": "A book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?",
+        "ground_truth": "103",
+        "domain": "number theory",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.\n\nIf the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to understand the relationship between the number of leaves and the number of pages. Given that the number of pages is twice the number of leaves, let's denote the number of leaves by \\( n \\). Therefore, the number of pages is \\( 2n \\).\n\nAccording to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).\n\nFirst, we rearrange the equation to solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Adding 3 (an odd number) to an even number results in an odd number, and adding 3 to an odd number results in an even number. Therefore, \\( k \\) must be odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so we set up the inequality:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.571 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA book is said to have $n$ leaves if it is composed of $n$ pieces of paper. On the other hand, the number of pages is twice the number of leaves because each side of a piece of paper is defined as a page.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "If the number of pages in a book is $3$ more than a multiple of $7$, and the number of leaves is greater than $100$, then what is the smallest possible number of leaves?\nassistant\nTo solve this problem, we need to understand the relationship between the number of leaves and the number of pages. Given that the number of pages is twice the number of leaves, let's denote the number of leaves by \\( n \\). Therefore, the number of pages is \\( 2n \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "According to the problem, the number of pages is 3 more than a multiple of 7. This can be expressed mathematically as:\n\\[ 2n = 7k + 3 \\]\nfor some integer \\( k \\). We need to find the smallest \\( n \\) such that \\( n > 100 \\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "First, we rearrange the equation to solve for \\( n \\):\n\\[ n = \\frac{7k + 3}{2} \\]\nFor \\( n \\) to be an integer, \\( 7k + 3 \\) must be even. Since 7 is odd, \\( 7k \\) is odd if \\( k \\) is odd and even if \\( k \\) is even. Adding 3 (an odd number) to an even number results in an odd number, and adding 3 to an odd number results in an even number. Therefore, \\( k \\) must be odd. Let \\( k = 2m + 1 \\) for some integer \\( m \\). Substituting \\( k = 2m + 1 \\) into the equation, we get:\n\\[ n = \\frac{7(2m + 1) + 3}{2} = \\frac{14m + 7 + 3}{2} = \\frac{14m + 10}{2} = 7m + 5 \\]\nWe need \\( n > 100 \\), so we set up the inequality:\n\\[ 7m + 5 > 100 \\]\nSubtracting 5 from both sides, we get:\n\\[ 7m > 95 \\]\nDividing both sides by 7, we get:\n\\[ m > \\frac{95}{7} \\approx 13.571 \\]\nSince \\( m \\) must be an integer, the smallest possible value for \\( m \\) is 14. Substituting \\( m = 14 \\) into the equation for \\( n \\), we get:\n\\[ n = 7(14) + 5 = 98 + 5 = 103 \\]\nThus, the smallest possible number of leaves is:\n\\[ \\boxed{103} \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "103",
+      "is_correct": true,
+      "num_tokens": 438,
+      "model_name": "QwQ-32B"
+    }
+  ]
+}

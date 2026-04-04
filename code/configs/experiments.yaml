@@ -1,0 +1,84 @@
+# Dataset configuration
+datasets:
+  gsm8k:
+    name: "gsm8k"
+    split: "test"
+    num_problems: 500
+    pilot_num: 50
+  math500:
+    name: "math500"
+    source: "HuggingFaceH4/MATH-500"
+    num_problems: 500
+    pilot_num: 50
+
+# Ground truth (forced replacement) config
+ground_truth:
+  corruption_types:
+    - "numeric_perturb"
+    - "operator_swap"
+  num_corruptions_per_step: 1
+  force_continuation_max_tokens: 2048
+  backtracking_keywords:
+    - "wait"
+    - "actually"
+    - "let me reconsider"
+    - "correction"
+    - "I made an error"
+    - "that's wrong"
+
+# Intervention config
+interventions:
+  style_rewrite:
+    num_variants_per_step: 3
+    styles:
+      - "verbose"
+      - "concise"
+      - "markdown"
+      - "discourse_markers"
+    target_steps: "sample_5"
+
+  decorative_insert:
+    templates:
+      - "Hmm, let me verify this step."
+      - "This makes sense so far."
+      - "Let me double-check my calculation."
+      - "Interesting, I can see the pattern now."
+      - "Okay, I'm confident in this result."
+      - "Wait, let me reconsider... no, this is correct."
+      - "Great, this aligns with what I expected."
+    insert_positions: "after_each_step"
+
+  redundant_insert:
+    method: "rephrase_existing"
+    target_steps: "inert_only"
+    num_per_trace: 3
+
+  necessary_delete:
+    target_steps: "necessary_only"
+
+  support_corrupt:
+    target_steps: "necessary_only"
+    corruption_types:
+      - "numeric_perturb"
+      - "operator_swap"
+
+  problem_mismatch:
+    method: "swap_problems"
+    similarity_filter: "same_domain"
+    num_pairs: 500
+
+# Downstream
+downstream:
+  bon:
+    n_values: [4, 8, 16, 32]
+    num_samples_per_problem: 32
+    sampling_temperature: 0.8
+    problems: 500
+    generation_batch_size: 8
+    max_new_tokens: 1536
+
+# Quality checking
+quality_check:
+  sample_size_per_family: 100
+  llm_judge_model: "intervention_model"
+  semantic_equivalence_threshold: 0.8

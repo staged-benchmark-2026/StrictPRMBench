@@ -1,0 +1,21 @@
+Prevalence table from existing natural-pool data
+
+Primary prevalence notion: product vs GM disagreement on natural 32-trace pools.
+
+Mean product-vs-GM disagreement rate across 14 cells: 47.1%
+Mean both-correct rate (of all problems) for product-vs-GM: 32.7%
+Mean both-correct share conditional on disagreement: 72.0%
+Mean Pr(product shorter chars | product-vs-GM disagreement): 58.3%
+Mean shorter+wrong rate (of all problems) for product-vs-GM: 1.4%
+
+Highest product-vs-GM disagreement cells:
+- RLHFlow / MATH-500: disagree=79.4%, both-correct=49.4%, both-correct|disagree=62.2%
+- Skywork-7B / MATH-500: disagree=65.2%, both-correct=43.4%, both-correct|disagree=66.6%
+- Skywork-1.5B / MATH-500: disagree=65.2%, both-correct=44.6%, both-correct|disagree=68.4%
+- Math-Shepherd / MATH-500: disagree=60.6%, both-correct=35.0%, both-correct|disagree=57.8%
+- InternLM2-1.8B / MATH-500: disagree=53.4%, both-correct=31.6%, both-correct|disagree=59.2%
+
+Interpretation:
+- On natural pools, the phenomenon is common rather than rare: product vs GM disagree on a substantial fraction of problems in every cell.
+- A large share of these disagreements are both-correct, so the practical issue is often trace selection among correct answers rather than outright answer failure.
+- Product-selected traces are usually shorter on disagreement cases, which matches the omission-bias story.

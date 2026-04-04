@@ -1,0 +1,33 @@
+Within-trace NI verification (strict rescored, zero new inference)
+
+Source scope
+- Strict within-trace analysis uses outputs/reports/matched_control_multiseed/union with rescored traces from outputs/matched_control/multiseed_scores.
+- This is the largest same-trace subset with cached full rescoring available at zero compute.
+
+Eligible overlap counts
+- GSM8K: all-eligible overlap=902, rescored union overlap=148, mean |position gap|=2.31
+- MATH-500: all-eligible overlap=2191, rescored union overlap=122, mean |position gap|=4.21
+
+Per-cell results (product APR within same trace)
+- InternLM2-1.8B / GSM8K: n=148, APR_nec=0.622, APR_inert=0.932, ΔNI_within=-0.311 [-0.392, -0.230]
+- InternLM2-7B / GSM8K: n=148, APR_nec=0.426, APR_inert=0.919, ΔNI_within=-0.493 [-0.588, -0.405]
+- Math-Shepherd / GSM8K: n=148, APR_nec=0.304, APR_inert=0.784, ΔNI_within=-0.480 [-0.574, -0.385]
+- Qwen / GSM8K: n=148, APR_nec=0.074, APR_inert=0.385, ΔNI_within=-0.311 [-0.399, -0.223]
+- RLHFlow / GSM8K: n=148, APR_nec=0.095, APR_inert=0.291, ΔNI_within=-0.196 [-0.270, -0.115]
+- Skywork-7B / GSM8K: n=148, APR_nec=0.365, APR_inert=0.757, ΔNI_within=-0.392 [-0.486, -0.277]
+- Skywork-1.5B / GSM8K: n=148, APR_nec=0.432, APR_inert=0.804, ΔNI_within=-0.372 [-0.473, -0.270]
+- InternLM2-1.8B / MATH-500: n=122, APR_nec=0.770, APR_inert=0.910, ΔNI_within=-0.139 [-0.230, -0.057]
+- InternLM2-7B / MATH-500: n=122, APR_nec=0.508, APR_inert=0.828, ΔNI_within=-0.320 [-0.426, -0.205]
+- Math-Shepherd / MATH-500: n=122, APR_nec=0.369, APR_inert=0.770, ΔNI_within=-0.402 [-0.500, -0.303]
+- Qwen / MATH-500: n=122, APR_nec=0.107, APR_inert=0.352, ΔNI_within=-0.246 [-0.352, -0.156]
+- RLHFlow / MATH-500: n=122, APR_nec=0.246, APR_inert=0.369, ΔNI_within=-0.123 [-0.230, -0.016]
+- Skywork-7B / MATH-500: n=122, APR_nec=0.393, APR_inert=0.721, ΔNI_within=-0.328 [-0.443, -0.205]
+- Skywork-1.5B / MATH-500: n=122, APR_nec=0.385, APR_inert=0.803, ΔNI_within=-0.418 [-0.508, -0.328]
+
+- Total within-trace pairs analyzed across 14 cells: 1890
+- Non-positive ΔNI_within: 14/14
+- CIs excluding zero: 14/14
+- Mean ΔNI_within across 14 cells: -0.324
+
+Clean-score consistency check
+- Same-trace necessary/inert rows should have identical clean scores up to numerical noise; per-cell mean/max absolute clean-score differences are written to within_trace_ni.csv.

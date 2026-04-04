@@ -1,0 +1,118 @@
+intervention_model:
+  do_sample: true
+  dtype: float16
+  max_new_tokens: 512
+  name: Qwen2.5-Coder-7B-Instruct
+  path: Qwen/Qwen2.5-Coder-7B-Instruct
+  temperature: 0.7
+prms:
+  genprm:
+    dtype: float16
+    name: GenPRM
+    path: currently-placeholder
+    score_extraction: generated
+    step_token: '
+
+      '
+    type: generative
+  math_shepherd:
+    dtype: float16
+    name: Math-Shepherd-PRM
+    path: peiyi9979/math-shepherd-mistral-7b-prm
+    score_extraction: logits
+    step_token: ки
+    type: classifier
+  qwen_prm:
+    dtype: float16
+    name: Qwen2.5-Math-PRM
+    path: Qwen/Qwen2.5-Math-PRM-7B
+    score_extraction: logits
+    step_token: '
+
+      '
+    type: classifier
+  internlm2_7b_reward:
+    cache_dir: ./.cache/hf
+    local_files_only: true
+    dtype: float16
+    name: InternLM2-7B-Reward
+    path: internlm/internlm2-7b-reward
+    score_extraction: logits
+    step_token: '
+
+      '
+    type: classifier
+    aggregation_method: last
+  internlm2_1_8b_reward:
+    cache_dir: ./.cache/hf
+    local_files_only: false
+    dtype: float16
+    name: InternLM2-1.8B-Reward
+    path: internlm/internlm2-1_8b-reward
+    score_extraction: logits
+    step_token: '
+
+      '
+    type: classifier
+    aggregation_method: last
+  rlhflow_prm:
+    dtype: float16
+    name: RLHFlow-Deepseek-PRM
+    path: RLHFlow/Llama3.1-8B-PRM-Deepseek-Data
+    score_extraction: logits
+    step_token: '
+
+      '
+    type: classifier
+  skywork_prm:
+    dtype: float16
+    name: Skywork-o1-PRM
+    path: Skywork/Skywork-o1-Open-PRM-Qwen-2.5-7B
+    score_extraction: logits
+    step_token: '
+
+      '
+    type: classifier
+  skywork_prm_1_5b:
+    cache_dir: ./.cache/hf
+    local_files_only: true
+    dtype: float16
+    name: Skywork-o1-PRM-1.5B
+    path: Skywork/Skywork-o1-Open-PRM-Qwen-2.5-1.5B
+    score_extraction: logits
+    step_token: '
+
+      '
+    type: classifier
+  reasonflux_prm:
+    cache_dir: ./.cache/hf
+    local_files_only: true
+    dtype: bfloat16
+    name: ReasonFlux-PRM-7B
+    path: ./local_models/ReasonFlux-PRM-7B
+    score_extraction: logits
+    step_token: <extra_0>
+    type: classifier
+    aggregation_method: min
+  eurus_rm_7b:
+    cache_dir: ./.cache/hf
+    local_files_only: true
+    dtype: float16
+    name: Eurus-RM-7B
+    path: openbmb/Eurus-RM-7b
+    score_extraction: logits
+    step_token: '
+
+      '
+    type: classifier
+    aggregation_method: last
+reasoning_model:
+  chat_template: true
+  do_sample: false
+  dtype: auto
+  max_new_tokens: 4096
+  name: QwQ-32B
+  path: Qwen/Qwen2.5-7B-Instruct
+  temperature: 0.0
+  think_tag: true
+  trust_remote_code: true

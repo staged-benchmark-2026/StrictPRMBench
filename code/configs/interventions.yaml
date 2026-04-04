@@ -1,0 +1,65 @@
+# Detailed intervention family specifications
+# Each family has: name, type (inert/causal-important), construction method, quality criteria
+
+families:
+  style_rewrite:
+    label: "inert"
+    description: "Rewrite step with different wording/formatting, preserving semantics"
+    quality_criteria:
+      - "Semantic content must be identical"
+      - "Mathematical expressions must be equivalent"
+      - "Only surface form (wording, formatting, verbosity) changes"
+    failure_modes_to_detect:
+      - "Accidental semantic change"
+      - "Missing mathematical content"
+
+  decorative_insert:
+    label: "inert"
+    description: "Insert rhetorical self-checks or meta-commentary"
+    quality_criteria:
+      - "Inserted text introduces no new mathematical facts"
+      - "Inserted text does not reference specific numbers from the solution"
+      - "Surrounding steps remain unchanged"
+    failure_modes_to_detect:
+      - "Accidentally referencing solution-specific values"
+
+  redundant_insert:
+    label: "inert"
+    description: "Insert correct-but-unnecessary computation or restatement"
+    quality_criteria:
+      - "Inserted step is mathematically correct"
+      - "Inserted step's content is already established elsewhere"
+      - "No downstream step depends on inserted step (no new variables)"
+    failure_modes_to_detect:
+      - "Inserted step actually introduces new information"
+      - "Inserted step contradicts existing steps"
+
+  necessary_delete:
+    label: "causal_important"
+    description: "Delete a step that introduces a value/symbol used later"
+    quality_criteria:
+      - "Deleted step has necessity_label=1 from Protocol B"
+      - "Later steps reference values/symbols from deleted step"
+    failure_modes_to_detect:
+      - "Step actually isn't referenced later (false positive necessity)"
+
+  support_corrupt:
+    label: "causal_important"
+    description: "Replace numeric value in a necessary step with incorrect value"
+    quality_criteria:
+      - "Only the target value is changed"
+      - "Later steps remain unchanged (creating inconsistency)"
+      - "Corruption is subtle (not obviously absurd)"
+    failure_modes_to_detect:
+      - "Corruption is too extreme (obviously wrong)"
+      - "Multiple values changed accidentally"
+
+  problem_mismatch:
+    label: "causal_important"
+    description: "Pair reasoning trace with wrong problem statement"
+    quality_criteria:
+      - "Trace and problem are from different questions"
+      - "Problems are from the same domain for subtlety"
+      - "Trace is a valid solution for its original problem"
+    failure_modes_to_detect:
+      - "Paired problem is too similar (trace might actually work)"

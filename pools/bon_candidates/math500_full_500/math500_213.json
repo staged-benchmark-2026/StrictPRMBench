@@ -1,0 +1,2281 @@
+{
+  "problem_id": "math500_213",
+  "n": 32,
+  "temperature": 0.8,
+  "candidates": [
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series: \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).\n\nWe use the identity for Fibonacci numbers: \\(F_{n+2} = F_{n+1} + F_n\\). Rewriting the term using this identity, we get:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose the fraction as follows:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1} + F_n - F_n}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1} + F_n}{F_n (F_{n+1} + F_n)} - \\frac{F_n}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nSince \\(F_{n+1} + F_n = F_{n+2}\\), the expression simplifies to:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = 1 + \\frac{1}{1} = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series: \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "We use the identity for Fibonacci numbers: \\(F_{n+2} = F_{n+1} + F_n\\). Rewriting the term using this identity, we get:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose the fraction as follows:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1} + F_n - F_n}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1} + F_n}{F_n (F_{n+1} + F_n)} - \\frac{F_n}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nSince \\(F_{n+1} + F_n = F_{n+2}\\), the expression simplifies to:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = 1 + \\frac{1}{1} = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 226,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).\n\nUsing the Fibonacci recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\), we can rewrite the term as follows:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nMatching coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]\nThis implies \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWriting out the first few terms, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 2.\n\\]\nTherefore, the sum is:\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "Using the Fibonacci recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\), we can rewrite the term as follows:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nMatching coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]\nThis implies \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWriting out the first few terms, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 2.\n\\]\nTherefore, the sum is:\n\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 247,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the identity for Fibonacci numbers, which states \\(F_{n+2} = F_{n+1} + F_n\\). We can rewrite the general term of the series as follows:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\n\nWe can decompose this fraction into partial fractions. Notice that:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2}.\n\\]\n\nWe can use the identity \\(F_{n+1} = F_{n+2} - F_n\\) to simplify further. However, a more straightforward approach is to recognize a telescoping series. Let's rewrite the term in a form that will telescope:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\n\nThis can be verified by combining the fractions on the right-hand side:\n\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1} - (F_{n+1} - F_n)}{F_n F_{n+1}} = \\frac{F_n}{F_n F_{n+1}} = \\frac{F_{n+1}}{F_n F_{n+1}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\n\nThus, the series becomes a telescoping series:\n\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\n\nIn a telescoping series, most terms cancel out, leaving us with:\n\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots = \\frac{1}{F_1} = 1,\n\\]\n\nsince \\(F_1 = 1\\) and all other terms cancel out. Therefore, the sum of the series is:\n\n\\[\n\\boxed{1}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the identity for Fibonacci numbers, which states \\(F_{n+2} = F_{n+1} + F_n\\). We can rewrite the general term of the series as follows:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We can decompose this fraction into partial fractions. Notice that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "We can use the identity \\(F_{n+1} = F_{n+2} - F_n\\) to simplify further. However, a more straightforward approach is to recognize a telescoping series. Let's rewrite the term in a form that will telescope:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "This can be verified by combining the fractions on the right-hand side:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1} - (F_{n+1} - F_n)}{F_n F_{n+1}} = \\frac{F_n}{F_n F_{n+1}} = \\frac{F_{n+1}}{F_n F_{n+1}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "Thus, the series becomes a telescoping series:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "In a telescoping series, most terms cancel out, leaving us with:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots = \\frac{1}{F_1} = 1,\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "since \\(F_1 = 1\\) and all other terms cancel out. Therefore, the sum of the series is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "\\[\n\\boxed{1}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 276,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). We use the identity for Fibonacci numbers \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the term:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\n\nWe can decompose this fraction using partial fractions. Notice that:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\n\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\n\nBy comparing coefficients, we find that \\(A = 1\\) and \\(B = -1\\). Therefore, we have:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\n\nThus, the sum becomes a telescoping series:\n\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\n\nWhen we write out the first few terms of the series, we see:\n\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\n\nAll intermediate terms cancel out, leaving us with:\n\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = 1 + \\frac{1}{1} = 2.\n\\]\n\nTherefore, the value of the sum is:\n\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). We use the identity for Fibonacci numbers \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the term:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We can decompose this fraction using partial fractions. Notice that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Multiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "By comparing coefficients, we find that \\(A = 1\\) and \\(B = -1\\). Therefore, we have:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "Thus, the sum becomes a telescoping series:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "When we write out the first few terms of the series, we see:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "All intermediate terms cancel out, leaving us with:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = 1 + \\frac{1}{1} = 2.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "Therefore, the value of the sum is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 237,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of the Fibonacci sequence. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for \\(n \\geq 0\\).\n\nFirst, let's simplify the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Using the recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\), we can rewrite the term as:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction into partial fractions:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nMatching coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + A F_n + B F_n = A F_{n+1} + (A + B) F_n.\n\\]\nThis implies \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nSince \\(F_{n+1} + F_n = F_{n+2}\\), we can rewrite this as:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = 1 + \\frac{1}{1} = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of the Fibonacci sequence. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for \\(n \\geq 0\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's simplify the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Using the recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\), we can rewrite the term as:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction into partial fractions:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nMatching coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + A F_n + B F_n = A F_{n+1} + (A + B) F_n.\n\\]\nThis implies \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nSince \\(F_{n+1} + F_n = F_{n+2}\\), we can rewrite this as:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = 1 + \\frac{1}{1} = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 305,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Using the Fibonacci recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\), we can rewrite the term as follows:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\n\nWe can decompose this fraction using partial fractions. Notice that:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\n\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\n\nMatching coefficients, we get:\n\n\\[\nF_{n+1} = A F_{n+1} + A F_n + B F_n = A F_{n+1} + (A + B) F_n.\n\\]\n\nThis implies that \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\n\nThus, the series can be written as:\n\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\n\nThis is a telescoping series. Writing out the first few terms, we get:\n\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\n\nAll intermediate terms cancel out, leaving us with:\n\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 2.\n\\]\n\nTherefore, the value of the sum is:\n\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Using the Fibonacci recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\), we can rewrite the term as follows:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We can decompose this fraction using partial fractions. Notice that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Multiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "Matching coefficients, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "\\[\nF_{n+1} = A F_{n+1} + A F_n + B F_n = A F_{n+1} + (A + B) F_n.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "This implies that \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "Thus, the series can be written as:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "This is a telescoping series. Writing out the first few terms, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "All intermediate terms cancel out, leaving us with:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 2.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "Therefore, the value of the sum is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 17,
+          "text": "\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 265,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of Fibonacci numbers. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n \\geq 2\\).\n\nFirst, let's express \\(F_{n+2}\\) in terms of \\(F_{n+1}\\) and \\(F_n\\):\n\\[F_{n+2} = F_{n+1} + F_n.\\]\nSubstituting this into the summand, we get:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose the fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we see that if we choose \\(A = 1\\) and \\(B = -1\\), the equation holds:\n\\[\nF_{n+1} = F_{n+1} + F_n - F_n.\n\\]\nThus, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nThis allows us to rewrite the original sum as a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right).\n\\]\nNotice that:\n\\[\n\\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_{n+2}}.\n\\]\nSo the series becomes:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nThis is a telescoping series, where most terms cancel out. Writing out the first few terms, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of Fibonacci numbers. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n \\geq 2\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's express \\(F_{n+2}\\) in terms of \\(F_{n+1}\\) and \\(F_n\\):\n\\[F_{n+2} = F_{n+1} + F_n.\\]\nSubstituting this into the summand, we get:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose the fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we see that if we choose \\(A = 1\\) and \\(B = -1\\), the equation holds:\n\\[\nF_{n+1} = F_{n+1} + F_n - F_n.\n\\]\nThus, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nThis allows us to rewrite the original sum as a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right).\n\\]\nNotice that:\n\\[\n\\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_{n+2}}.\n\\]\nSo the series becomes:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nThis is a telescoping series, where most terms cancel out. Writing out the first few terms, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 314,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of the Fibonacci sequence. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n \\geq 2\\).\n\nFirst, let's express the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\) in a more convenient form. Using the Fibonacci recurrence relation, we have:\n\\[F_{n+2} = F_{n+1} + F_n.\\]\nThus, the term becomes:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\n\nWe can decompose this fraction into partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2}.\n\\]\n\nHowever, a more useful decomposition is to recognize that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis can be verified by combining the fractions on the right-hand side:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1} - (F_{n+1} - F_n)}{F_n F_{n+1}} = \\frac{F_n}{F_n F_{n+1}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\n\nThus, the series can be written as:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\n\nThis is a telescoping series. Writing out the first few terms, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots.\n\\]\n\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} = \\frac{1}{1} = 1.\n\\]\n\nTherefore, the value of the sum is:\n\\[\n\\boxed{1}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of the Fibonacci sequence. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n \\geq 2\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's express the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\) in a more convenient form. Using the Fibonacci recurrence relation, we have:\n\\[F_{n+2} = F_{n+1} + F_n.\\]\nThus, the term becomes:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We can decompose this fraction into partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "However, a more useful decomposition is to recognize that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis can be verified by combining the fractions on the right-hand side:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1} - (F_{n+1} - F_n)}{F_n F_{n+1}} = \\frac{F_n}{F_n F_{n+1}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Thus, the series can be written as:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "This is a telescoping series. Writing out the first few terms, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "All intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} = \\frac{1}{1} = 1.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "Therefore, the value of the sum is:\n\\[\n\\boxed{1}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 273,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series: \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).\n\nRecall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and for \\(n \\geq 2\\), \\(F_n = F_{n-1} + F_{n-2}\\). We can use this recurrence relation to express \\(F_{n+2}\\) in terms of \\(F_{n+1}\\) and \\(F_n\\):\n\n\\[F_{n+2} = F_{n+1} + F_n.\\]\n\nSubstituting this into the general term, we get:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\n\nWe can decompose this fraction using partial fractions. Notice that:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\n\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\n\nBy comparing coefficients, we find that \\(A = 1\\) and \\(B = -1\\). Therefore, we have:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\n\nThis allows us to rewrite the original sum as a telescoping series:\n\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right).\n\\]\n\nNotice that the series telescopes, meaning most terms cancel out. Specifically, the series becomes:\n\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2 + F_1} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3 + F_2} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4 + F_3} \\right) + \\cdots.\n\\]\n\nSince \\(F_1 = 1\\) and \\(F_2 = 1\\), the first few terms are:\n\n\\[\n\\left( \\frac{1}{1} - \\frac{1}{1 + 1} \\right) + \\left( \\frac{1}{1} - \\frac{1}{1 + 1} \\right) + \\left( \\frac{1}{2} - \\frac{1}{3} \\right) + \\left( \\frac{1}{3} - \\frac{1}{5} \\right) + \\cdots.\n\\]\n\nAll intermediate terms cancel, leaving us with:\n\n\\[\n1 - \\lim_{n \\to \\infty} \\frac{1}{F_{n+1} + F_n}.\n\\]\n\nAs \\(n\\) approaches infinity, \\(F_{n+1} + F_n\\) also approaches infinity, so \\(\\frac{1}{F_{n+1} + F_n}\\) approaches 0. Therefore, the sum is:\n\n\\[\n1 - 0 = 1.\n\\]\n\nThus, the value of the sum is \\(\\boxed{1}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series: \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and for \\(n \\geq 2\\), \\(F_n = F_{n-1} + F_{n-2}\\). We can use this recurrence relation to express \\(F_{n+2}\\) in terms of \\(F_{n+1}\\) and \\(F_n\\):",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "\\[F_{n+2} = F_{n+1} + F_n.\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "Substituting this into the general term, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "We can decompose this fraction using partial fractions. Notice that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "Multiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "By comparing coefficients, we find that \\(A = 1\\) and \\(B = -1\\). Therefore, we have:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "This allows us to rewrite the original sum as a telescoping series:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right).\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "Notice that the series telescopes, meaning most terms cancel out. Specifically, the series becomes:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2 + F_1} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3 + F_2} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4 + F_3} \\right) + \\cdots.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "Since \\(F_1 = 1\\) and \\(F_2 = 1\\), the first few terms are:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "\\[\n\\left( \\frac{1}{1} - \\frac{1}{1 + 1} \\right) + \\left( \\frac{1}{1} - \\frac{1}{1 + 1} \\right) + \\left( \\frac{1}{2} - \\frac{1}{3} \\right) + \\left( \\frac{1}{3} - \\frac{1}{5} \\right) + \\cdots.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 17,
+          "text": "All intermediate terms cancel, leaving us with:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 18,
+          "text": "\\[\n1 - \\lim_{n \\to \\infty} \\frac{1}{F_{n+1} + F_n}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 19,
+          "text": "As \\(n\\) approaches infinity, \\(F_{n+1} + F_n\\) also approaches infinity, so \\(\\frac{1}{F_{n+1} + F_n}\\) approaches 0. Therefore, the sum is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 20,
+          "text": "\\[\n1 - 0 = 1.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 21,
+          "text": "Thus, the value of the sum is \\(\\boxed{1}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 348,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).\n\nFirst, let's rewrite the general term:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we find that \\(A = 1\\) and \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's rewrite the general term:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we find that \\(A = 1\\) and \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 254,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo find the value of the infinite sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Recall that the Fibonacci sequence is defined by \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for \\(n \\geq 0\\).\n\nFirst, let's rewrite the general term using the Fibonacci recurrence relation:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction into partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nMatching coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]\nFrom this, we see that \\(A = 1 - B\\) and \\(A + B = 0\\). Solving these equations, we find \\(A = \\frac{1}{2}\\) and \\(B = -\\frac{1}{2}\\). Therefore:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1/2}{F_n} - \\frac{1/2}{F_{n+1} + F_n} = \\frac{1}{2} \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right).\n\\]\nHowever, a simpler approach is to recognize a telescoping series. Let's write out the first few terms of the series:\n\\[\n\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}} = \\left( \\frac{F_2}{F_1 F_3} - \\frac{F_3}{F_2 F_4} \\right) + \\left( \\frac{F_3}{F_2 F_4} - \\frac{F_4}{F_3 F_5} \\right) + \\left( \\frac{F_4}{F_3 F_5} - \\frac{F_5}{F_4 F_6} \\right) + \\cdots.\n\\]\nThis series telescopes, and all intermediate terms cancel out, leaving:\n\\[\n\\frac{F_2}{F_1 F_3} = \\frac{1}{1 \\cdot 2} = \\frac{1}{2}.\n\\]\nThus, the value of the infinite sum is:\n\\[\n\\boxed{\\frac{1}{2}}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo find the value of the infinite sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Recall that the Fibonacci sequence is defined by \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for \\(n \\geq 0\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's rewrite the general term using the Fibonacci recurrence relation:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction into partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nMatching coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]\nFrom this, we see that \\(A = 1 - B\\) and \\(A + B = 0\\). Solving these equations, we find \\(A = \\frac{1}{2}\\) and \\(B = -\\frac{1}{2}\\). Therefore:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1/2}{F_n} - \\frac{1/2}{F_{n+1} + F_n} = \\frac{1}{2} \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right).\n\\]\nHowever, a simpler approach is to recognize a telescoping series. Let's write out the first few terms of the series:\n\\[\n\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}} = \\left( \\frac{F_2}{F_1 F_3} - \\frac{F_3}{F_2 F_4} \\right) + \\left( \\frac{F_3}{F_2 F_4} - \\frac{F_4}{F_3 F_5} \\right) + \\left( \\frac{F_4}{F_3 F_5} - \\frac{F_5}{F_4 F_6} \\right) + \\cdots.\n\\]\nThis series telescopes, and all intermediate terms cancel out, leaving:\n\\[\n\\frac{F_2}{F_1 F_3} = \\frac{1}{1 \\cdot 2} = \\frac{1}{2}.\n\\]\nThus, the value of the infinite sum is:\n\\[\n\\boxed{\\frac{1}{2}}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "\\frac{1}{2}",
+      "is_correct": false,
+      "num_tokens": 292,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term in the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n \\geq 2\\).\n\nFirst, let's simplify the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Using the Fibonacci recurrence relation, we have:\n\\[F_{n+2} = F_{n+1} + F_n.\\]\nThus, the term can be rewritten as:\n\\[\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[F_{n+1} = A (F_{n+1} + F_n) + B F_n.\\]\nMatching coefficients, we get:\n\\[F_{n+1} = A F_{n+1} + (A + B) F_n.\\]\nThis implies:\n\\[A = 1 \\quad \\text{and} \\quad A + B = 0,\\]\nso \\(B = -1\\). Therefore, we have:\n\\[\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\\]\nSo the series becomes a telescoping series:\n\\[\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\\]\nWriting out the first few terms, we get:\n\\[\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\\]\nNotice that all intermediate terms cancel out, leaving us with:\n\\[\\frac{1}{F_1} + \\frac{1}{F_2} = 1 + \\frac{1}{1} = 2.\\]\nTherefore, the sum of the series is:\n\\[\\boxed{2}.\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term in the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n \\geq 2\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's simplify the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Using the Fibonacci recurrence relation, we have:\n\\[F_{n+2} = F_{n+1} + F_n.\\]\nThus, the term can be rewritten as:\n\\[\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[F_{n+1} = A (F_{n+1} + F_n) + B F_n.\\]\nMatching coefficients, we get:\n\\[F_{n+1} = A F_{n+1} + (A + B) F_n.\\]\nThis implies:\n\\[A = 1 \\quad \\text{and} \\quad A + B = 0,\\]\nso \\(B = -1\\). Therefore, we have:\n\\[\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\\]\nSo the series becomes a telescoping series:\n\\[\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\\]\nWriting out the first few terms, we get:\n\\[\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\\]\nNotice that all intermediate terms cancel out, leaving us with:\n\\[\\frac{1}{F_1} + \\frac{1}{F_2} = 1 + \\frac{1}{1} = 2.\\]\nTherefore, the sum of the series is:\n\\[\\boxed{2}.\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 271,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).\n\nUsing the Fibonacci recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\), we can rewrite the term as:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n^2} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis is because:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nIn a telescoping series, most terms cancel out, leaving us with:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots = \\frac{1}{F_1} - \\lim_{n \\to \\infty} \\frac{1}{F_n}.\n\\]\nSince \\(F_1 = 1\\) and the Fibonacci sequence grows exponentially, \\(\\lim_{n \\to \\infty} \\frac{1}{F_n} = 0\\). Therefore, the sum is:\n\\[\n\\frac{1}{F_1} - 0 = 1.\n\\]\nSo, the value of the sum is:\n\\[\n\\boxed{1}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "Using the Fibonacci recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\), we can rewrite the term as:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n^2} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis is because:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nIn a telescoping series, most terms cancel out, leaving us with:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots = \\frac{1}{F_1} - \\lim_{n \\to \\infty} \\frac{1}{F_n}.\n\\]\nSince \\(F_1 = 1\\) and the Fibonacci sequence grows exponentially, \\(\\lim_{n \\to \\infty} \\frac{1}{F_n} = 0\\). Therefore, the sum is:\n\\[\n\\frac{1}{F_1} - 0 = 1.\n\\]\nSo, the value of the sum is:\n\\[\n\\boxed{1}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 219,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series. The Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).\n\nFirst, let's rewrite the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\) using the Fibonacci recurrence relation:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nMatching coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]\nFrom this, we see that \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nHowever, a simpler decomposition is:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis is because:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nWhen we write out the first few terms, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} = 1.\n\\]\nTherefore, the sum of the series is:\n\\[\n\\boxed{1}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series. The Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's rewrite the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\) using the Fibonacci recurrence relation:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nMatching coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]\nFrom this, we see that \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nHowever, a simpler decomposition is:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis is because:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nWhen we write out the first few terms, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} = 1.\n\\]\nTherefore, the sum of the series is:\n\\[\n\\boxed{1}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 299,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).\n\nWe can rewrite the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\) using the Fibonacci recurrence relation:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction into partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n^2} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n F_{n-1} + F_n^2 - F_n F_{n-1}} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n F_{n-1} + F_n^2 - F_n F_{n-1}} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n^2}.\n\\]\nHowever, a simpler approach is to use the identity involving Fibonacci numbers:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis identity can be verified by rewriting the right-hand side:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1} - (F_{n+1} - F_n)}{F_n F_{n+1}} = \\frac{F_n}{F_n F_{n+1}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nIn a telescoping series, most terms cancel out, leaving us with:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots = \\frac{1}{F_1} = \\frac{1}{1} = 1.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{1}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "We can rewrite the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\) using the Fibonacci recurrence relation:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction into partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n^2} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n F_{n-1} + F_n^2 - F_n F_{n-1}} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n F_{n-1} + F_n^2 - F_n F_{n-1}} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n^2}.\n\\]\nHowever, a simpler approach is to use the identity involving Fibonacci numbers:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis identity can be verified by rewriting the right-hand side:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1} - (F_{n+1} - F_n)}{F_n F_{n+1}} = \\frac{F_n}{F_n F_{n+1}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nIn a telescoping series, most terms cancel out, leaving us with:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots = \\frac{1}{F_1} = \\frac{1}{1} = 1.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{1}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 282,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term in the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).\n\nFirst, let's simplify the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Using the Fibonacci recurrence relation, we have:\n\\[F_{n+2} = F_{n+1} + F_n.\\]\nThus,\n\\[\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\\]\nWe can rewrite this as:\n\\[\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\\]\nThis simplification comes from the partial fraction decomposition:\n\\[\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\\]\nNow, we can write the infinite sum as a telescoping series:\n\\[\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\\]\nIn a telescoping series, most terms cancel out. Writing out the first few terms, we get:\n\\[\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots.\\]\nAll intermediate terms cancel, leaving us with:\n\\[\\frac{1}{F_1} = \\frac{1}{1} = 1.\\]\nTherefore, the value of the sum is:\n\\[\\boxed{1}.\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term in the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's simplify the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Using the Fibonacci recurrence relation, we have:\n\\[F_{n+2} = F_{n+1} + F_n.\\]\nThus,\n\\[\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\\]\nWe can rewrite this as:\n\\[\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\\]\nThis simplification comes from the partial fraction decomposition:\n\\[\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\\]\nNow, we can write the infinite sum as a telescoping series:\n\\[\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\\]\nIn a telescoping series, most terms cancel out. Writing out the first few terms, we get:\n\\[\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots.\\]\nAll intermediate terms cancel, leaving us with:\n\\[\\frac{1}{F_1} = \\frac{1}{1} = 1.\\]\nTherefore, the value of the sum is:\n\\[\\boxed{1}.\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 223,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term in the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n \\geq 2\\).\n\nFirst, let's rewrite the general term using the properties of the Fibonacci sequence:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}}.\n\\]\nUsing the Fibonacci recurrence relation, we have \\(F_{n+2} = F_{n+1} + F_n\\). Substituting this into the term gives:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis can be verified by combining the right-hand side over a common denominator:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1} - (F_{n+1} - F_n)}{F_n F_{n+1}} = \\frac{F_n}{F_n F_{n+1}} = \\frac{F_{n+1}}{F_n F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nIn a telescoping series, most terms cancel out, leaving us with:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots = \\frac{1}{F_1} = \\frac{1}{1} = 1.\n\\]\nTherefore, the sum of the series is:\n\\[\n\\boxed{1}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term in the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n \\geq 2\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's rewrite the general term using the properties of the Fibonacci sequence:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}}.\n\\]\nUsing the Fibonacci recurrence relation, we have \\(F_{n+2} = F_{n+1} + F_n\\). Substituting this into the term gives:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis can be verified by combining the right-hand side over a common denominator:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1} - (F_{n+1} - F_n)}{F_n F_{n+1}} = \\frac{F_n}{F_n F_{n+1}} = \\frac{F_{n+1}}{F_n F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nIn a telescoping series, most terms cancel out, leaving us with:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots = \\frac{1}{F_1} = \\frac{1}{1} = 1.\n\\]\nTherefore, the sum of the series is:\n\\[\n\\boxed{1}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 250,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using a known identity for Fibonacci numbers. Specifically, we use the identity:\n\n\\[ F_{n+2} = F_{n+1} + F_n. \\]\n\nRewriting the term in the sum using this identity, we get:\n\n\\[ \\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}. \\]\n\nWe can decompose this fraction using partial fractions. Notice that:\n\n\\[ \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}. \\]\n\nHowever, a more straightforward approach is to use the identity directly in a telescoping series form. Let's rewrite the sum in a way that allows us to see the cancellation:\n\n\\[ \\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right). \\]\n\nThis is a telescoping series. Writing out the first few terms, we get:\n\n\\[ \\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots. \\]\n\nAll intermediate terms cancel out, leaving us with:\n\n\\[ \\frac{1}{F_1} - \\lim_{n \\to \\infty} \\frac{1}{F_{n+1}}. \\]\n\nSince \\(F_1 = 1\\) and the Fibonacci sequence grows exponentially, \\(\\lim_{n \\to \\infty} \\frac{1}{F_{n+1}} = 0\\). Therefore, the sum simplifies to:\n\n\\[ \\frac{1}{1} - 0 = 1. \\]\n\nThus, the value of the sum is:\n\n\\[ \\boxed{1}. \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using a known identity for Fibonacci numbers. Specifically, we use the identity:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "\\[ F_{n+2} = F_{n+1} + F_n. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "Rewriting the term in the sum using this identity, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[ \\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "We can decompose this fraction using partial fractions. Notice that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[ \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "However, a more straightforward approach is to use the identity directly in a telescoping series form. Let's rewrite the sum in a way that allows us to see the cancellation:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "\\[ \\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right). \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "This is a telescoping series. Writing out the first few terms, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "\\[ \\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "All intermediate terms cancel out, leaving us with:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "\\[ \\frac{1}{F_1} - \\lim_{n \\to \\infty} \\frac{1}{F_{n+1}}. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "Since \\(F_1 = 1\\) and the Fibonacci sequence grows exponentially, \\(\\lim_{n \\to \\infty} \\frac{1}{F_{n+1}} = 0\\). Therefore, the sum simplifies to:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "\\[ \\frac{1}{1} - 0 = 1. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "Thus, the value of the sum is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "\\[ \\boxed{1}. \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 249,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}}\n\\]\n\nWe can use the Fibonacci recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the term as follows:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}\n\\]\n\nNext, we decompose the fraction using partial fractions. We want to express \\(\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}\\) in a form that might telescope. Notice that:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}\n\\]\n\nWe can rewrite this as:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2}\n\\]\n\nNow, let's try to decompose it into simpler terms. We assume:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1}}\n\\]\n\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n\n\\]\n\nExpanding and equating coefficients, we get:\n\n\\[\nF_{n+1} = A F_{n+1} + A F_n + B F_n\n\\]\n\nThis simplifies to:\n\n\\[\nF_{n+1} = (A + B) F_n + A F_{n+1}\n\\]\n\nFor the equation to hold for all \\(n\\), we need:\n\n\\[\n1 = A \\quad \\text{and} \\quad A + B = 0\n\\]\n\nThus, \\(A = 1\\) and \\(B = -1\\). Therefore, we have:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}\n\\]\n\nThe series now becomes a telescoping series:\n\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right)\n\\]\n\nIn a telescoping series, most terms cancel out, leaving us with:\n\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots\n\\]\n\nAll intermediate terms cancel, leaving:\n\n\\[\n\\frac{1}{F_1}\n\\]\n\nSince \\(F_1 = 1\\), we have:\n\n\\[\n\\frac{1}{F_1} = 1\n\\]\n\nThus, the sum of the series is:\n\n\\[\n\\boxed{1}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We can use the Fibonacci recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the term as follows:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Next, we decompose the fraction using partial fractions. We want to express \\(\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}\\) in a form that might telescope. Notice that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "We can rewrite this as:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "Now, let's try to decompose it into simpler terms. We assume:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1}}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "Multiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "Expanding and equating coefficients, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "\\[\nF_{n+1} = A F_{n+1} + A F_n + B F_n\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "This simplifies to:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "\\[\nF_{n+1} = (A + B) F_n + A F_{n+1}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "For the equation to hold for all \\(n\\), we need:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 17,
+          "text": "\\[\n1 = A \\quad \\text{and} \\quad A + B = 0\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 18,
+          "text": "Thus, \\(A = 1\\) and \\(B = -1\\). Therefore, we have:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 19,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 20,
+          "text": "The series now becomes a telescoping series:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 21,
+          "text": "\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right)\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 22,
+          "text": "In a telescoping series, most terms cancel out, leaving us with:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 23,
+          "text": "\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 24,
+          "text": "All intermediate terms cancel, leaving:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 25,
+          "text": "\\[\n\\frac{1}{F_1}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 26,
+          "text": "Since \\(F_1 = 1\\), we have:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 27,
+          "text": "\\[\n\\frac{1}{F_1} = 1\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 28,
+          "text": "Thus, the sum of the series is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 29,
+          "text": "\\[\n\\boxed{1}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 341,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using a known identity involving Fibonacci numbers. The identity that will be useful here is:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}\n\\]\n\nThis identity can be derived from the definition of the Fibonacci sequence \\(F_{n+2} = F_{n+1} + F_n\\). Let's verify it:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n F_n} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}\n\\]\n\nNow, we substitute this identity into the original sum:\n\n\\[\n\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}} = \\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right)\n\\]\n\nThis is a telescoping series. When we write out the first few terms, we see:\n\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots\n\\]\n\nAll intermediate terms cancel out, leaving us with:\n\n\\[\n\\frac{1}{F_1} - \\lim_{n \\to \\infty} \\frac{1}{F_{n+1}}\n\\]\n\nSince \\(F_1 = 1\\) and the Fibonacci sequence grows without bound, \\(\\lim_{n \\to \\infty} \\frac{1}{F_{n+1}} = 0\\). Therefore, the sum simplifies to:\n\n\\[\n\\frac{1}{1} - 0 = 1\n\\]\n\nThus, the value of the sum is:\n\n\\[\n\\boxed{1}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using a known identity involving Fibonacci numbers. The identity that will be useful here is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "This identity can be derived from the definition of the Fibonacci sequence \\(F_{n+2} = F_{n+1} + F_n\\). Let's verify it:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n F_n} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Now, we substitute this identity into the original sum:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\n\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}} = \\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right)\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "This is a telescoping series. When we write out the first few terms, we see:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "All intermediate terms cancel out, leaving us with:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "\\[\n\\frac{1}{F_1} - \\lim_{n \\to \\infty} \\frac{1}{F_{n+1}}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "Since \\(F_1 = 1\\) and the Fibonacci sequence grows without bound, \\(\\lim_{n \\to \\infty} \\frac{1}{F_{n+1}} = 0\\). Therefore, the sum simplifies to:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "\\[\n\\frac{1}{1} - 0 = 1\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "Thus, the value of the sum is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "\\[\n\\boxed{1}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 233,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).\n\nFirst, let's rewrite the general term using the Fibonacci recurrence relation:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]\nThis implies \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms of the series, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = 1 + \\frac{1}{1} = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's rewrite the general term using the Fibonacci recurrence relation:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]\nThis implies \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms of the series, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = 1 + \\frac{1}{1} = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 275,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the identity for Fibonacci numbers, which states that \\(F_{n+2} = F_{n+1} + F_n\\). This allows us to rewrite the term in the sum as follows:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\n\nWe can decompose this fraction into partial fractions. Notice that:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\n\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\n\nBy comparing coefficients, we see that if we choose \\(A = 1\\) and \\(B = -1\\), the equation holds:\n\n\\[\nF_{n+1} = F_{n+1} + F_n - F_n.\n\\]\n\nThus, we have:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\n\nThis means the original sum can be written as a telescoping series:\n\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\n\nWhen we write out the first few terms of this series, we get:\n\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\n\nAll intermediate terms cancel out, leaving us with:\n\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2.\n\\]\n\nTherefore, the value of the sum is:\n\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the identity for Fibonacci numbers, which states that \\(F_{n+2} = F_{n+1} + F_n\\). This allows us to rewrite the term in the sum as follows:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We can decompose this fraction into partial fractions. Notice that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Multiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "By comparing coefficients, we see that if we choose \\(A = 1\\) and \\(B = -1\\), the equation holds:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "\\[\nF_{n+1} = F_{n+1} + F_n - F_n.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "Thus, we have:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "This means the original sum can be written as a telescoping series:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "When we write out the first few terms of this series, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "All intermediate terms cancel out, leaving us with:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "Therefore, the value of the sum is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 17,
+          "text": "\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 263,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n \\geq 2\\).\n\nFirst, let's rewrite the general term using the properties of Fibonacci numbers:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can simplify this expression by recognizing that \\(F_{n+2} = F_{n+1} + F_n\\). Therefore,\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nNext, we use the identity \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the denominator:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\n\nTo proceed further, we use a known identity involving Fibonacci numbers:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis identity can be derived from the properties of Fibonacci numbers and telescoping series. Let's verify it:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}}.\n\\]\nSince \\(F_{n+1} = F_n + F_{n-1}\\), we have:\n\\[\nF_{n+1} - F_n = F_{n-1}.\n\\]\nThus,\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n-1}}{F_n F_{n+1}}.\n\\]\nHowever, we need to adjust our approach slightly to match the given term. Instead, we use:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\n\nNow, we can write the sum as a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nIn a telescoping series, most terms cancel out:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel, leaving:\n\\[\n\\frac{1}{F_1} - \\lim_{n \\to \\infty} \\frac{1}{F_{n+1}}.\n\\]\nSince \\(F_1 = 1\\) and \\(F_n\\) grows exponentially, \\(\\lim_{n \\to \\infty} \\frac{1}{F_{n+1}} = 0\\). Therefore, the sum simplifies to:\n\\[\n\\frac{1}{1} - 0 = 1.\n\\]\n\nThus, the value of the sum is:\n\\[\n\\boxed{1}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n \\geq 2\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's rewrite the general term using the properties of Fibonacci numbers:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can simplify this expression by recognizing that \\(F_{n+2} = F_{n+1} + F_n\\). Therefore,\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nNext, we use the identity \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the denominator:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "To proceed further, we use a known identity involving Fibonacci numbers:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis identity can be derived from the properties of Fibonacci numbers and telescoping series. Let's verify it:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}}.\n\\]\nSince \\(F_{n+1} = F_n + F_{n-1}\\), we have:\n\\[\nF_{n+1} - F_n = F_{n-1}.\n\\]\nThus,\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n-1}}{F_n F_{n+1}}.\n\\]\nHowever, we need to adjust our approach slightly to match the given term. Instead, we use:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "Now, we can write the sum as a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nIn a telescoping series, most terms cancel out:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel, leaving:\n\\[\n\\frac{1}{F_1} - \\lim_{n \\to \\infty} \\frac{1}{F_{n+1}}.\n\\]\nSince \\(F_1 = 1\\) and \\(F_n\\) grows exponentially, \\(\\lim_{n \\to \\infty} \\frac{1}{F_{n+1}} = 0\\). Therefore, the sum simplifies to:\n\\[\n\\frac{1}{1} - 0 = 1.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Thus, the value of the sum is:\n\\[\n\\boxed{1}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 337,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of the Fibonacci sequence. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).\n\nFirst, let's rewrite the general term in the sum:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]\nThis implies that \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the sum becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of the Fibonacci sequence. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's rewrite the general term in the sum:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we get:\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]\nThis implies that \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThus, the sum becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms, we see:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 2.\n\\]\nTherefore, the value of the sum is:\n\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 273,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of Fibonacci numbers. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).\n\nFirst, let's rewrite the general term in the series:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}}.\n\\]\nUsing the Fibonacci recurrence relation, we have \\(F_{n+2} = F_{n+1} + F_n\\). Substituting this into the term, we get:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis decomposition is valid because:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1} - (F_{n+1} - F_n)}{F_n F_{n+1}} = \\frac{F_n}{F_n F_{n+1}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThus, we can rewrite the series as:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nThis is a telescoping series. Writing out the first few terms, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} = \\frac{1}{1} = 1.\n\\]\nTherefore, the sum of the series is:\n\\[\n\\boxed{1}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of Fibonacci numbers. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's rewrite the general term in the series:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}}.\n\\]\nUsing the Fibonacci recurrence relation, we have \\(F_{n+2} = F_{n+1} + F_n\\). Substituting this into the term, we get:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThis decomposition is valid because:\n\\[\n\\frac{1}{F_n} - \\frac{1}{F_{n+1}} = \\frac{F_{n+1} - F_n}{F_n F_{n+1}} = \\frac{F_{n+1} - (F_{n+1} - F_n)}{F_n F_{n+1}} = \\frac{F_n}{F_n F_{n+1}} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\nThus, we can rewrite the series as:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\nThis is a telescoping series. Writing out the first few terms, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} = \\frac{1}{1} = 1.\n\\]\nTherefore, the sum of the series is:\n\\[\n\\boxed{1}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 256,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}}\n\\]\n\nWe can use the Fibonacci recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the denominator:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}\n\\]\n\nNext, we decompose the fraction using partial fractions. We want to express \\(\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}\\) in the form:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}\n\\]\n\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n\n\\]\n\nExpanding and equating coefficients, we get:\n\n\\[\nF_{n+1} = A F_{n+1} + A F_n + B F_n\n\\]\n\nThis simplifies to:\n\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n\n\\]\n\nFor this equation to hold for all \\(n\\), the coefficients of \\(F_{n+1}\\) and \\(F_n\\) must match on both sides. Therefore, we have:\n\n\\[\nA = 1 \\quad \\text{and} \\quad A + B = 0\n\\]\n\nSolving these, we find:\n\n\\[\nA = 1 \\quad \\text{and} \\quad B = -1\n\\]\n\nThus, the partial fraction decomposition is:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}\n\\]\n\nSubstituting back into the sum, we get:\n\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right)\n\\]\n\nThis is a telescoping series. Writing out the first few terms, we see:\n\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2 + F_1} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3 + F_2} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4 + F_3} \\right) + \\cdots\n\\]\n\nNotice that most terms cancel out:\n\n\\[\n\\frac{1}{F_1} + \\left( -\\frac{1}{F_2 + F_1} + \\frac{1}{F_2} \\right) + \\left( -\\frac{1}{F_3 + F_2} + \\frac{1}{F_3} \\right) + \\left( -\\frac{1}{F_4 + F_3} + \\frac{1}{F_4} \\right) + \\cdots\n\\]\n\nThe remaining terms are:\n\n\\[\n\\frac{1}{F_1} + \\left( \\frac{1}{F_2} - \\frac{1}{F_2 + F_1} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_3 + F_2} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_4 + F_3} \\right) + \\cdots\n\\]\n\nSince \\(F_1 = 1\\) and \\(F_2 = 1\\):\n\n\\[\n\\frac{1}{1} + \\left( \\frac{1}{1} - \\frac{1}{1+1} \\right) + \\left( \\frac{1}{2} - \\frac{1}{2+1} \\right) + \\left( \\frac{1}{3} - \\frac{1}{3+2} \\right) + \\cdots\n\\]\n\nSimplifying further:\n\n\\[\n1 + \\left( 1 - \\frac{1}{2} \\right) + \\left( \\frac{1}{2} - \\frac{1}{3} \\right) + \\left( \\frac{1}{3} - \\frac{1}{5} \\right) + \\cdots\n\\]\n\nAll intermediate terms cancel out, leaving:\n\n\\[\n1 + 1 = 2\n\\]\n\nThus, the sum is:\n\n\\[\n\\boxed{2}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We can use the Fibonacci recurrence relation \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the denominator:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Next, we decompose the fraction using partial fractions. We want to express \\(\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}\\) in the form:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "Multiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "Expanding and equating coefficients, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "\\[\nF_{n+1} = A F_{n+1} + A F_n + B F_n\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "This simplifies to:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "For this equation to hold for all \\(n\\), the coefficients of \\(F_{n+1}\\) and \\(F_n\\) must match on both sides. Therefore, we have:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "\\[\nA = 1 \\quad \\text{and} \\quad A + B = 0\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "Solving these, we find:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "\\[\nA = 1 \\quad \\text{and} \\quad B = -1\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "Thus, the partial fraction decomposition is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 17,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 18,
+          "text": "Substituting back into the sum, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 19,
+          "text": "\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right)\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 20,
+          "text": "This is a telescoping series. Writing out the first few terms, we see:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 21,
+          "text": "\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2 + F_1} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3 + F_2} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4 + F_3} \\right) + \\cdots\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 22,
+          "text": "Notice that most terms cancel out:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 23,
+          "text": "\\[\n\\frac{1}{F_1} + \\left( -\\frac{1}{F_2 + F_1} + \\frac{1}{F_2} \\right) + \\left( -\\frac{1}{F_3 + F_2} + \\frac{1}{F_3} \\right) + \\left( -\\frac{1}{F_4 + F_3} + \\frac{1}{F_4} \\right) + \\cdots\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 24,
+          "text": "The remaining terms are:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 25,
+          "text": "\\[\n\\frac{1}{F_1} + \\left( \\frac{1}{F_2} - \\frac{1}{F_2 + F_1} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_3 + F_2} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_4 + F_3} \\right) + \\cdots\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 26,
+          "text": "Since \\(F_1 = 1\\) and \\(F_2 = 1\\):",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 27,
+          "text": "\\[\n\\frac{1}{1} + \\left( \\frac{1}{1} - \\frac{1}{1+1} \\right) + \\left( \\frac{1}{2} - \\frac{1}{2+1} \\right) + \\left( \\frac{1}{3} - \\frac{1}{3+2} \\right) + \\cdots\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 28,
+          "text": "Simplifying further:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 29,
+          "text": "\\[\n1 + \\left( 1 - \\frac{1}{2} \\right) + \\left( \\frac{1}{2} - \\frac{1}{3} \\right) + \\left( \\frac{1}{3} - \\frac{1}{5} \\right) + \\cdots\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 30,
+          "text": "All intermediate terms cancel out, leaving:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 31,
+          "text": "\\[\n1 + 1 = 2\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 32,
+          "text": "Thus, the sum is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 33,
+          "text": "\\[\n\\boxed{2}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 434,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).\n\nRecall that the Fibonacci sequence is defined as:\n\\[ F_0 = 0, \\quad F_1 = 1, \\quad \\text{and} \\quad F_{n} = F_{n-1} + F_{n-2} \\text{ for } n \\geq 2. \\]\n\nWe can use the identity \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the general term:\n\\[ \\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}. \\]\n\nNext, we decompose the fraction using partial fractions:\n\\[ \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}. \\]\n\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[ F_{n+1} = A (F_{n+1} + F_n) + B F_n. \\]\n\nEquating coefficients, we get:\n\\[ F_{n+1} = A F_{n+1} + A F_n + B F_n. \\]\n\nThis simplifies to:\n\\[ F_{n+1} = (A + B) F_n + A F_{n+1}. \\]\n\nFor this to hold for all \\(n\\), we must have:\n\\[ A + B = 0 \\quad \\text{and} \\quad A = 1. \\]\n\nSolving these equations, we find:\n\\[ A = 1 \\quad \\text{and} \\quad B = -1. \\]\n\nThus, we can write:\n\\[ \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}. \\]\n\nNow, we can express the sum as:\n\\[ \\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right). \\]\n\nNotice that this is a telescoping series. Let's write out the first few terms to see the pattern:\n\\[ \\left( \\frac{1}{F_1} - \\frac{1}{F_2 + F_1} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3 + F_2} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4 + F_3} \\right) + \\cdots. \\]\n\nThis simplifies to:\n\\[ \\left( \\frac{1}{1} - \\frac{1}{1 + 1} \\right) + \\left( \\frac{1}{1} - \\frac{1}{2 + 1} \\right) + \\left( \\frac{1}{2} - \\frac{1}{3 + 2} \\right) + \\left( \\frac{1}{3} - \\frac{1}{5 + 3} \\right) + \\cdots. \\]\n\nMost terms cancel out, leaving:\n\\[ 1 + \\left( \\frac{1}{1} - \\frac{1}{2} \\right) + \\left( \\frac{1}{2} - \\frac{1}{3} \\right) + \\left( \\frac{1}{3} - \\frac{1}{5} \\right) + \\cdots. \\]\n\nThe remaining terms are:\n\\[ 1 + 1 = 2. \\]\n\nThus, the sum of the series is:\n\\[ \\boxed{2}. \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "Recall that the Fibonacci sequence is defined as:\n\\[ F_0 = 0, \\quad F_1 = 1, \\quad \\text{and} \\quad F_{n} = F_{n-1} + F_{n-2} \\text{ for } n \\geq 2. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We can use the identity \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the general term:\n\\[ \\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "Next, we decompose the fraction using partial fractions:\n\\[ \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Multiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[ F_{n+1} = A (F_{n+1} + F_n) + B F_n. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "Equating coefficients, we get:\n\\[ F_{n+1} = A F_{n+1} + A F_n + B F_n. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "This simplifies to:\n\\[ F_{n+1} = (A + B) F_n + A F_{n+1}. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "For this to hold for all \\(n\\), we must have:\n\\[ A + B = 0 \\quad \\text{and} \\quad A = 1. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "Solving these equations, we find:\n\\[ A = 1 \\quad \\text{and} \\quad B = -1. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "Thus, we can write:\n\\[ \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "Now, we can express the sum as:\n\\[ \\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right). \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "Notice that this is a telescoping series. Let's write out the first few terms to see the pattern:\n\\[ \\left( \\frac{1}{F_1} - \\frac{1}{F_2 + F_1} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3 + F_2} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4 + F_3} \\right) + \\cdots. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "This simplifies to:\n\\[ \\left( \\frac{1}{1} - \\frac{1}{1 + 1} \\right) + \\left( \\frac{1}{1} - \\frac{1}{2 + 1} \\right) + \\left( \\frac{1}{2} - \\frac{1}{3 + 2} \\right) + \\left( \\frac{1}{3} - \\frac{1}{5 + 3} \\right) + \\cdots. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "Most terms cancel out, leaving:\n\\[ 1 + \\left( \\frac{1}{1} - \\frac{1}{2} \\right) + \\left( \\frac{1}{2} - \\frac{1}{3} \\right) + \\left( \\frac{1}{3} - \\frac{1}{5} \\right) + \\cdots. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "The remaining terms are:\n\\[ 1 + 1 = 2. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "Thus, the sum of the series is:\n\\[ \\boxed{2}. \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 383,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series: \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).\n\nRecall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\). Using this recurrence relation, we can express \\(F_{n+2}\\) in terms of \\(F_{n+1}\\) and \\(F_n\\):\n\\[F_{n+2} = F_{n+1} + F_n.\\]\n\nNow, let's rewrite the general term:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. We want to find constants \\(A\\) and \\(B\\) such that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A(F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we see that if we set \\(A = 1\\) and \\(B = -1\\), the equation holds:\n\\[\nF_{n+1} = F_{n+1} + F_n - F_n.\n\\]\nThus, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nSo the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right).\n\\]\nWriting out the first few terms, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2 + F_1} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3 + F_2} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4 + F_3} \\right) + \\cdots.\n\\]\nThis simplifies to:\n\\[\n\\left( \\frac{1}{1} - \\frac{1}{1 + 1} \\right) + \\left( \\frac{1}{1} - \\frac{1}{2 + 1} \\right) + \\left( \\frac{1}{2} - \\frac{1}{3 + 2} \\right) + \\left( \\frac{1}{3} - \\frac{1}{5 + 3} \\right) + \\cdots.\n\\]\nNotice that all terms except the first \\(\\frac{1}{1}\\) cancel out. Therefore, the sum of the series is:\n\\[\n1.\n\\]\nThus, the value of the sum is:\n\\[\n\\boxed{1}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term of the series: \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\). Using this recurrence relation, we can express \\(F_{n+2}\\) in terms of \\(F_{n+1}\\) and \\(F_n\\):\n\\[F_{n+2} = F_{n+1} + F_n.\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "Now, let's rewrite the general term:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. We want to find constants \\(A\\) and \\(B\\) such that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A(F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we see that if we set \\(A = 1\\) and \\(B = -1\\), the equation holds:\n\\[\nF_{n+1} = F_{n+1} + F_n - F_n.\n\\]\nThus, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nSo the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} \\right).\n\\]\nWriting out the first few terms, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2 + F_1} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3 + F_2} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4 + F_3} \\right) + \\cdots.\n\\]\nThis simplifies to:\n\\[\n\\left( \\frac{1}{1} - \\frac{1}{1 + 1} \\right) + \\left( \\frac{1}{1} - \\frac{1}{2 + 1} \\right) + \\left( \\frac{1}{2} - \\frac{1}{3 + 2} \\right) + \\left( \\frac{1}{3} - \\frac{1}{5 + 3} \\right) + \\cdots.\n\\]\nNotice that all terms except the first \\(\\frac{1}{1}\\) cancel out. Therefore, the sum of the series is:\n\\[\n1.\n\\]\nThus, the value of the sum is:\n\\[\n\\boxed{1}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 329,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the known identity for Fibonacci numbers: \\(F_{n+2} = F_{n+1} + F_n\\). This allows us to rewrite the general term of the series as follows:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\n\nWe can decompose this fraction into partial fractions. Notice that:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n^2} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n^2}.\n\\]\n\nWe can use the identity \\(F_{n+1}^2 - F_n F_{n+2} = (-1)^n\\) (a consequence of Cassini's identity), but here a simpler approach is to recognize a telescoping series. Let's rewrite the term in a more suggestive form:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\n\nThis can be verified by algebraic manipulation:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1} + F_n - F_n}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{F_n}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]\n\nThus, the series becomes a telescoping series:\n\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]\n\nIn a telescoping series, most terms cancel out, leaving us with:\n\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots = \\frac{1}{F_1} = 1,\n\\]\n\nsince \\(F_1 = 1\\) and all other terms cancel. Therefore, the sum is:\n\n\\[\n\\boxed{1}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the known identity for Fibonacci numbers: \\(F_{n+2} = F_{n+1} + F_n\\). This allows us to rewrite the general term of the series as follows:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We can decompose this fraction into partial fractions. Notice that:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1}}{F_n F_{n+1} + F_n^2} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n^2} = \\frac{F_{n+1}}{F_{n+1} F_n + F_n^2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "We can use the identity \\(F_{n+1}^2 - F_n F_{n+2} = (-1)^n\\) (a consequence of Cassini's identity), but here a simpler approach is to recognize a telescoping series. Let's rewrite the term in a more suggestive form:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "This can be verified by algebraic manipulation:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{F_{n+1} + F_n - F_n}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{F_n}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1}}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "Thus, the series becomes a telescoping series:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+1}} \\right).\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "In a telescoping series, most terms cancel out, leaving us with:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_2} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_4} \\right) + \\cdots = \\frac{1}{F_1} = 1,\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "since \\(F_1 = 1\\) and all other terms cancel. Therefore, the sum is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "\\[\n\\boxed{1}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1",
+      "is_correct": false,
+      "num_tokens": 266,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term in the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for \\(n \\geq 0\\).\n\nFirst, let's rewrite the general term:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we find that \\(A + B = 0\\) and \\(A F_n + B F_n = F_{n+1}\\). This implies \\(A = 1\\) and \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nSince \\(F_{n+1} + F_n = F_{n+2}\\), the term simplifies to:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThis means the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms of the series, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2.\n\\]\nTherefore, the sum of the series is:\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term in the series. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for \\(n \\geq 0\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's rewrite the general term:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\nWe can decompose this fraction using partial fractions. Notice that:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\nMultiplying through by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\nBy comparing coefficients, we find that \\(A + B = 0\\) and \\(A F_n + B F_n = F_{n+1}\\). This implies \\(A = 1\\) and \\(B = -1\\). Therefore, we have:\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n}.\n\\]\nSince \\(F_{n+1} + F_n = F_{n+2}\\), the term simplifies to:\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\nThis means the series becomes a telescoping series:\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\nWhen we write out the first few terms of the series, we get:\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\nAll intermediate terms cancel out, leaving us with:\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2.\n\\]\nTherefore, the sum of the series is:\n\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 286,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of the Fibonacci sequence. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).\n\nFirst, let's simplify the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Using the Fibonacci recurrence relation, we have:\n\\[ F_{n+2} = F_{n+1} + F_n. \\]\nThus,\n\\[ \\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}. \\]\n\nWe can decompose this fraction using partial fractions. Notice that:\n\\[ \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}. \\]\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[ F_{n+1} = A (F_{n+1} + F_n) + B F_n. \\]\nMatching coefficients, we get:\n\\[ F_{n+1} = A F_{n+1} + (A + B) F_n. \\]\nThis implies:\n\\[ A = 1 \\quad \\text{and} \\quad A + B = 0. \\]\nSo, \\(A = 1\\) and \\(B = -1\\). Therefore,\n\\[ \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}. \\]\n\nNow, we can write the series as:\n\\[ \\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right). \\]\nThis is a telescoping series. Writing out the first few terms, we get:\n\\[ \\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots. \\]\nAll intermediate terms cancel out, leaving us with:\n\\[ \\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2. \\]\n\nTherefore, the value of the sum is:\n\\[ \\boxed{2}. \\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo compute the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by using the properties of the Fibonacci sequence. Recall that the Fibonacci sequence is defined as \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\geq 0\\).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's simplify the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). Using the Fibonacci recurrence relation, we have:\n\\[ F_{n+2} = F_{n+1} + F_n. \\]\nThus,\n\\[ \\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We can decompose this fraction using partial fractions. Notice that:\n\\[ \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}. \\]\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\\[ F_{n+1} = A (F_{n+1} + F_n) + B F_n. \\]\nMatching coefficients, we get:\n\\[ F_{n+1} = A F_{n+1} + (A + B) F_n. \\]\nThis implies:\n\\[ A = 1 \\quad \\text{and} \\quad A + B = 0. \\]\nSo, \\(A = 1\\) and \\(B = -1\\). Therefore,\n\\[ \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "Now, we can write the series as:\n\\[ \\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right). \\]\nThis is a telescoping series. Writing out the first few terms, we get:\n\\[ \\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots. \\]\nAll intermediate terms cancel out, leaving us with:\n\\[ \\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2. \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Therefore, the value of the sum is:\n\\[ \\boxed{2}. \\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 298,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_213",
+      "problem": {
+        "id": "math500_213",
+        "dataset": "math500",
+        "question": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+        "ground_truth": "2",
+        "domain": "intermediate algebra",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo find the value of the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). We can use the identity for Fibonacci numbers \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the term as follows:\n\n\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]\n\nWe can decompose this fraction using partial fractions. Let's assume:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]\n\nMultiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:\n\n\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]\n\nMatching coefficients, we get:\n\n\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]\n\nThis implies that \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:\n\n\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]\n\nThus, the series can be written as:\n\n\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]\n\nThis is a telescoping series. Writing out the first few terms, we get:\n\n\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]\n\nAll intermediate terms cancel out, leaving us with:\n\n\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2.\n\\]\n\nTherefore, the value of the sum is:\n\n\\[\n\\boxed{2}.\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nCompute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$\nassistant\nTo find the value of the sum \\(\\sum_{n=1}^\\infty \\frac{F_{n+1}}{F_n F_{n+2}}\\), we start by examining the general term \\(\\frac{F_{n+1}}{F_n F_{n+2}}\\). We can use the identity for Fibonacci numbers \\(F_{n+2} = F_{n+1} + F_n\\) to rewrite the term as follows:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n F_{n+2}} = \\frac{F_{n+1}}{F_n (F_{n+1} + F_n)}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "We can decompose this fraction using partial fractions. Let's assume:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{A}{F_n} + \\frac{B}{F_{n+1} + F_n}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Multiplying both sides by \\(F_n (F_{n+1} + F_n)\\) gives:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\nF_{n+1} = A (F_{n+1} + F_n) + B F_n.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "Matching coefficients, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "\\[\nF_{n+1} = A F_{n+1} + (A + B) F_n.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "This implies that \\(A = 1\\) and \\(A + B = 0\\), so \\(B = -1\\). Therefore, we have:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "\\[\n\\frac{F_{n+1}}{F_n (F_{n+1} + F_n)} = \\frac{1}{F_n} - \\frac{1}{F_{n+1} + F_n} = \\frac{1}{F_n} - \\frac{1}{F_{n+2}}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "Thus, the series can be written as:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "\\[\n\\sum_{n=1}^\\infty \\left( \\frac{1}{F_n} - \\frac{1}{F_{n+2}} \\right).\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "This is a telescoping series. Writing out the first few terms, we get:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "\\[\n\\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\left( \\frac{1}{F_4} - \\frac{1}{F_6} \\right) + \\cdots.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "All intermediate terms cancel out, leaving us with:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "\\[\n\\frac{1}{F_1} + \\frac{1}{F_2} = \\frac{1}{1} + \\frac{1}{1} = 1 + 1 = 2.\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "Therefore, the value of the sum is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 17,
+          "text": "\\[\n\\boxed{2}.\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "2",
+      "is_correct": true,
+      "num_tokens": 266,
+      "model_name": "QwQ-32B"
+    }
+  ]
+}

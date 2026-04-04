@@ -1,0 +1,1771 @@
+{
+  "problem_id": "math500_330",
+  "n": 32,
+  "temperature": 0.8,
+  "candidates": [
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo solve the problem of forming a subcommittee of 5 members with at least one member from each party (Republicans and Democrats), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all Republicans or all Democrats).\n\n### Step 1: Calculate the total number of ways to choose 5 members from 14\n\nThe total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\):\n\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n\\]\n\nCalculating this:\n\n\\[\n\\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n\\]\n\n### Step 2: Calculate the number of ways to choose all Republicans\n\nWe need to count the number of ways to choose 5 members such that they are all Republicans. Since there are only 8 Republicans, it is impossible to choose 5 Republicans if there are fewer than 5 Republicans available. Therefore, the number of ways to choose 5 Republicans is:\n\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n\\]\n\n### Step 3: Calculate the number of ways to choose all Democrats\n\nSimilarly, we need to count the number of ways to choose 5 members such that they are all Democrats. Since there are only 6 Democrats, it is impossible to choose 5 Democrats if there are fewer than 5 Democrats available. Therefore, the number of ways to choose 5 Democrats is:\n\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n\\]\n\n### Step 4: Subtract the invalid cases from the total\n\nNow, we subtract the number of invalid cases (all Republicans and all Democrats) from the total number of ways to choose any 5 members:\n\n\\[\n\\text{Valid subcommittees} = \\binom{14}{5} - \\binom{8}{5} - \\binom{6}{5}\n\\]\n\nSubstituting the values we calculated:\n\n\\[\n\\text{Valid subcommittees} = 2002 - 56 - 6 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo solve the problem of forming a subcommittee of 5 members with at least one member from each party (Republicans and Democrats), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all Republicans or all Democrats).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "### Step 1: Calculate the total number of ways to choose 5 members from 14",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\):",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Calculating this:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\n\\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "### Step 2: Calculate the number of ways to choose all Republicans",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "We need to count the number of ways to choose 5 members such that they are all Republicans. Since there are only 8 Republicans, it is impossible to choose 5 Republicans if there are fewer than 5 Republicans available. Therefore, the number of ways to choose 5 Republicans is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "### Step 3: Calculate the number of ways to choose all Democrats",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "Similarly, we need to count the number of ways to choose 5 members such that they are all Democrats. Since there are only 6 Democrats, it is impossible to choose 5 Democrats if there are fewer than 5 Democrats available. Therefore, the number of ways to choose 5 Democrats is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "### Step 4: Subtract the invalid cases from the total",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "Now, we subtract the number of invalid cases (all Republicans and all Democrats) from the total number of ways to choose any 5 members:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "\\[\n\\text{Valid subcommittees} = \\binom{14}{5} - \\binom{8}{5} - \\binom{6}{5}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "Substituting the values we calculated:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "\\[\n\\text{Valid subcommittees} = 2002 - 56 - 6 = 1940\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 17,
+          "text": "Thus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 18,
+          "text": "\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 420,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo solve the problem of forming a subcommittee of 5 members with at least one member from each party (Republicans and Democrats), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all members are from one party).\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Simplifying this:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee with all Republicans:**\n\n   The number of ways to choose 5 Republicans from 8 is:\n\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]\n\n3. **Calculate the number of ways to form a subcommittee with all Democrats:**\n\n   The number of ways to choose 5 Democrats from 6 is:\n\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n   \\]\n\n4. **Calculate the number of subcommittees with at least one member from each party:**\n\n   Subtract the number of subcommittees with all Republicans and all Democrats from the total number of subcommittees:\n\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\binom{8}{5} - \\binom{6}{5}\n   \\]\n\n   Substituting the values we calculated:\n\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - 56 - 6 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Simplifying this:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee with all Republicans:**\n\n   The number of ways to choose 5 Republicans from 8 is:\n\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with all Democrats:**\n\n   The number of ways to choose 5 Democrats from 6 is:\n\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of subcommittees with at least one member from each party:**\n\n   Subtract the number of subcommittees with all Republicans and all Democrats from the total number of subcommittees:\n\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\binom{8}{5} - \\binom{6}{5}\n   \\]\n\n   Substituting the values we calculated:\n\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - 56 - 6 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 368,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo solve the problem of forming a subcommittee of 5 members with at least one member from each party (at least one Republican and one Democrat), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all members are from one party).\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee with only Republicans:**\n\n   There are 8 Republicans, so the number of ways to choose 5 Republicans out of 8 is:\n\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]\n\n3. **Calculate the number of ways to form a subcommittee with only Democrats:**\n\n   There are 6 Democrats, so the number of ways to choose 5 Democrats out of 6 is:\n\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{6}{5} = \\frac{6}{1} = 6\n   \\]\n\n4. **Calculate the number of subcommittees that do not have at least one member from each party:**\n\n   This is the sum of the subcommittees that consist only of Republicans and only of Democrats:\n\n   \\[\n   56 + 6 = 62\n   \\]\n\n5. **Calculate the number of subcommittees with at least one member from each party:**\n\n   Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:\n\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee with only Republicans:**\n\n   There are 8 Republicans, so the number of ways to choose 5 Republicans out of 8 is:\n\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with only Democrats:**\n\n   There are 6 Democrats, so the number of ways to choose 5 Democrats out of 6 is:\n\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{6}{5} = \\frac{6}{1} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of subcommittees that do not have at least one member from each party:**\n\n   This is the sum of the subcommittees that consist only of Republicans and only of Democrats:\n\n   \\[\n   56 + 6 = 62\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "**Calculate the number of subcommittees with at least one member from each party:**\n\n   Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:\n\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 413,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee consisting of 8 Republicans and 6 Democrats, with the condition that the subcommittee must include at least one member from each party, we can use the principle of complementary counting.\n\nFirst, let's calculate the total number of ways to choose 5 members out of the 14 available members (8 Republicans + 6 Democrats):\n\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n\\]\n\nCalculating the factorials:\n\n\\[\n14! = 14 \\times 13 \\times 12 \\times 11 \\times 10 \\times 9!\n\\]\n\\[\n5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120\n\\]\n\nThus,\n\n\\[\n\\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{120} = 2002\n\\]\n\nNext, we need to subtract the number of ways to form a subcommittee that consists entirely of Republicans or entirely of Democrats from this total.\n\n**Case 1: All Republicans**\n\nThe number of ways to choose 5 Republicans out of 8 is:\n\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n\\]\n\nCalculating the factorials:\n\n\\[\n8! = 8 \\times 7 \\times 6 \\times 5!\n\\]\n\\[\n3! = 3 \\times 2 \\times 1 = 6\n\\]\n\nThus,\n\n\\[\n\\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{6} = 56\n\\]\n\n**Case 2: All Democrats**\n\nThe number of ways to choose 5 Democrats out of 6 is:\n\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n\\]\n\nCalculating the factorials:\n\n\\[\n6! = 6 \\times 5!\n\\]\n\\[\n1! = 1\n\\]\n\nThus,\n\n\\[\n\\binom{6}{5} = \\frac{6}{1} = 6\n\\]\n\nNow, we sum the number of ways for both cases:\n\n\\[\n56 + 6 = 62\n\\]\n\nFinally, we subtract this sum from the total number of ways to form any 5-member subcommittee:\n\n\\[\n2002 - 62 = 1940\n\\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that includes at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee consisting of 8 Republicans and 6 Democrats, with the condition that the subcommittee must include at least one member from each party, we can use the principle of complementary counting.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, let's calculate the total number of ways to choose 5 members out of the 14 available members (8 Republicans + 6 Democrats):",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "Calculating the factorials:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "\\[\n14! = 14 \\times 13 \\times 12 \\times 11 \\times 10 \\times 9!\n\\]\n\\[\n5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "Thus,",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "\\[\n\\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{120} = 2002\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "Next, we need to subtract the number of ways to form a subcommittee that consists entirely of Republicans or entirely of Democrats from this total.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "**Case 1: All Republicans**",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "The number of ways to choose 5 Republicans out of 8 is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "Calculating the factorials:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "\\[\n8! = 8 \\times 7 \\times 6 \\times 5!\n\\]\n\\[\n3! = 3 \\times 2 \\times 1 = 6\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "Thus,",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "\\[\n\\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{6} = 56\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "**Case 2: All Democrats**",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "The number of ways to choose 5 Democrats out of 6 is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 17,
+          "text": "\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 18,
+          "text": "Calculating the factorials:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 19,
+          "text": "\\[\n6! = 6 \\times 5!\n\\]\n\\[\n1! = 1\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 20,
+          "text": "Thus,",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 21,
+          "text": "\\[\n\\binom{6}{5} = \\frac{6}{1} = 6\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 22,
+          "text": "Now, we sum the number of ways for both cases:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 23,
+          "text": "\\[\n56 + 6 = 62\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 24,
+          "text": "Finally, we subtract this sum from the total number of ways to form any 5-member subcommittee:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 25,
+          "text": "\\[\n2002 - 62 = 1940\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 26,
+          "text": "Therefore, the number of ways to form a subcommittee of 5 members that includes at least one member from each party is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 27,
+          "text": "\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 373,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (Republicans and Democrats), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement.\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to choose 5 members from 14:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Calculating this, we get:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]\n\n2. **Calculate the number of ways to choose 5 members all from one party:**\n\n   - **All Republicans:** We need to choose 5 Republicans from 8.\n\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n     \\]\n\n   - **All Democrats:** We need to choose 5 Democrats from 6.\n\n     \\[\n     \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n     \\]\n\n3. **Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees.\n\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\left( \\binom{8}{5} + \\binom{6}{5} \\right)\n   \\]\n\n   Substituting the values we calculated:\n\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - (56 + 6) = 2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to choose 5 members from 14:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Calculating this, we get:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to choose 5 members all from one party:**\n\n   - **All Republicans:** We need to choose 5 Republicans from 8.\n\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n     \\]\n\n   - **All Democrats:** We need to choose 5 Democrats from 6.\n\n     \\[\n     \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n     \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees.\n\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\left( \\binom{8}{5} + \\binom{6}{5} \\right)\n   \\]\n\n   Substituting the values we calculated:\n\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - (56 + 6) = 2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 359,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (Republicans and Democrats), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all members are from one party).\n\n### Step 1: Calculate the total number of subcommittees\n\nThe total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements without regard to order.\n\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n\\]\n\nCalculating this:\n\n\\[\n\\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n\\]\n\n### Step 2: Calculate the number of subcommittees with all members from one party\n\n#### All members are Republicans:\nWe need to choose 5 Republicans out of 8.\n\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n\\]\n\nCalculating this:\n\n\\[\n\\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n\\]\n\n#### All members are Democrats:\nWe need to choose 5 Democrats out of 6.\n\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n\\]\n\nCalculating this:\n\n\\[\n\\binom{6}{5} = \\frac{6}{1} = 6\n\\]\n\n### Step 3: Subtract the invalid subcommittees from the total\n\nThe number of subcommittees that do not have at least one member from each party is the sum of the subcommittees that are all Republicans and all Democrats.\n\n\\[\n56 + 6 = 62\n\\]\n\n### Step 4: Calculate the number of valid subcommittees\n\nSubtract the number of invalid subcommittees from the total number of subcommittees.\n\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (Republicans and Democrats), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all members are from one party).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "### Step 1: Calculate the total number of subcommittees",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "The total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements without regard to order.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Calculating this:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\n\\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "### Step 2: Calculate the number of subcommittees with all members from one party",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "#### All members are Republicans:\nWe need to choose 5 Republicans out of 8.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "Calculating this:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "\\[\n\\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "#### All members are Democrats:\nWe need to choose 5 Democrats out of 6.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "Calculating this:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "\\[\n\\binom{6}{5} = \\frac{6}{1} = 6\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "### Step 3: Subtract the invalid subcommittees from the total",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "The number of subcommittees that do not have at least one member from each party is the sum of the subcommittees that are all Republicans and all Democrats.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 17,
+          "text": "\\[\n56 + 6 = 62\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 18,
+          "text": "### Step 4: Calculate the number of valid subcommittees",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 19,
+          "text": "Subtract the number of invalid subcommittees from the total number of subcommittees.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 20,
+          "text": "\\[\n2002 - 62 = 1940\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 21,
+          "text": "Thus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 22,
+          "text": "\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 383,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (Republicans and Democrats) from a Senate committee consisting of 8 Republicans and 6 Democrats, we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement.\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula:\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Simplifying this, we get:\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee with only Republicans:**\n\n   The number of ways to choose 5 Republicans out of 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n   \\]\n\n   Simplifying this, we get:\n   \\[\n   \\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]\n\n3. **Calculate the number of ways to form a subcommittee with only Democrats:**\n\n   The number of ways to choose 5 Democrats out of 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n   \\]\n\n   Simplifying this, we get:\n   \\[\n   \\binom{6}{5} = \\frac{6}{1} = 6\n   \\]\n\n4. **Calculate the number of subcommittees that do not have at least one member from each party:**\n\n   This includes subcommittees with only Republicans and subcommittees with only Democrats:\n   \\[\n   \\text{Total subcommittees without at least one member from each party} = \\binom{8}{5} + \\binom{6}{5} = 56 + 6 = 62\n   \\]\n\n5. **Calculate the number of subcommittees with at least one member from each party:**\n\n   Subtract the number of subcommittees without at least one member from each party from the total number of subcommittees:\n   \\[\n   \\text{Subcommittees with at least one member from each party} = \\binom{14}{5} - (\\binom{8}{5} + \\binom{6}{5}) = 2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula:\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Simplifying this, we get:\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee with only Republicans:**\n\n   The number of ways to choose 5 Republicans out of 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n   \\]\n\n   Simplifying this, we get:\n   \\[\n   \\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with only Democrats:**\n\n   The number of ways to choose 5 Democrats out of 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n   \\]\n\n   Simplifying this, we get:\n   \\[\n   \\binom{6}{5} = \\frac{6}{1} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of subcommittees that do not have at least one member from each party:**\n\n   This includes subcommittees with only Republicans and subcommittees with only Democrats:\n   \\[\n   \\text{Total subcommittees without at least one member from each party} = \\binom{8}{5} + \\binom{6}{5} = 56 + 6 = 62\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "**Calculate the number of subcommittees with at least one member from each party:**\n\n   Subtract the number of subcommittees without at least one member from each party from the total number of subcommittees:\n   \\[\n   \\text{Subcommittees with at least one member from each party} = \\binom{14}{5} - (\\binom{8}{5} + \\binom{6}{5}) = 2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 415,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (Republican and Democrat), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., those that consist entirely of one party).\n\n1. **Calculate the total number of ways to choose 5 members out of 14:**\n\n   The total number of ways to choose 5 members from 14 is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!} = 2002\n   \\]\n\n2. **Calculate the number of ways to choose all Republicans:**\n\n   There are 8 Republicans, and we need to choose 5 out of them:\n\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = 56\n   \\]\n\n3. **Calculate the number of ways to choose all Democrats:**\n\n   There are 6 Democrats, and we need to choose 5 out of them:\n\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = 6\n   \\]\n\n4. **Calculate the number of subcommittees that do not have at least one member from each party:**\n\n   These are the subcommittees that are either all Republicans or all Democrats:\n\n   \\[\n   56 + 6 = 62\n   \\]\n\n5. **Calculate the number of subcommittees with at least one member from each party:**\n\n   Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:\n\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to choose 5 members out of 14:**\n\n   The total number of ways to choose 5 members from 14 is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to choose all Republicans:**\n\n   There are 8 Republicans, and we need to choose 5 out of them:\n\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to choose all Democrats:**\n\n   There are 6 Democrats, and we need to choose 5 out of them:\n\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of subcommittees that do not have at least one member from each party:**\n\n   These are the subcommittees that are either all Republicans or all Democrats:\n\n   \\[\n   56 + 6 = 62\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "**Calculate the number of subcommittees with at least one member from each party:**\n\n   Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:\n\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 341,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee consisting of 8 Republicans and 6 Democrats, with the condition that the subcommittee must include at least one member from each party, we can use the principle of complementary counting. Here's the step-by-step process:\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members without any restrictions:**\n   The total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements without regard to order.\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee with no Republicans (all Democrats):**\n   The number of ways to choose 5 Democrats out of 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!1!} = 6\n   \\]\n\n3. **Calculate the number of ways to form a subcommittee with no Democrats (all Republicans):**\n   The number of ways to choose 5 Republicans out of 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!3!} = 56\n   \\]\n\n4. **Use the principle of complementary counting to find the number of valid subcommittees:**\n   Subtract the number of invalid subcommittees (those with all Democrats or all Republicans) from the total number of subcommittees.\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\left( \\binom{6}{5} + \\binom{8}{5} \\right)\n   \\]\n   Substituting the values we calculated:\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - (6 + 56) = 2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that includes at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members without any restrictions:**\n   The total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements without regard to order.\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee with no Republicans (all Democrats):**\n   The number of ways to choose 5 Democrats out of 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!1!} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with no Democrats (all Republicans):**\n   The number of ways to choose 5 Republicans out of 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!3!} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Use the principle of complementary counting to find the number of valid subcommittees:**\n   Subtract the number of invalid subcommittees (those with all Democrats or all Republicans) from the total number of subcommittees.\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\left( \\binom{6}{5} + \\binom{8}{5} \\right)\n   \\]\n   Substituting the values we calculated:\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - (6 + 56) = 2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that includes at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 333,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (Republicans and Democrats), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all members are from one party).\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee with all members from one party:**\n\n   - **All Republicans:** We need to choose 5 Republicans from 8.\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = 56\n     \\]\n\n   - **All Democrats:** We need to choose 5 Democrats from 6. Since it's not possible to choose 5 from 6, this case is:\n     \\[\n     \\binom{6}{5} = 6\n     \\]\n\n   Therefore, the total number of subcommittees consisting entirely of members from one party is:\n   \\[\n   56 + 6 = 62\n   \\]\n\n3. **Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of subcommittees with all members from one party from the total number of subcommittees:\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members with at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee with all members from one party:**\n\n   - **All Republicans:** We need to choose 5 Republicans from 8.\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = 56\n     \\]\n\n   - **All Democrats:** We need to choose 5 Democrats from 6. Since it's not possible to choose 5 from 6, this case is:\n     \\[\n     \\binom{6}{5} = 6\n     \\]\n\n   Therefore, the total number of subcommittees consisting entirely of members from one party is:\n   \\[\n   56 + 6 = 62\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of subcommittees with all members from one party from the total number of subcommittees:\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members with at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 328,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo solve the problem of forming a subcommittee of 5 members with at least one member from each party (at least one Republican and one Democrat), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all Republicans or all Democrats).\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members from 14 members:**\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!}\n   \\]\n   Simplifying this:\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee with only Republicans:**\n   There are 8 Republicans, so the number of ways to choose 5 Republicans from 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!}\n   \\]\n   Simplifying this:\n   \\[\n   \\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]\n\n3. **Calculate the number of ways to form a subcommittee with only Democrats:**\n   There are 6 Democrats, so the number of ways to choose 5 Democrats from 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!}\n   \\]\n   Simplifying this:\n   \\[\n   \\binom{6}{5} = \\frac{6}{1} = 6\n   \\]\n\n4. **Calculate the number of subcommittees that do not meet the requirement (all Republicans or all Democrats):**\n   \\[\n   56 + 6 = 62\n   \\]\n\n5. **Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:**\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members from 14 members:**\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!}\n   \\]\n   Simplifying this:\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee with only Republicans:**\n   There are 8 Republicans, so the number of ways to choose 5 Republicans from 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!}\n   \\]\n   Simplifying this:\n   \\[\n   \\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with only Democrats:**\n   There are 6 Democrats, so the number of ways to choose 5 Democrats from 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!}\n   \\]\n   Simplifying this:\n   \\[\n   \\binom{6}{5} = \\frac{6}{1} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of subcommittees that do not meet the requirement (all Republicans or all Democrats):**\n   \\[\n   56 + 6 = 62\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "**Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:**\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 331,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee consisting of 8 Republicans and 6 Democrats, with the condition that the subcommittee must have at least one member from each party, we can use the principle of complementary counting.\n\nFirst, calculate the total number of ways to choose 5 members out of the 14 committee members without any restrictions:\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!} = 2002\n\\]\n\nNext, we need to subtract the number of ways to form a subcommittee that consists entirely of one party (either all Republicans or all Democrats).\n\n1. **All Republicans:**\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = 56\n   \\]\n\n2. **All Democrats:**\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = 6\n   \\]\n\nThe total number of ways to form a subcommittee that is entirely from one party is:\n\\[\n56 + 6 = 62\n\\]\n\nNow, subtract this from the total number of ways to form any subcommittee of 5 members:\n\\[\n2002 - 62 = 1940\n\\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**All Republicans:**\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**All Democrats:**\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = 6\n   \\]\n\nThe total number of ways to form a subcommittee that is entirely from one party is:\n\\[\n56 + 6 = 62\n\\]\n\nNow, subtract this from the total number of ways to form any subcommittee of 5 members:\n\\[\n2002 - 62 = 1940\n\\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 247,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (at least one Republican and one Democrat), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., those with all members from one party).\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee with only Republicans:**\n\n   There are 8 Republicans, and we need to choose 5 out of these 8.\n\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]\n\n3. **Calculate the number of ways to form a subcommittee with only Democrats:**\n\n   There are 6 Democrats, and we need to choose 5 out of these 6.\n\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{6}{5} = \\frac{6}{1} = 6\n   \\]\n\n4. **Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees.\n\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\left( \\binom{8}{5} + \\binom{6}{5} \\right)\n   \\]\n\n   Substituting the values we calculated:\n\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - (56 + 6) = 2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members with at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee with only Republicans:**\n\n   There are 8 Republicans, and we need to choose 5 out of these 8.\n\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with only Democrats:**\n\n   There are 6 Democrats, and we need to choose 5 out of these 6.\n\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{6}{5} = \\frac{6}{1} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees.\n\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\left( \\binom{8}{5} + \\binom{6}{5} \\right)\n   \\]\n\n   Substituting the values we calculated:\n\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - (56 + 6) = 2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members with at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 400,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee with 8 Republicans and 6 Democrats, ensuring that the subcommittee has at least one member from each party, we can use the principle of complementary counting.\n\nFirst, let's calculate the total number of ways to choose 5 members out of the 14 (8 Republicans + 6 Democrats) without any restrictions. This is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements:\n\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!} = 2002\n\\]\n\nNext, we need to subtract the number of ways to form a subcommittee that does not meet the requirement of having at least one member from each party. There are two scenarios to consider: a subcommittee with only Republicans or a subcommittee with only Democrats.\n\n1. **Subcommittees with only Republicans:**\n   - We need to choose all 5 members from the 8 Republicans.\n   - The number of ways to do this is:\n\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = 56\n\\]\n\n2. **Subcommittees with only Democrats:**\n   - We need to choose all 5 members from the 6 Democrats.\n   - The number of ways to do this is:\n\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = 6\n\\]\n\nNow, we add the number of ways for both scenarios (only Republicans and only Democrats):\n\n\\[\n56 + 6 = 62\n\\]\n\nFinally, we subtract this number from the total number of ways to form a subcommittee of 5 members:\n\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Subcommittees with only Republicans:**\n   - We need to choose all 5 members from the 8 Republicans.\n   - The number of ways to do this is:\n\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = 56\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Subcommittees with only Democrats:**\n   - We need to choose all 5 members from the 6 Democrats.\n   - The number of ways to do this is:\n\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = 6\n\\]\n\nNow, we add the number of ways for both scenarios (only Republicans and only Democrats):\n\n\\[\n56 + 6 = 62\n\\]\n\nFinally, we subtract this number from the total number of ways to form a subcommittee of 5 members:\n\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 344,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee consisting of 8 Republicans and 6 Democrats, with the condition that the subcommittee must have at least one member from each party, we can use the principle of complementary counting.\n\nFirst, calculate the total number of ways to choose 5 members out of the 14 available (8 Republicans + 6 Democrats):\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n\\]\n\nNext, calculate the number of ways to form a subcommittee that consists entirely of Republicans or entirely of Democrats, as these scenarios do not meet the requirement of having at least one member from each party.\n\n1. **All Republicans**: The number of ways to choose 5 Republicans out of 8:\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = 56\n\\]\n\n2. **All Democrats**: The number of ways to choose 5 Democrats out of 6:\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = 6\n\\]\n\nThe total number of ways to form a subcommittee that is either all Republicans or all Democrats is the sum of the two cases above:\n\\[\n56 + 6 = 62\n\\]\n\nFinally, subtract this number from the total number of ways to form any subcommittee of 5 members to get the number of ways to form a subcommittee that includes at least one member from each party:\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**All Republicans**: The number of ways to choose 5 Republicans out of 8:\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = 56\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**All Democrats**: The number of ways to choose 5 Democrats out of 6:\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = 6\n\\]\n\nThe total number of ways to form a subcommittee that is either all Republicans or all Democrats is the sum of the two cases above:\n\\[\n56 + 6 = 62\n\\]\n\nFinally, subtract this number from the total number of ways to form any subcommittee of 5 members to get the number of ways to form a subcommittee that includes at least one member from each party:\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 304,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee consisting of 8 Republicans and 6 Democrats, with the condition that the subcommittee must have at least one member from each party, we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., those that consist entirely of members from one party).\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members:**\n   The total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Simplifying this:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee with all members from one party:**\n   - **All Republicans:** We need to choose 5 out of 8 Republicans.\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n     \\]\n   \n   - **All Democrats:** We need to choose 5 out of 6 Democrats.\n     \\[\n     \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n     \\]\n\n3. **Calculate the number of ways to form a subcommittee that does not meet the requirement:**\n   The number of subcommittees that consist entirely of Republicans or entirely of Democrats is the sum of the two cases above:\n   \\[\n   56 + 6 = 62\n   \\]\n\n4. **Calculate the number of ways to form a subcommittee with at least one member from each party:**\n   Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members:**\n   The total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Simplifying this:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee with all members from one party:**\n   - **All Republicans:** We need to choose 5 out of 8 Republicans.\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n     \\]\n   \n   - **All Democrats:** We need to choose 5 out of 6 Democrats.\n     \\[\n     \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n     \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee that does not meet the requirement:**\n   The number of subcommittees that consist entirely of Republicans or entirely of Democrats is the sum of the two cases above:\n   \\[\n   56 + 6 = 62\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of ways to form a subcommittee with at least one member from each party:**\n   Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 405,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee consisting of 8 Republicans and 6 Democrats, with the condition that the subcommittee must include at least one member from each party, we can use the principle of complementary counting.\n\nFirst, calculate the total number of ways to form a subcommittee of 5 members from the 14 committee members (8 Republicans + 6 Democrats):\n\n\\[\n\\binom{14}{5}\n\\]\n\nNext, subtract the number of subcommittees that consist entirely of Republicans or entirely of Democrats.\n\n1. **Subcommittees with all Republicans:**\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]\n\n2. **Subcommittees with all Democrats:**\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = \\frac{6}{1} = 6\n   \\]\n\nNow, add these two counts together to get the number of subcommittees that do not meet the requirement of having at least one member from each party:\n\n\\[\n56 + 6 = 62\n\\]\n\nFinally, subtract this number from the total number of subcommittees to find the number of valid subcommittees that include at least one member from each party:\n\n\\[\n\\binom{14}{5} - 62\n\\]\n\nCalculate \\(\\binom{14}{5}\\):\n\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n\\]\n\nSo, the number of valid subcommittees is:\n\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Subcommittees with all Republicans:**\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Subcommittees with all Democrats:**\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = \\frac{6}{1} = 6\n   \\]\n\nNow, add these two counts together to get the number of subcommittees that do not meet the requirement of having at least one member from each party:\n\n\\[\n56 + 6 = 62\n\\]\n\nFinally, subtract this number from the total number of subcommittees to find the number of valid subcommittees that include at least one member from each party:\n\n\\[\n\\binom{14}{5} - 62\n\\]\n\nCalculate \\(\\binom{14}{5}\\):\n\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n\\]\n\nSo, the number of valid subcommittees is:\n\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 307,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee with 8 Republicans and 6 Democrats, such that the subcommittee includes at least one member from each party, we can use the principle of complementary counting.\n\nFirst, calculate the total number of ways to choose 5 members from the 14 available members (8 Republicans + 6 Democrats):\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n\\]\n\nNext, calculate the number of ways to form a subcommittee that does not meet the requirement of having at least one member from each party. There are two cases to consider:\n1. The subcommittee consists entirely of Republicans.\n2. The subcommittee consists entirely of Democrats.\n\n**Case 1: All Republicans in the subcommittee**\nThe number of ways to choose 5 Republicans from 8 is:\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = 56\n\\]\n\n**Case 2: All Democrats in the subcommittee**\nThe number of ways to choose 5 Democrats from 6 is:\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = 6\n\\]\n\nNow, add the number of ways for both cases to find the total number of subcommittees that do not have at least one member from each party:\n\\[\n56 + 6 = 62\n\\]\n\nFinally, subtract this number from the total number of ways to form any subcommittee of 5 members to get the number of valid subcommittees:\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "The subcommittee consists entirely of Republicans.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "The subcommittee consists entirely of Democrats.\n\n**Case 1: All Republicans in the subcommittee**\nThe number of ways to choose 5 Republicans from 8 is:\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = 56\n\\]\n\n**Case 2: All Democrats in the subcommittee**\nThe number of ways to choose 5 Democrats from 6 is:\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = 6\n\\]\n\nNow, add the number of ways for both cases to find the total number of subcommittees that do not have at least one member from each party:\n\\[\n56 + 6 = 62\n\\]\n\nFinally, subtract this number from the total number of ways to form any subcommittee of 5 members to get the number of valid subcommittees:\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 307,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo solve this problem, we need to calculate the total number of ways to form a subcommittee of 5 members from 14 senators (8 Republicans and 6 Democrats) and then subtract the cases where the subcommittee is formed entirely from one party.\n\n### Step 1: Calculate the Total Number of Ways to Form a Subcommittee of 5 Members\n\nThe total number of ways to choose 5 members out of 14 is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n\\]\n\nCalculating the factorials:\n\n\\[\n14! = 14 \\times 13 \\times 12 \\times 11 \\times 10 \\times 9!\n\\]\n\\[\n5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120\n\\]\n\nSo,\n\n\\[\n\\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = \\frac{240240}{120} = 2002\n\\]\n\n### Step 2: Calculate the Number of Ways to Form a Subcommittee with Only Republicans or Only Democrats\n\n#### All Republicans:\nThe number of ways to choose 5 Republicans out of 8 is:\n\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n\\]\n\nCalculating the factorials:\n\n\\[\n8! = 8 \\times 7 \\times 6 \\times 5!\n\\]\n\\[\n3! = 3 \\times 2 \\times 1 = 6\n\\]\n\nSo,\n\n\\[\n\\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = \\frac{336}{6} = 56\n\\]\n\n#### All Democrats:\nThe number of ways to choose 5 Democrats out of 6 is:\n\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n\\]\n\nCalculating the factorials:\n\n\\[\n6! = 6 \\times 5!\n\\]\n\\[\n1! = 1\n\\]\n\nSo,\n\n\\[\n\\binom{6}{5} = \\frac{6 \\times 5!}{5! \\times 1} = 6\n\\]\n\n### Step 3: Subtract the Invalid Cases from the Total\n\nThe number of ways to form a subcommittee of 5 members that includes at least one Republican and one Democrat is:\n\n\\[\n\\text{Total ways} - (\\text{All Republicans} + \\text{All Democrats}) = 2002 - (56 + 6) = 2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo solve this problem, we need to calculate the total number of ways to form a subcommittee of 5 members from 14 senators (8 Republicans and 6 Democrats) and then subtract the cases where the subcommittee is formed entirely from one party.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "### Step 1: Calculate the Total Number of Ways to Form a Subcommittee of 5 Members",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "The total number of ways to choose 5 members out of 14 is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Calculating the factorials:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "\\[\n14! = 14 \\times 13 \\times 12 \\times 11 \\times 10 \\times 9!\n\\]\n\\[\n5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 6,
+          "text": "So,",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 7,
+          "text": "\\[\n\\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = \\frac{240240}{120} = 2002\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 8,
+          "text": "### Step 2: Calculate the Number of Ways to Form a Subcommittee with Only Republicans or Only Democrats",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 9,
+          "text": "#### All Republicans:\nThe number of ways to choose 5 Republicans out of 8 is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 10,
+          "text": "\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 11,
+          "text": "Calculating the factorials:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 12,
+          "text": "\\[\n8! = 8 \\times 7 \\times 6 \\times 5!\n\\]\n\\[\n3! = 3 \\times 2 \\times 1 = 6\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 13,
+          "text": "So,",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 14,
+          "text": "\\[\n\\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = \\frac{336}{6} = 56\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 15,
+          "text": "#### All Democrats:\nThe number of ways to choose 5 Democrats out of 6 is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 16,
+          "text": "\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 17,
+          "text": "Calculating the factorials:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 18,
+          "text": "\\[\n6! = 6 \\times 5!\n\\]\n\\[\n1! = 1\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 19,
+          "text": "So,",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 20,
+          "text": "\\[\n\\binom{6}{5} = \\frac{6 \\times 5!}{5! \\times 1} = 6\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 21,
+          "text": "### Step 3: Subtract the Invalid Cases from the Total",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 22,
+          "text": "The number of ways to form a subcommittee of 5 members that includes at least one Republican and one Democrat is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 23,
+          "text": "\\[\n\\text{Total ways} - (\\text{All Republicans} + \\text{All Democrats}) = 2002 - (56 + 6) = 2002 - 62 = 1940\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 24,
+          "text": "Thus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 25,
+          "text": "\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 427,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (Republicans and Democrats) from a Senate committee consisting of 8 Republicans and 6 Democrats, we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all members are from one party).\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to choose 5 members from 14:**\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\(\\binom{n}{k}\\), which represents the number of ways to choose \\(k\\) elements from a set of \\(n\\) elements without regard to the order of selection.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]\n\n2. **Calculate the number of ways to choose 5 members all from one party:**\n   - All 5 members are Republicans:\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n     \\]\n\n   - All 5 members are Democrats:\n     \\[\n     \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n     \\]\n\n3. **Calculate the number of ways to form a subcommittee with at least one member from each party:**\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees:\n\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\left( \\binom{8}{5} + \\binom{6}{5} \\right)\n   \\]\n\n   Substituting the values we calculated:\n\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - (56 + 6) = 2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to choose 5 members from 14:**\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\(\\binom{n}{k}\\), which represents the number of ways to choose \\(k\\) elements from a set of \\(n\\) elements without regard to the order of selection.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Calculating this:\n\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to choose 5 members all from one party:**\n   - All 5 members are Republicans:\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n     \\]\n\n   - All 5 members are Democrats:\n     \\[\n     \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n     \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with at least one member from each party:**\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees:\n\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\left( \\binom{8}{5} + \\binom{6}{5} \\right)\n   \\]\n\n   Substituting the values we calculated:\n\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - (56 + 6) = 2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 365,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (at least one Republican and one Democrat), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all members from one party).\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula:\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Simplifying this:\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee with only Republicans:**\n\n   The number of ways to choose 5 Republicans from 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]\n\n3. **Calculate the number of ways to form a subcommittee with only Democrats:**\n\n   The number of ways to choose 5 Democrats from 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n   \\]\n\n4. **Calculate the number of subcommittees that do not meet the requirement:**\n\n   The number of subcommittees that are either all Republicans or all Democrats is the sum of the two cases calculated above:\n   \\[\n   56 + 6 = 62\n   \\]\n\n5. **Calculate the number of subcommittees with at least one member from each party:**\n\n   Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula:\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n\n   Simplifying this:\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee with only Republicans:**\n\n   The number of ways to choose 5 Republicans from 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with only Democrats:**\n\n   The number of ways to choose 5 Democrats from 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of subcommittees that do not meet the requirement:**\n\n   The number of subcommittees that are either all Republicans or all Democrats is the sum of the two cases calculated above:\n   \\[\n   56 + 6 = 62\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "**Calculate the number of subcommittees with at least one member from each party:**\n\n   Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 365,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee with 8 Republicans and 6 Democrats, ensuring that the subcommittee has at least one member from each party, we can use the principle of complementary counting.\n\nFirst, calculate the total number of ways to form a subcommittee of 5 members without any restrictions. This is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements.\n\nThe total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is:\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n\\]\n\nNext, we need to subtract the number of ways to form a subcommittee that does not meet the requirement of having at least one member from each party. There are two scenarios to consider here:\n\n1. The subcommittee consists only of Republicans.\n2. The subcommittee consists only of Democrats.\n\n**Case 1: Subcommittee with only Republicans**\n\nThe number of ways to choose 5 Republicans from 8 is:\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = 56\n\\]\n\n**Case 2: Subcommittee with only Democrats**\n\nThe number of ways to choose 5 Democrats from 6 is:\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = 6\n\\]\n\nNow, add the number of ways for both cases to get the total number of subcommittees that do not have at least one member from each party:\n\\[\n56 + 6 = 62\n\\]\n\nFinally, subtract this from the total number of ways to form any subcommittee of 5 members to get the number of valid subcommittees:\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "The subcommittee consists only of Republicans.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "The subcommittee consists only of Democrats.\n\n**Case 1: Subcommittee with only Republicans**\n\nThe number of ways to choose 5 Republicans from 8 is:\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = 56\n\\]\n\n**Case 2: Subcommittee with only Democrats**\n\nThe number of ways to choose 5 Democrats from 6 is:\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = 6\n\\]\n\nNow, add the number of ways for both cases to get the total number of subcommittees that do not have at least one member from each party:\n\\[\n56 + 6 = 62\n\\]\n\nFinally, subtract this from the total number of ways to form any subcommittee of 5 members to get the number of valid subcommittees:\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 351,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee consisting of 8 Republicans and 6 Democrats, with the condition that the subcommittee must include at least one member from each party, we can use the principle of complementary counting.\n\nFirst, let's calculate the total number of ways to form a subcommittee of 5 members without any restrictions. This is simply the combination of choosing 5 members out of 14:\n\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n\\]\n\nNext, we need to subtract the number of subcommittees that do not meet the requirement of having at least one member from each party. There are two cases to consider: subcommittees composed entirely of Republicans or subcommittees composed entirely of Democrats.\n\n1. **Subcommittees composed entirely of Republicans**: The number of ways to choose 5 Republicans out of 8 is:\n\n\\[\n\\binom{8}{5} = \\frac{8!}{5!3!} = 56\n\\]\n\n2. **Subcommittees composed entirely of Democrats**: The number of ways to choose 5 Democrats out of 6 is:\n\n\\[\n\\binom{6}{5} = \\frac{6!}{5!1!} = 6\n\\]\n\nNow, we subtract these two cases from the total number of unrestricted combinations to get the number of valid subcommittees:\n\n\\[\n2002 - 56 - 6 = 1940\n\\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that includes at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Subcommittees composed entirely of Republicans**: The number of ways to choose 5 Republicans out of 8 is:\n\n\\[\n\\binom{8}{5} = \\frac{8!}{5!3!} = 56\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Subcommittees composed entirely of Democrats**: The number of ways to choose 5 Democrats out of 6 is:\n\n\\[\n\\binom{6}{5} = \\frac{6!}{5!1!} = 6\n\\]\n\nNow, we subtract these two cases from the total number of unrestricted combinations to get the number of valid subcommittees:\n\n\\[\n2002 - 56 - 6 = 1940\n\\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that includes at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 276,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party, we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all members are from one party).\n\n1. **Calculate the total number of ways to choose 5 members from 14:**\n\n   The total number of ways to choose 5 members from 14 is given by the combination formula \\(\\binom{n}{k}\\), which represents the number of ways to choose \\(k\\) items from \\(n\\) items without regard to order.\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!}\n   \\]\n   Calculating this:\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]\n\n2. **Calculate the number of ways to choose 5 members all from one party:**\n\n   - All 5 members are Republicans:\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n     \\]\n\n   - All 5 members are Democrats:\n     \\[\n     \\binom{6}{5} = \\frac{6!}{5!1!} = \\frac{6}{1} = 6\n     \\]\n\n3. **Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees.\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\left( \\binom{8}{5} + \\binom{6}{5} \\right)\n   \\]\n   Substituting the values we calculated:\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - (56 + 6) = 2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to choose 5 members from 14:**\n\n   The total number of ways to choose 5 members from 14 is given by the combination formula \\(\\binom{n}{k}\\), which represents the number of ways to choose \\(k\\) items from \\(n\\) items without regard to order.\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!}\n   \\]\n   Calculating this:\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to choose 5 members all from one party:**\n\n   - All 5 members are Republicans:\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!3!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n     \\]\n\n   - All 5 members are Democrats:\n     \\[\n     \\binom{6}{5} = \\frac{6!}{5!1!} = \\frac{6}{1} = 6\n     \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees.\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\left( \\binom{8}{5} + \\binom{6}{5} \\right)\n   \\]\n   Substituting the values we calculated:\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - (56 + 6) = 2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 327,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee consisting of 8 Republicans and 6 Democrats, with the condition that the subcommittee must have at least one member from each party, we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all members are from one party).\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members:**\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee with only Republicans:**\n   The number of ways to choose 5 Republicans from 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = 56\n   \\]\n\n3. **Calculate the number of ways to form a subcommittee with only Democrats:**\n   The number of ways to choose 5 Democrats from 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = 6\n   \\]\n\n4. **Calculate the number of subcommittees that do not meet the requirement (all members from one party):**\n   Add the number of subcommittees that are all Republicans and all Democrats:\n   \\[\n   56 + 6 = 62\n   \\]\n\n5. **Calculate the number of subcommittees that have at least one member from each party:**\n   Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members:**\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee with only Republicans:**\n   The number of ways to choose 5 Republicans from 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with only Democrats:**\n   The number of ways to choose 5 Democrats from 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of subcommittees that do not meet the requirement (all members from one party):**\n   Add the number of subcommittees that are all Republicans and all Democrats:\n   \\[\n   56 + 6 = 62\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "**Calculate the number of subcommittees that have at least one member from each party:**\n   Subtract the number of subcommittees that do not meet the requirement from the total number of subcommittees:\n   \\[\n   2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 357,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party, we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., those that consist entirely of one party).\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula:\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n   Simplifying this, we get:\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee consisting entirely of Republicans:**\n\n   The number of ways to choose 5 Republicans from 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n   \\]\n   Simplifying this, we get:\n   \\[\n   \\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]\n\n3. **Calculate the number of ways to form a subcommittee consisting entirely of Democrats:**\n\n   The number of ways to choose 5 Democrats from 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n   \\]\n   Simplifying this, we get:\n   \\[\n   \\binom{6}{5} = \\frac{6}{1} = 6\n   \\]\n\n4. **Calculate the number of subcommittees that have at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees:\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\binom{8}{5} - \\binom{6}{5}\n   \\]\n   Substituting the values we calculated:\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - 56 - 6 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members from 14 (8 Republicans + 6 Democrats) is given by the combination formula:\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n   \\]\n   Simplifying this, we get:\n   \\[\n   \\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee consisting entirely of Republicans:**\n\n   The number of ways to choose 5 Republicans from 8 is:\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n   \\]\n   Simplifying this, we get:\n   \\[\n   \\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee consisting entirely of Democrats:**\n\n   The number of ways to choose 5 Democrats from 6 is:\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!}\n   \\]\n   Simplifying this, we get:\n   \\[\n   \\binom{6}{5} = \\frac{6}{1} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of subcommittees that have at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees:\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\binom{8}{5} - \\binom{6}{5}\n   \\]\n   Substituting the values we calculated:\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - 56 - 6 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 362,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee consisting of 8 Republicans and 6 Democrats, with the condition that the subcommittee must have at least one member from each party, we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., those that consist entirely of Republicans or entirely of Democrats).\n\nFirst, calculate the total number of ways to choose 5 members from the 14 available members (8 Republicans + 6 Democrats):\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n\\]\n\nNext, calculate the number of ways to choose a subcommittee of 5 members that consists entirely of Republicans. Since there are only 8 Republicans, this is:\n\\[\n\\binom{8}{5} = \\frac{8!}{5!3!} = 56\n\\]\n\nThen, calculate the number of ways to choose a subcommittee of 5 members that consists entirely of Democrats. Since there are only 6 Democrats, this is:\n\\[\n\\binom{6}{5} = \\frac{6!}{5!1!} = 6\n\\]\n\nNow, subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees to get the number of subcommittees that include at least one member from each party:\n\\[\n2002 - 56 - 6 = 1940\n\\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members from a Senate committee consisting of 8 Republicans and 6 Democrats, with the condition that the subcommittee must have at least one member from each party, we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., those that consist entirely of Republicans or entirely of Democrats).",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, calculate the total number of ways to choose 5 members from the 14 available members (8 Republicans + 6 Democrats):\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "Next, calculate the number of ways to choose a subcommittee of 5 members that consists entirely of Republicans. Since there are only 8 Republicans, this is:\n\\[\n\\binom{8}{5} = \\frac{8!}{5!3!} = 56\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "Then, calculate the number of ways to choose a subcommittee of 5 members that consists entirely of Democrats. Since there are only 6 Democrats, this is:\n\\[\n\\binom{6}{5} = \\frac{6!}{5!1!} = 6\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Now, subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees to get the number of subcommittees that include at least one member from each party:\n\\[\n2002 - 56 - 6 = 1940\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "Therefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 285,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (Republicans and Democrats), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all members are from one party).\n\n1. **Calculate the total number of ways to choose 5 members out of 14:**\n\n   The total number of ways to choose 5 members from 14 is given by the combination formula \\( \\binom{n}{k} = \\frac{n!}{k!(n-k)!} \\):\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!9!} = 2002\n   \\]\n\n2. **Calculate the number of ways to choose 5 members all from one party:**\n\n   - **All Republicans:** There are 8 Republicans, so the number of ways to choose 5 Republicans out of 8 is:\n\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!3!} = 56\n     \\]\n\n   - **All Democrats:** There are 6 Democrats, so the number of ways to choose 5 Democrats out of 6 is:\n\n     \\[\n     \\binom{6}{5} = \\frac{6!}{5!1!} = 6\n     \\]\n\n3. **Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees:\n\n   \\[\n   2002 - 56 - 6 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that includes at least one Republican and one Democrat is:\n\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to choose 5 members out of 14:**\n\n   The total number of ways to choose 5 members from 14 is given by the combination formula \\( \\binom{n}{k} = \\frac{n!}{k!(n-k)!} \\):\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!9!} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to choose 5 members all from one party:**\n\n   - **All Republicans:** There are 8 Republicans, so the number of ways to choose 5 Republicans out of 8 is:\n\n     \\[\n     \\binom{8}{5} = \\frac{8!}{5!3!} = 56\n     \\]\n\n   - **All Democrats:** There are 6 Democrats, so the number of ways to choose 5 Democrats out of 6 is:\n\n     \\[\n     \\binom{6}{5} = \\frac{6!}{5!1!} = 6\n     \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees:\n\n   \\[\n   2002 - 56 - 6 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that includes at least one Republican and one Democrat is:\n\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 283,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party, we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all Republicans or all Democrats).\n\n1. **Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n   \\]\n\n2. **Calculate the number of ways to form a subcommittee with only Republicans:**\n\n   The number of ways to choose 5 Republicans out of 8 is:\n\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = 56\n   \\]\n\n3. **Calculate the number of ways to form a subcommittee with only Democrats:**\n\n   The number of ways to choose 5 Democrats out of 6 is:\n\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = 6\n   \\]\n\n4. **Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees:\n\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\binom{8}{5} - \\binom{6}{5}\n   \\]\n\n   Substituting the values we calculated:\n\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - 56 - 6 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to form a subcommittee of 5 members:**\n\n   The total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats) is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) elements from a set of \\( n \\) elements without regard to order.\n\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to form a subcommittee with only Republicans:**\n\n   The number of ways to choose 5 Republicans out of 8 is:\n\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5!3!} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to form a subcommittee with only Democrats:**\n\n   The number of ways to choose 5 Democrats out of 6 is:\n\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5!1!} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of ways to form a subcommittee with at least one member from each party:**\n\n   Subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees:\n\n   \\[\n   \\text{Number of valid subcommittees} = \\binom{14}{5} - \\binom{8}{5} - \\binom{6}{5}\n   \\]\n\n   Substituting the values we calculated:\n\n   \\[\n   \\text{Number of valid subcommittees} = 2002 - 56 - 6 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is \\(\\boxed{1940}\\).",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 329,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (at least one Republican and one Democrat), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement.\n\nFirst, calculate the total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats):\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n\\]\n\nNext, calculate the number of ways to form a subcommittee that consists entirely of Republicans or entirely of Democrats:\n- The number of ways to choose 5 Republicans out of 8 is:\n\\[\n\\binom{8}{5} = \\frac{8!}{5!3!} = 56\n\\]\n- The number of ways to choose 5 Democrats out of 6 is:\n\\[\n\\binom{6}{5} = \\frac{6!}{5!1!} = 6\n\\]\n\nSo, the total number of subcommittees that consist entirely of one party is:\n\\[\n56 + 6 = 62\n\\]\n\nNow, subtract the number of subcommittees that do not meet the requirement (all Republicans or all Democrats) from the total number of subcommittees:\n\\[\n2002 - 62 = 1940\n\\]\n\nThus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (at least one Republican and one Democrat), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement.",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "First, calculate the total number of ways to choose 5 members out of 14 (8 Republicans + 6 Democrats):\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5!9!} = 2002\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "Next, calculate the number of ways to form a subcommittee that consists entirely of Republicans or entirely of Democrats:\n- The number of ways to choose 5 Republicans out of 8 is:\n\\[\n\\binom{8}{5} = \\frac{8!}{5!3!} = 56\n\\]\n- The number of ways to choose 5 Democrats out of 6 is:\n\\[\n\\binom{6}{5} = \\frac{6!}{5!1!} = 6\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "So, the total number of subcommittees that consist entirely of one party is:\n\\[\n56 + 6 = 62\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "Now, subtract the number of subcommittees that do not meet the requirement (all Republicans or all Democrats) from the total number of subcommittees:\n\\[\n2002 - 62 = 1940\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 5,
+          "text": "Thus, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 265,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (Republican and Democrat) from a Senate committee consisting of 8 Republicans and 6 Democrats, we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all members are from one party).\n\n### Step-by-Step Solution:\n\n1. **Calculate the total number of ways to choose 5 members from 14:**\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!} = 2002\n   \\]\n\n2. **Calculate the number of ways to choose 5 members all from the Republicans:**\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = 56\n   \\]\n\n3. **Calculate the number of ways to choose 5 members all from the Democrats:**\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = 6\n   \\]\n\n4. **Calculate the number of subcommittees that do not have at least one member from each party:**\n   \\[\n   \\text{Subcommittees with only Republicans} + \\text{Subcommittees with only Democrats} = 56 + 6 = 62\n   \\]\n\n5. **Calculate the number of valid subcommittees with at least one member from each party:**\n   \\[\n   \\binom{14}{5} - (\\text{Subcommittees with only Republicans} + \\text{Subcommittees with only Democrats}) = 2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**Calculate the total number of ways to choose 5 members from 14:**\n   \\[\n   \\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!} = 2002\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**Calculate the number of ways to choose 5 members all from the Republicans:**\n   \\[\n   \\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!} = 56\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 2,
+          "text": "**Calculate the number of ways to choose 5 members all from the Democrats:**\n   \\[\n   \\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = 6\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 3,
+          "text": "**Calculate the number of subcommittees that do not have at least one member from each party:**\n   \\[\n   \\text{Subcommittees with only Republicans} + \\text{Subcommittees with only Democrats} = 56 + 6 = 62\n   \\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 4,
+          "text": "**Calculate the number of valid subcommittees with at least one member from each party:**\n   \\[\n   \\binom{14}{5} - (\\text{Subcommittees with only Republicans} + \\text{Subcommittees with only Democrats}) = 2002 - 62 = 1940\n   \\]\n\nTherefore, the number of ways to form a subcommittee of 5 members that has at least one member from each party is:\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 287,
+      "model_name": "QwQ-32B"
+    },
+    {
+      "problem_id": "math500_330",
+      "problem": {
+        "id": "math500_330",
+        "dataset": "math500",
+        "question": "A Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?",
+        "ground_truth": "1940",
+        "domain": "counting & probability",
+        "difficulty": null
+      },
+      "raw_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nA Senate committee has 8 Republicans and 6 Democrats.  In how many ways can we form a subcommittee of 5 members that has at least one member from each party?\nassistant\nTo determine the number of ways to form a subcommittee of 5 members with at least one member from each party (at least one Republican and one Democrat), we can use the principle of complementary counting. This involves calculating the total number of possible subcommittees and then subtracting the number of subcommittees that do not meet the requirement (i.e., all Republicans or all Democrats).\n\nFirst, let's calculate the total number of ways to form a subcommittee of 5 members from the 14 members (8 Republicans and 6 Democrats). This is given by the combination formula \\( \\binom{n}{k} \\), which represents the number of ways to choose \\( k \\) items from \\( n \\) items without regard to order.\n\n\\[\n\\binom{14}{5} = \\frac{14!}{5!(14-5)!} = \\frac{14!}{5! \\cdot 9!}\n\\]\n\nCalculating the factorials:\n\n\\[\n14! = 14 \\times 13 \\times 12 \\times 11 \\times 10 \\times 9!\n\\]\n\\[\n5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120\n\\]\n\nSo,\n\n\\[\n\\binom{14}{5} = \\frac{14 \\times 13 \\times 12 \\times 11 \\times 10}{120}\n\\]\n\nSimplifying step-by-step:\n\n\\[\n14 \\times 13 = 182\n\\]\n\\[\n182 \\times 12 = 2184\n\\]\n\\[\n2184 \\times 11 = 24024\n\\]\n\\[\n24024 \\times 10 = 240240\n\\]\n\\[\n\\frac{240240}{120} = 2002\n\\]\n\nThus, the total number of ways to form a subcommittee of 5 members from 14 members is 2002.\n\nNext, we need to subtract the number of subcommittees that consist entirely of Republicans or entirely of Democrats.\n\n1. **All Republicans**: We need to choose 5 Republicans from 8.\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n\\]\n\nCalculating the factorials:\n\n\\[\n8! = 8 \\times 7 \\times 6 \\times 5!\n\\]\n\\[\n3! = 3 \\times 2 \\times 1 = 6\n\\]\n\nSo,\n\n\\[\n\\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{6} = 8 \\times 7 = 56\n\\]\n\n2. **All Democrats**: We need to choose 5 Democrats from 6.\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n\\]\n\nNow, we subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees:\n\n\\[\n2002 - 56 - 6 = 1940\n\\]\n\nTherefore, the number of ways to form a subcommittee of 5 members with at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+      "steps": [
+        {
+          "index": 0,
+          "text": "**All Republicans**: We need to choose 5 Republicans from 8.\n\\[\n\\binom{8}{5} = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\cdot 3!}\n\\]\n\nCalculating the factorials:\n\n\\[\n8! = 8 \\times 7 \\times 6 \\times 5!\n\\]\n\\[\n3! = 3 \\times 2 \\times 1 = 6\n\\]\n\nSo,\n\n\\[\n\\binom{8}{5} = \\frac{8 \\times 7 \\times 6}{6} = 8 \\times 7 = 56\n\\]",
+          "token_start": null,
+          "token_end": null
+        },
+        {
+          "index": 1,
+          "text": "**All Democrats**: We need to choose 5 Democrats from 6.\n\\[\n\\binom{6}{5} = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\cdot 1!} = \\frac{6}{1} = 6\n\\]\n\nNow, we subtract the number of all-Republican and all-Democrat subcommittees from the total number of subcommittees:\n\n\\[\n2002 - 56 - 6 = 1940\n\\]\n\nTherefore, the number of ways to form a subcommittee of 5 members with at least one member from each party is:\n\n\\[\n\\boxed{1940}\n\\]",
+          "token_start": null,
+          "token_end": null
+        }
+      ],
+      "extracted_answer": "1940",
+      "is_correct": true,
+      "num_tokens": 425,
+      "model_name": "QwQ-32B"
+    }
+  ]
+}

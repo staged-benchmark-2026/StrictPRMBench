@@ -1,0 +1,14 @@
+Three-way Product / GM / Official comparison on strict common support
+
+Definition:
+- Common support requires product, GM, and the official rule to each have a clean correct top-1 and a built deleted-variant attack.
+- Official scorer map: Qwen=product; Skywork-7B/Skywork-1.5B/RLHFlow=arith_mean; Math-Shepherd=min-step; InternLM2-7B/1.8B=last-step.
+
+GM stability best (including ties): 8/14 cells
+Product stability worst (including ties): 14/14 cells
+Utility ties on strict common support: 14/14 cells
+
+Observation: under the strict three-way correct-top1 common support, utility gains are frequently tied by construction because all retained rules already select correct traces on the same problems. The informative separation is therefore primarily in Flip@32 stability, not answer-accuracy gain.
+
+CSV: ./results/three_way/three_way_table.csv
+TeX: ./results/three_way/three_way_table.tex
