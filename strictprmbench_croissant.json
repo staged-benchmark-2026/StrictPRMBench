@@ -1,0 +1,425 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "StrictPRMBench",
+  "description": "Anonymous NeurIPS 2026 artifact for strict counterfactual auditing of PRM aggregation rules. This Croissant file indexes the main tabular outputs used in the submission.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://huggingface.co/datasets/staged-benchmark-2026/StrictPRMBench",
+  "version": "1.0",
+  "datePublished": "2026-04-04",
+  "conformsTo": "http://mlcommons.org/croissant/1.1",
+  "citeAs": "Anonymous Authors. StrictPRMBench: anonymous submission artifact for strict PRM aggregation audits. 2026.",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "ni_gap_csv",
+      "name": "answer_preserved_ni.csv",
+      "contentUrl": "https://huggingface.co/datasets/staged-benchmark-2026/StrictPRMBench/resolve/main/results/ni_gap/answer_preserved_ni.csv",
+      "encodingFormat": "text/csv",
+      "md5": "adad6bf563b6c2c37f0852fb3b578dad"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "clustered_agg_csv",
+      "name": "primary_table.csv",
+      "contentUrl": "https://huggingface.co/datasets/staged-benchmark-2026/StrictPRMBench/resolve/main/results/clustered_agg/primary_table.csv",
+      "encodingFormat": "text/csv",
+      "md5": "ad96a3b9ddc059600a0ecdee40c912b6"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "optimization_bridge_csv",
+      "name": "hijack_results.csv",
+      "contentUrl": "https://huggingface.co/datasets/staged-benchmark-2026/StrictPRMBench/resolve/main/results/optimization_bridge/hijack_results.csv",
+      "encodingFormat": "text/csv",
+      "md5": "7c7469677e8b4f116ac2f35362355906"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "forced_choice_csv",
+      "name": "forced_choice_results.csv",
+      "contentUrl": "https://huggingface.co/datasets/staged-benchmark-2026/StrictPRMBench/resolve/main/human_cards/forced_choice/forced_choice_results.csv",
+      "encodingFormat": "text/csv",
+      "md5": "7e119c890c3755c471b8538ff4edf2c5"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "name": "ni_gap_results",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "prm",
+          "description": "PRM identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ni_gap_csv"
+            },
+            "extract": {
+              "column": "prm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "benchmark",
+          "description": "Benchmark identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ni_gap_csv"
+            },
+            "extract": {
+              "column": "benchmark"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "n_answer_preserved",
+          "description": "Count of answer-preserved pairs.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "ni_gap_csv"
+            },
+            "extract": {
+              "column": "n_answer_preserved"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "delta_ni_raw",
+          "description": "Raw NI gap.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "ni_gap_csv"
+            },
+            "extract": {
+              "column": "delta_ni_raw"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "delta_ni_matched",
+          "description": "Matched NI gap.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "ni_gap_csv"
+            },
+            "extract": {
+              "column": "delta_ni_matched"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "clustered_aggregation_results",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "prm",
+          "description": "PRM identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "clustered_agg_csv"
+            },
+            "extract": {
+              "column": "prm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "benchmark",
+          "description": "Benchmark identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "clustered_agg_csv"
+            },
+            "extract": {
+              "column": "benchmark"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Flip_prod",
+          "description": "Flip@32 for product aggregation.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "clustered_agg_csv"
+            },
+            "extract": {
+              "column": "Flip_prod"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Flip_GM",
+          "description": "Flip@32 for GM aggregation.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "clustered_agg_csv"
+            },
+            "extract": {
+              "column": "Flip_GM"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Flip_cluster",
+          "description": "Flip@32 for clustered aggregation.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "clustered_agg_csv"
+            },
+            "extract": {
+              "column": "Flip_cluster"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Flip_official",
+          "description": "Flip@32 for official scorer.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "clustered_agg_csv"
+            },
+            "extract": {
+              "column": "Flip_official"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "optimization_bridge_results",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "prm",
+          "description": "PRM identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "optimization_bridge_csv"
+            },
+            "extract": {
+              "column": "prm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "benchmark",
+          "description": "Benchmark identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "optimization_bridge_csv"
+            },
+            "extract": {
+              "column": "benchmark"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "optimize_for",
+          "description": "Optimization target rule.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "optimization_bridge_csv"
+            },
+            "extract": {
+              "column": "optimize_for"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "n_nontrivial",
+          "description": "Count of nontrivial optimized traces.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "optimization_bridge_csv"
+            },
+            "extract": {
+              "column": "n_nontrivial"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "hijack_product",
+          "description": "Hijack rate under product.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "optimization_bridge_csv"
+            },
+            "extract": {
+              "column": "hijack_product"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "hijack_gm",
+          "description": "Hijack rate under GM.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "optimization_bridge_csv"
+            },
+            "extract": {
+              "column": "hijack_gm"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "forced_choice_results",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "prm",
+          "description": "PRM identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "forced_choice_csv"
+            },
+            "extract": {
+              "column": "prm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "benchmark",
+          "description": "Benchmark identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "forced_choice_csv"
+            },
+            "extract": {
+              "column": "benchmark"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "n",
+          "description": "Number of cards.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "forced_choice_csv"
+            },
+            "extract": {
+              "column": "n"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gm_rate",
+          "description": "GM preference rate.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "forced_choice_csv"
+            },
+            "extract": {
+              "column": "gm_rate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "fleiss_kappa",
+          "description": "Inter-annotator agreement.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "forced_choice_csv"
+            },
+            "extract": {
+              "column": "fleiss_kappa"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
