@@ -1,0 +1,44 @@
+Natural-pool reannotation round 20260418
+
+Input audit
+- annotator_1: natural_pool_extension_annotator1_completed.xlsx, md5=67226e66a47a449d55781482b2f53ee3, nonempty_rows=420
+- annotator_2: natural_pool_extension_annotator2.xlsx, md5=4cc2efaa9ee183ea79d2cda3773c30e3, nonempty_rows=420
+- annotator_3: natural_pool_extension_annotator3.xlsx, md5=2e739632c51b807b4b5157a0ba804b89, nonempty_rows=420
+
+Annotator independence audit
+- annotator_1 vs annotator_2: same preference 71.7%, identical full rows 21.0%
+- annotator_1 vs annotator_3: same preference 95.7%, identical full rows 0.5%
+- annotator_2 vs annotator_3: same preference 71.0%, identical full rows 0.0%
+
+Pooled majority vote
+- native majority: 28/420 (6.7%)
+- product majority: 15/420 (3.6%)
+- no-preference majority: 374/420 (89.0%)
+- split 1/1/1: 3/420 (0.7%)
+- resolved-only native rate: 65.1% [49.1%, 79.0%], p=0.066
+
+Inter-annotator agreement
+- Fleiss kappa (product / native / no-preference): 0.317
+- annotator_1 vs annotator_2: 71.7% raw agreement on overall preference
+- annotator_1 vs annotator_3: 95.7% raw agreement on overall preference
+- annotator_2 vs annotator_3: 71.0% raw agreement on overall preference
+
+Pooled Likert deltas (product - native)
+- completeness: -0.056 [-0.111, -0.007]
+- auditability: -0.052 [-0.097, -0.013]
+- coherence: -0.065 [-0.119, -0.016]
+- supervision: -0.066 [-0.124, -0.013]
+- composite: -0.060 [-0.112, -0.013]
+
+Per-cell majority summary
+- skywork_prm / gsm8k: native=1, product=1, no-pref=68, split=0, resolved-native=50.0%
+- skywork_prm / math500: native=6, product=2, no-pref=61, split=1, resolved-native=75.0%
+- internlm2_7b_reward / gsm8k: native=6, product=1, no-pref=63, split=0, resolved-native=85.7%
+- internlm2_7b_reward / math500: native=15, product=8, no-pref=45, split=2, resolved-native=65.2%
+- qwen_prm / gsm8k: native=0, product=0, no-pref=70, split=0, resolved-native=nan%
+- qwen_prm / math500: native=0, product=3, no-pref=67, split=0, resolved-native=0.0%
+
+Interpretation
+- The dominant outcome remains majority no-preference on natural-pool disagreements.
+- On this 420-card reannotation round, resolved majority preference favors native over product (28 native vs 15 product), but most cards remain majority no-preference.
+- Likert deltas remain close to zero, so any process-quality difference on natural pools is still much weaker than the deletion-stress forced-choice signal.

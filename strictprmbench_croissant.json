@@ -86,6 +86,38 @@
       "contentUrl": "https://huggingface.co/datasets/staged-benchmark-2026/StrictPRMBench/resolve/main/human_cards/forced_choice/forced_choice_results.csv",
       "encodingFormat": "text/csv",
       "md5": "7e119c890c3755c471b8538ff4edf2c5"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "no_pref_majority_summary_csv",
+      "name": "no_preference_reannotation_majority_summary.csv",
+      "contentUrl": "https://huggingface.co/datasets/staged-benchmark-2026/StrictPRMBench/resolve/main/human_cards/no_preference_reannotation/analysis/majority_summary.csv",
+      "encodingFormat": "text/csv",
+      "md5": "722facea014a9d1147b6f64f68f20075"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "no_pref_card_majority_csv",
+      "name": "no_preference_reannotation_card_majority.csv",
+      "contentUrl": "https://huggingface.co/datasets/staged-benchmark-2026/StrictPRMBench/resolve/main/human_cards/no_preference_reannotation/analysis/card_majority.csv",
+      "encodingFormat": "text/csv",
+      "md5": "daa4775165f0199072cc73410bc08994"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "no_pref_per_response_csv",
+      "name": "no_preference_reannotation_per_response.csv",
+      "contentUrl": "https://huggingface.co/datasets/staged-benchmark-2026/StrictPRMBench/resolve/main/human_cards/no_preference_reannotation/analysis/per_response.csv",
+      "encodingFormat": "text/csv",
+      "md5": "7d8d3f344449f1085cd2293d7a3d5cc9"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "no_pref_sanity_txt",
+      "name": "no_preference_reannotation_sanity_checks.txt",
+      "contentUrl": "https://huggingface.co/datasets/staged-benchmark-2026/StrictPRMBench/resolve/main/human_cards/no_preference_reannotation/analysis/sanity_checks_no_pref_reannotation.txt",
+      "encodingFormat": "text/plain",
+      "md5": "411ea63ac26dcba28e0945851712dceb"
     }
   ],
   "recordSet": [
@@ -420,6 +452,153 @@
           }
         }
       ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "no_preference_reannotation_majority_summary",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "group",
+          "description": "Analysis stratum.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "no_pref_majority_summary_csv"
+            },
+            "extract": {
+              "column": "group"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "n_cards",
+          "description": "Number of cards in stratum.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "no_pref_majority_summary_csv"
+            },
+            "extract": {
+              "column": "n_cards"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gm_majority",
+          "description": "Cards with GM majority.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "no_pref_majority_summary_csv"
+            },
+            "extract": {
+              "column": "gm_majority"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "product_majority",
+          "description": "Cards with product majority.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "no_pref_majority_summary_csv"
+            },
+            "extract": {
+              "column": "product_majority"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "no_preference_majority",
+          "description": "Cards with no-preference majority.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "no_pref_majority_summary_csv"
+            },
+            "extract": {
+              "column": "no_preference_majority"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "split",
+          "description": "Cards without a majority label.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "no_pref_majority_summary_csv"
+            },
+            "extract": {
+              "column": "split"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "resolved_gm_rate",
+          "description": "GM rate among resolved GM/product majority cards.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "no_pref_majority_summary_csv"
+            },
+            "extract": {
+              "column": "resolved_gm_rate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "no_preference_rate",
+          "description": "No-preference majority rate.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "no_pref_majority_summary_csv"
+            },
+            "extract": {
+              "column": "no_preference_rate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gm_raw_rate",
+          "description": "Raw GM majority rate over all cards.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "no_pref_majority_summary_csv"
+            },
+            "extract": {
+              "column": "gm_raw_rate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "product_raw_rate",
+          "description": "Raw product majority rate over all cards.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "no_pref_majority_summary_csv"
+            },
+            "extract": {
+              "column": "product_raw_rate"
+            }
+          }
+        }
+      ]
     }
-  ]
+  ],
+  "dataAnnotationAnalysis": "Human annotation artifacts include the original forced-choice evaluation, Likert/natural-pool materials, expert mini-replication, and a 200-card no-preference forced-choice reannotation subset. The no-preference subset is recomputable from returned XLSX files, per-annotator manifests, and deblind keys via reproduce_no_preference_reannotation.py --check."
 }
