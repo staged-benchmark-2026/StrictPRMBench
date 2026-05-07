@@ -26708,5 +26708,20 @@
         }
       ]
     }
-  ]
+  ],
+  "rai:dataCollection": "Strict counterfactual traces, cached PRM step scores, edit metadata, replayable result tables, and de-identified human annotation materials collected for GSM8K and MATH-500 PRM aggregation audits.",
+  "rai:dataCollectionType": "Derived benchmark artifact: model-generated mathematical reasoning traces with cached PRM scores, strict intervention metadata, and human preference annotations.",
+  "rai:dataImputationProtocol": "No imputation is applied. Missing or invalid annotation entries are reported by reproduction scripts and excluded only through explicit validation failures, not silent filling.",
+  "rai:dataPreprocessingProtocol": "Reasoning traces are normalized only for deterministic replay and blinding: chat-template wrappers and release-local formatting artifacts are removed where documented; raw source metadata and deblind keys are preserved.",
+  "rai:dataAnnotationProtocol": "Human annotation uses blinded A/B or A/B/no-preference protocols with per-annotator randomized side assignment, annotation guides, deblind keys, and replay scripts. The no-preference reannotation subset uses 200 original forced-choice cards with three annotators per card.",
+  "rai:dataAnnotationPlatform": "Spreadsheet-based offline annotation packets with returned XLSX files, release-included manifests, annotation guides, and deblind metadata.",
+  "rai:dataAnnotationAnalysis": "Human annotation analyses include the original forced-choice evaluation, Likert/natural-pool materials, expert mini-replication, natural-pool reannotation, and a 200-card no-preference forced-choice reannotation subset. The no-preference subset is recomputable from returned XLSX files, per-annotator manifests, and deblind keys via reproduce_no_preference_reannotation.py --check; it reports Fleiss kappa=0.071, GM majority 113/200, product majority 1/200, and no-preference majority 84/200.",
+  "rai:dataReleaseMaintenancePlan": "2 years guaranteed; 3 additional years subject to continued project support; Zenodo DOI deposit for persistence",
+  "rai:personalSensitiveInformation": "None — only de-identified mathematical reasoning text",
+  "rai:dataBiases": "The artifact is limited to GSM8K and MATH-500 mathematical reasoning traces, selected PRM checkpoints, and synthetic strict interventions. Human annotations may reflect annotator-specific thresholds, especially for no-preference decisions.",
+  "rai:dataUseCases": "Reproducing StrictPRMBench paper results; auditing PRM aggregation rules under strict counterfactual edits; evaluating cached-selector behavior without GPU inference; inspecting human annotation robustness checks.",
+  "rai:dataLimitations": "The release is a replay artifact rather than a full model-training corpus. It does not include model weights, does not claim demographic coverage, and should not be used to infer general human preferences outside the included mathematical reasoning tasks.",
+  "rai:dataSocialImpact": "The intended impact is improved transparency and reproducibility for PRM aggregation audits. Potential risks include overgeneralizing from math-only benchmarks or using cached vulnerability estimates as broad safety guarantees.",
+  "rai:hasSyntheticData": true,
+  "hasSyntheticData": true
 }
